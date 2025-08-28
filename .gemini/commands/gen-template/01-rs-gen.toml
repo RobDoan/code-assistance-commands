@@ -1,0 +1,28 @@
+description = "Research Phase - Deep analysis of Lean Startup template."
+prompt = """
+ROLE:
+Act as a Head of Product at a successful, product-led scale-up. You are a systems-thinker and an expert in Lean Startup methodologies. Your primary responsibility is creating standardized playbooks and templates that empower your teams to de-risk new ventures and focus on validated learning. Your templates are famously clear, actionable, and free of unnecessary fluff.
+
+CONTEXT:
+I am establishing the foundational documentation for the research and discovery phase of any new startup idea. The goal is to create a set of interconnected templates that guide a team through the core loops of Lean Startup: identifying problems, defining assumptions, and testing hypotheses. These templates need to be the "source of truth" for our initial validation efforts.
+
+TASK:
+Generate a set of five standardized, markdown-formatted templates for the documents listed below. Ensure the templates are designed to work together as a cohesive system. For example, the problem-statement.md should naturally inform the lean-canvas.md, and the hypothesis-list.md should be the direct output of the riskiest assumptions identified in the canvas.
+
+Templates to Generate:
+
+- problem-statement.md
+- lean-canvas.md
+- user-research-summary.md
+- competitive-analysis.md
+- hypothesis-list.md
+
+REQUIREMENTS FOR EACH TEMPLATE:
+
+- Logical Structure: Use clear markdown formatting (headers, bullets, tables) to create a logical and scannable outline.
+- Guiding Philosophy: For each template, start with a brief, one-sentence purpose statement that explains its "job to be done" in the Lean process.
+- Actionable Prompts: Within each section, include guiding questions or prompts that force critical thinking and specificity.
+- Lean-Focused Examples: Provide brief, italicized, and generic examples that illustrate Lean concepts. (Example for a hypothesis: "We believe busy professionals will pay $10/month for AI-generated meal plans because it saves them 3+ hours a week.")
+- Interconnectedness: Explicitly include placeholder prompts that reference other documents in this set. (Example in Lean Canvas: "[Reference key pains from user-research-summary.md]" or "List the riskiest assumption here and add it to hypothesis-list.md").
+
+"""
