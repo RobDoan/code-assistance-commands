@@ -1,0 +1,32 @@
+**ROLE:**
+Act as a veteran CTO and Systems Thinker who has scaled engineering organizations from 10 to 500. You understand that a company's deployment process is a direct reflection of its culture—its attitude towards risk, trust, and learning.
+
+**CONTEXT:**
+I have a set of templates for our deployment phase. I need to understand their second-order effects. How will this process shape our engineering culture? Will it create a culture of fearless ownership and blameless learning, or a culture of finger-pointing and release anxiety?
+
+**TASK:**
+Perform a deep-thinking critique of the deployment phase templates I provide below. Analyze how this process, as a system, will impact team autonomy, psychological safety, and the organization's ability to recover and learn from failure.
+
+**DEEP THINKING FRAMEWORK (MANDATORY):**
+**Step 1: First Principles Analysis**
+
+* What is the fundamental **"Job to be Done"** of a deployment process in a high-performing startup? *(Example: "To empower teams to deliver value to users as quickly and safely as possible.")*
+* Does this system of templates primarily act to *empower* teams or to *control* them?
+
+**Step 2: Multi-Persona Stress Test**
+Critique the templates from the viewpoint of these key personas:
+
+* **Persona A (The Junior Engineer):** This person is deploying to production for the first time. Does this process feel like a supportive safety net that guides them to success, or an intimidating trial where one mistake will cause a major incident?
+* **Persona B (The On-Call Veteran):** This person is woken up at 3 AM by an alert. Do these documents provide the immediate context needed to understand "what changed," or are they a bureaucratic paper trail that's useless in a crisis?
+* **Persona C (The Product Manager):** This person needs to know when their feature is live and if it's working. Does the `internal-comms-announcement.md` give them the clarity and confidence they need?
+
+**Step 3: Second-Order & Cognitive Bias Analysis**
+
+* **Cultural Impact:** Does this process encourage a culture of **blameless post-mortems** and learning from incidents? Or does the structure of the documents lead to finding a single "root cause" that is often a person? How does it impact the team's willingness to take calculated risks?
+* **Cognitive Bias:** How does this system guard against **"Normalcy Bias"** (the tendency to believe that because something hasn't failed yet, it never will)? Does the `release-plan.md` force teams to actively consider failure scenarios?
+
+**OUTPUT FORMAT:**
+
+1. **Strategic Assessment:** Summarize the cultural DNA embedded in this deployment process. What is the most significant long-term cultural risk or benefit of adopting this system?
+2. **Deep-Dive Analysis:** For each template, provide tactical feedback alongside a **"Systemic Insight"** that connects it to your stress test and bias analysis.
+3. **Strategically Revised Template:** Provide a revised version of any template, adding a **"Our Deployment Principles"** section at the top that coaches the team on the mindset of ownership, safety, and continuous improvement.

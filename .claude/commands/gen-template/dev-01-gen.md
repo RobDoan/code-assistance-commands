@@ -1,0 +1,24 @@
+**ROLE:**
+
+Act as a Principal Engineer at a high-velocity startup that excels at rapid experimentation. You are an expert in Agile and Lean methodologies, responsible for creating the engineering playbooks that enable small teams to build, ship, and learn in fast, iterative cycles. Your templates are known for being pragmatic, developer-friendly, and ruthlessly focused on minimizing waste.
+
+**CONTEXT:**
+I am creating the standard templates for our product development phase. This phase begins *after* design has defined the experiment to be built. The goal of these documents is to provide just enough structure to coordinate the build process, ensure the experiment is shipped correctly, and prepare for data collection, without slowing the team down with bureaucracy.
+
+**TASK:**
+Generate a set of four standardized, markdown-formatted templates for the core activities in a lean development cycle. These templates should create a clear and fast path from the initial plan to a live experiment.
+
+**Templates to Generate:**
+
+1. `sprint-plan.md` (A lightweight plan for the build cycle)
+2. `technical-task-breakdown.md`
+3. `release-checklist.md`
+4. `experiment-results-log.md`
+
+**REQUIREMENTS FOR EACH TEMPLATE:**
+
+* **Lean Philosophy:** Start each template with a one-sentence purpose statement explaining its job in accelerating the Build-Measure-Learn loop.
+* **Actionable Prompts:** Use guiding questions and checklists to ensure clarity and focus on the essentials.
+* **Interconnectedness:** Include placeholders that link to documents from the design phase (like `prd.md` and `architecture-outline.md`) and to each other.
+* **Developer-Focused Examples:** Provide brief, italicized examples relevant to a development team. (*Example for a task: "Task: Set up a new API endpoint `POST /feedback` that accepts a `rating` and `comment`."*)
+* **Clear Structure:** Use markdown for headers, lists, and tables to ensure the templates are easy for engineers to quickly parse and use.

@@ -1,0 +1,27 @@
+description = "Testing Phase - Generate lean testing templates."
+prompt = """
+ROLE:
+Act as a Head of Growth at a data-driven startup. You are an expert in designing and executing high-tempo experiments. Your primary responsibility is creating the playbooks that product teams use to launch tests, gather clean data, and make objective decisions based on results. Your templates are known for their scientific rigor, clarity, and focus on actionable insights.
+
+CONTEXT:
+I am creating the standard templates for our product testing phase. This phase begins when a new feature or solution is ready to be exposed to users to validate a hypothesis. The goal of these documents is to ensure every test is well-designed, executed consistently, and produces trustworthy data that leads to a clear "pivot or persevere" decision.
+
+TASK:
+Generate a set of three standardized, markdown-formatted templates for the core activities in a lean testing cycle. These templates should create a closed loop from planning an experiment to synthesizing its learnings.
+
+Templates to Generate:
+
+1. `test-plan.md` (A one-page plan for a single experiment)
+2. `test-case.md` (Detailed scenarios for each test)
+3. `bug-tracker.md` (For logging and tracking bugs discovered during testing)
+4. `user-feedback-log.md` (For qualitative data from usability tests or interviews)
+5. `learning-summary.md` (A final report synthesizing all data to answer the hypothesis)
+
+REQUIREMENTS FOR EACH TEMPLATE:
+
+* **Scientific Method Philosophy:** Start each template with a one-sentence purpose statement explaining its role in the scientific method (Hypothesize, Test, Analyze, Conclude).
+* **Data-Driven Prompts:** Use guiding questions that force the team to define metrics, segments, and statistical significance *before* the test begins.
+* **Interconnectedness:** Include placeholders that link to documents from previous phases (like `prd.md` and `hypothesis-list.md`) and to each other.
+* **Clear Examples:** Provide brief, italicized examples relevant to testing. (*Example for a success metric: "Success is a 15% or greater click-through rate on the 'new feature' button for the test group, with 95% statistical confidence."*)
+* **Structured for Clarity:** Use markdown for headers, lists, and tables to make the templates easy to read and analyze.
+"""
