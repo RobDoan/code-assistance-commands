@@ -4,22 +4,36 @@
 
 ---
 
-## Screen 1: The Hook (e.g., Dashboard Banner)
+## 1. Content & Copy
+
+**This is the single source of truth for all text in the prototype.**
+
+* **Hook Headline:** "New! Supercharge your reports."
+* **Hook CTA:** "Learn More"
+* **Pitch Headline:** "Unlock Advanced Reporting"
+* **Pitch CTA:** "Get Early Access"
+* **Ask Headline:** "Coming Soon!"
+* **Ask Body:** "Enter your email to be notified."
+* **Ask CTA:** "Notify Me"
+
+---
+
+## 2. Screens
+
+### Screen 1: The Hook (e.g., Dashboard Banner)
 
 **Job-to-be-Done:** Grab the user's attention and get them to click.
 
 **Visual:**
 ```
 +------------------------------------------------------+
-| ✨ New! Supercharge your reports. [ Learn More ]      |
+| ✨ [Hook Headline]              [ Hook CTA ]         |
 +------------------------------------------------------+
 ```
-**Key Copy:** "New! Supercharge your reports."
-**CTA Text:** "Learn More"
 
 ---
 
-## Screen 2: The Pitch (e.g., Feature Landing Page)
+### Screen 2: The Pitch (e.g., Feature Landing Page)
 
 **Job-to-be-Done:** Convince the user the feature is valuable enough to take the next step.
 
@@ -28,37 +42,33 @@
 +----------------------------------+
 |      [Product Screenshot]        |
 |                                  |
-| # Unlock Advanced Reporting      |
+| # [Pitch Headline]               |
 | - Feature 1                      |
 | - Feature 2                      |
 |                                  |
-|       [ Get Early Access ]       |
+|       [ Pitch CTA ]              |
 |                                  |
 +----------------------------------+
 ```
-**Key Copy:** "Unlock Advanced Reporting"
-**CTA Text:** "Get Early Access"
 
 ---
 
-## Screen 3: The Ask (e.g., 'Coming Soon' Modal)
+### Screen 3: The Ask (e.g., 'Coming Soon' Modal)
 
 **Job-to-be-Done:** Capture the user's email as a signal of high intent.
 
 **Visual:**
 ```
 +----------------------------------+
-| # Coming Soon!                   |
+| # [Ask Headline]                 |
 |                                  |
-| Enter your email to be notified. |
+| [Ask Body]                       |
 | [ your.email@example.com   ]     |
 |                                  |
-|       [ Notify Me ]              |
+|       [ Ask CTA ]                |
 |                                  |
 +----------------------------------+
 ```
-**Key Copy:** "Coming Soon! Enter your email to be notified."
-**CTA Text:** "Notify Me"
 
 ---
 

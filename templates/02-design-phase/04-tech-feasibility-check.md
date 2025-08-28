@@ -30,6 +30,9 @@
 * **Can this be deployed behind a feature flag?**
   * [ ] Yes / [ ] No
 
+* **Does this experiment depend on any other work in progress?**
+  * [ ] No / [ ] Yes, it depends on:
+
 * **Is there any risk to existing users or system performance?**
   * [ ] No / [ ] Yes, here's the risk:
 

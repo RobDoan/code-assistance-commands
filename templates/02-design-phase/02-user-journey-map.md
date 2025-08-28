@@ -1,6 +1,6 @@
 # User Journey Map: [Name of Experiment]
 
-**Purpose:** To visualize the critical path a user must take to (in)validate our hypothesis from the `01-experiment-brief.md`.
+**Purpose:** To visualize the critical path a user must take to (in)validate our hypothesis and to define how we will measure it.
 
 ---
 
@@ -23,7 +23,19 @@
 
 ---
 
-## 2. Key Screens & Components
+## 2. Measurement Plan
+
+**How will we track progress through this journey?**
+
+| Step # | Action | Analytics Event Name |
+| :--- | :--- | :--- |
+| 1 | Clicks banner | `experiment_hook_clicked` |
+| 3 | Clicks 'Learn More' | `experiment_pitch_accepted` |
+| 4 | Submits email | `experiment_conversion_completed` |
+
+---
+
+## 3. Key Screens & Components
 
 **What UI is absolutely necessary for this journey?**
 
@@ -34,15 +46,15 @@
 
 ---
 
-## 3. Potential Drop-off Points & Risks
+## 4. Potential Drop-off Points & Risks
 
 **Where could this go wrong?**
 
-| Step # | Risk Description | Mitigation / What We'll Learn |
+| Step # | Risk Description | What We'll Learn If Users Drop Off Here |
 | :--- | :--- | :--- |
-| 1 | User doesn't see or ignores the banner. | We'll learn the hook is ineffective. |
-| 3 | User reads the pitch but doesn't click 'Learn More'. | We'll learn the value proposition is weak. |
-| 4 | User sees the email form but doesn't submit. | We'll learn the commitment is too high for the perceived value. |
+| 1 | User doesn't click the banner. | The hook is ineffective or poorly placed. |
+| 3 | User doesn't click 'Learn More'. | The value proposition is weak or unclear. |
+| 4 | User doesn't submit their email. | The commitment is too high for the perceived value. |
 
 ---
 

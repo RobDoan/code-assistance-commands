@@ -10,7 +10,9 @@
 
 **What is the single riskiest belief we hold that, if wrong, would cause this entire initiative to fail?**
 
-> *Example: We believe our target users are willing to pay for a standalone version of our reporting feature.*
+> *[State the assumption clearly. e.g., We believe our target users are willing to pay for a standalone version of our reporting feature.]*
+
+**Type of Assumption:** [ ] Problem / [ ] Solution / [ ] Usability / [ ] Technical / [ ] Business Model
 
 ---
 
@@ -42,11 +44,11 @@
 **What will we do based on the outcome? This forces us to have a plan for all results.**
 
 * **If Validated (Success):**
-  * **What We Learned:** [e.g., "Users have a strong intent to pay."]
+  * **What We Learned:** [e.g., "The assumption that users have a strong intent to pay was proven correct."]
   * **Next Action:** [e.g., "Greenlight the development of a real billing system and the V1 of the Pro plan."]
 
 * **If Invalidated (Failure):**
-  * **What We Learned:** [e.g., "Users are curious but not motivated enough to act, or the value prop is unclear."]
+  * **What We Learned:** [e.g., "The assumption that users have a strong intent to pay was proven false; the value prop is not strong enough to warrant action."]
   * **Next Action:** [e.g., "Conduct 5 customer interviews with users who clicked but didn't convert to understand the barrier. Do not build the billing system."]
 
 ---
