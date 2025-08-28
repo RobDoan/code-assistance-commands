@@ -1,13 +1,29 @@
 # Tech Feasibility Check: [Name of Experiment]
 
-**Purpose:** A quick (under 15 min) assessment by Engineering to confirm the prototype from `03-prototype-spec.md` is low-effort and safe to build. This is not a detailed architecture plan.
+**Purpose:** Final engineering validation that the prototype from `03-prototype-spec.md` can be built safely and quickly. This follows the initial `00-tech-spike-check.md` if one was needed.
 
 **Engineer:** [Engineer Name]
 **Date:** [Date]
+**Spike Completed:** [ ] N/A - No spike needed / [ ] Yes - Results incorporated / [ ] No - Proceeding with risk
 
 ---
 
-### 1. The Build: A Quick Q&A
+## 1. Technical Spike Results (If Applicable)
+
+**Was a technical spike performed?**
+- [ ] No spike was needed (trivial implementation)
+- [ ] Yes, spike completed successfully
+- [ ] Yes, spike revealed issues but we found workarounds
+- [ ] No, but one was recommended (proceeding at risk)
+
+**If spike was done, key findings:**
+- **What we learned:** [Key technical insights]
+- **What changed:** [How this affected our approach]
+- **Remaining unknowns:** [What we're still uncertain about]
+
+---
+
+## 2. The Build: Final Assessment
 
 * **Can we build this using existing components/UI patterns?**
   * [ ] Yes / [ ] Mostly / [ ] No, this requires significant new UI.
@@ -25,7 +41,25 @@
 
 ---
 
-### 2. The Release: Safety Checklist
+## 3. Progressive Complexity Check
+
+**If this experiment succeeds, what's the REAL complexity of making it production-ready?**
+
+| Component | Experiment Version | Production Version | Multiplier |
+|-----------|-------------------|-------------------|------------|
+| Frontend | [e.g., "Static HTML"] | [e.g., "React components"] | [e.g., "3x"] |
+| Backend | [e.g., "Hardcoded"] | [e.g., "Dynamic API"] | [e.g., "5x"] |
+| Data/Analytics | [e.g., "Basic events"] | [e.g., "Full funnel"] | [e.g., "2x"] |
+| **Total Effort** | **[X days]** | **[Y days]** | **[Z times harder]** |
+
+**Warning flags:**
+- [ ] Experiment version creates technical debt we can't easily remove
+- [ ] Production version requires architectural changes
+- [ ] Experiment success would create immediate scaling issues
+
+---
+
+## 4. The Release: Safety Checklist
 
 * **Can this be deployed behind a feature flag?**
   * [ ] Yes / [ ] No
@@ -42,7 +76,7 @@
 
 ---
 
-### 3. The Verdict
+## 5. The Verdict
 
 * **Rough Time Estimate (Dev work only):**
   * [ ] < 1 day
@@ -57,5 +91,17 @@
 ---
 
 **Connected Documents:**
+- `00-tech-spike-check.md` (if spike was needed)
 - `01-experiment-brief.md`
 - `03-prototype-spec.md`
+
+---
+
+## Appendix: When to Use Which Document
+
+1. **Start with `00-tech-spike-check.md`** when the idea is first proposed (5 min)
+2. **Run technical spike** if unknowns identified (2 hours - 2 days)
+3. **Create `01-experiment-brief.md`** once technical path is clear
+4. **Complete this `04-tech-feasibility-check.md`** after prototype is designed (15 min)
+
+This ensures technical constraints are discovered early, not after significant design work.

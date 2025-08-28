@@ -79,3 +79,35 @@ experiment_pitch_accepted, experiment_conversion_completed)
 - Better content management with centralized copy
 - Hidden blocker detection with dependency checking
 - Maintains lean principles while adding strategic precision
+
+---
+
+## Feedback 3
+
+✅ New Template: Experiment Summary
+
+Purpose: Turns raw experiment data into institutional knowledge and forces honest confrontation with results.
+
+Key Features:
+
+1. Executive Summary: One-sentence outcome for quick reference
+2. Data Section: Copies original hypothesis and compares against actual results
+3. Clear Verdict: Forces binary decision (Validated/Invalidated/Inconclusive)
+4. Core Learning: Captures the single most important insight
+5. Decision & Next Steps: Documents official go/no-go decision with justification
+
+Why This Completes the System:
+
+- Prevents zombie projects: Forces explicit decisions instead of indefinite continuation
+- Banks learning: Creates searchable, permanent record of what was tried and learned
+- Honest assessment: Compares actual results against original success metrics
+- Institutional knowledge: Future teams can learn from past experiments
+- Closes the loop: Transforms raw data into actionable decisions
+
+✅ Complete 5-Template System:
+
+1. 01-experiment-brief.md → Define the experiment
+2. 02-user-journey-map.md → Map the critical path
+3. 03-prototype-spec.md → Design the minimal solution
+4. 04-tech-feasibility-check.md → Validate technical approach
+5. 05-experiment-summary.md → NEW: Capture learnings and decide next steps
