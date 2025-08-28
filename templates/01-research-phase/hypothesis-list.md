@@ -1,216 +1,220 @@
-# Hypothesis List
+# The Hypothesis Engine
 
-## Document Overview
-
-**Purpose:** A living document to track all assumptions, experiments, and learnings. This is the engine of our Build-Measure-Learn loop.  
-**Last Updated:** `[YYYY-MM-DD]`  
-**Owner:** `[Product Manager/Team Name]`  
-**Review Cadence:** Weekly *(Lean teams review weekly, adjust if needed)*
-
-> ⚠️ **Remember:** The goal is to test our riskiest assumptions first. Focus on learning, not being right.
+**Purpose:** The single source of truth for what we believe, what we're testing, and what we've learned. This is the log of our journey to Product-Market Fit.  
+**Owner:** `[Product Team]`  
+**Last Updated:** `[YYYY-MM-DD]`
 
 ---
 
-## Hypothesis Framework
+## Our Guiding Principles
 
-### Standard Format
-*Every hypothesis must follow this structure:*
+> ⚠️ **This document is our defense against wishful thinking.** Its purpose is to accelerate learning by forcing us to be intellectually honest. Speed and decisiveness are paramount. A well-documented failure is more valuable than a poorly-understood success. If a test isn't in here, it didn't happen.
 
-**We believe that** `[specific change/feature]`  
-**For** `[target user segment]`  
-**Will achieve** `[expected outcome]`  
-**We will know this is true when** `[success metric and target]`
+---
 
-### Prioritization Formula
+## 1. Idea Triage (The "Napkin Sketch" Zone)
+
+*Got a new idea? Drop it here first. No detailed format required. Low friction entry-point. We review this list weekly to promote promising ideas into the backlog.*
+
+- *Idea: What if we used AI to write personalized invoice follow-ups?*
+- *Idea: Could we build a community feature for freelancers to share client feedback?*
+- *Idea: Test a "pay what you want" model for the first 3 months.*
+- *Idea: Integration with Stripe for automatic payment notifications*
+
+---
+
+## 2. Hypothesis Backlog (Prioritized for Action)
+
+*Prioritized by **Risk & Impact**. What's the most important thing to learn next? Don't over-analyze the score; it's a conversation starter.*
+
 **Priority Score = (Impact × Risk) / Effort**
-- **Impact:** 1-5 (5 = transforms the business)
-- **Risk:** 1-5 (5 = we're completely guessing)
-- **Effort:** 1-5 (5 = months of work)
+
+| Priority | Hypothesis | Impact | Risk | Effort | Score | Decision Maker |
+|:---:|:---|:---:|:---:|:---:|:---:|:---|
+| 1 | Personalized onboarding increases activation 25% | 5 | 4 | 2 | 10 | PM |
+| 2 | Mobile app drives 2x engagement | 4 | 5 | 3 | 6.7 | CEO |
+| 3 | Freemium tier converts 15% to paid | 4 | 4 | 4 | 4.0 | PM |
+| 4 | *[New Hypothesis]* | [1-5] | [1-5] | [1-5] | [Score] | [Owner] |
 
 ---
 
-## Active Experiments
+## 3. Active & Recent Experiments
 
-### Experiment #1: `[Short Title]`
-**Status:** 🟡 Testing  
-**Priority Score:** `[Score]` *(Impact: X, Risk: Y, Effort: Z)*  
-**Riskiest Assumption:** *Example: Users will pay for this feature at all*  
-**Test Dates:** `[Start]` → `[End]` *(Keep it short!)*
+*What we're testing now and what we've just learned. Focus on the DECISION.*
 
-#### Hypothesis Statement
-**We believe that** *Example: Adding one-click social login*  
-**For** *Example: new users during signup*  
-**Will achieve** *Example: reduced friction and increased conversion*  
-**We will know this is true when** *Example: signup conversion increases from 45% to 60%*
+### HYPOTHESIS #3: Remove Payment Wall from Onboarding
 
-#### Minimum Viable Test
-**Method:** *Example: Fake door test - Add button, measure clicks*  
-**Success Criteria:**
-| Metric | Current | Success Threshold |
-|--------|---------|------------------|
-| *Primary: Signup conversion* | *45%* | *>60%* |
-| *Guardrail: 7-day retention* | *35%* | *≥35% (don't break this!)* |
+- **Status:** ✅ **Concluded**
+- **Decision:** 🚀 **Ship & Iterate** - Keep change but fix retention immediately
+- **Key Learning:** *Quality vs quantity tradeoff: +73% signups but -11% retention*
+- **Evidence:** `[→ Experiment Summary #3]`
 
-**What We're NOT Testing Yet:** *Example: Full OAuth implementation - just measuring intent first*
+<details>
+<summary>Click to expand details for Hypothesis #3</summary>
 
-#### Results & Decision
-*Fill this out as soon as test completes:*
-- **Assumption Verdict:** ⏳ Pending / ✅ Validated / ❌ Invalidated / ❓ Inconclusive
-- **Key Learning:** *What was the most surprising/important thing we learned?*
-- **Decision:** 🚀 Ship It / 🔄 Pivot / 🛑 Kill It
-- **Next Action:** *Example: Move to Hypothesis #4 to test pricing sensitivity*
+**Hypothesis Statement:**  
+**We believe that** removing payment requirement from onboarding  
+**For** new users during signup  
+**Will achieve** 50% increase in trial signups  
+**We will know this is true when** signup completion rate exceeds 60%
 
----
+**Riskiest Assumption Being Tested:** *Users are avoiding signup primarily due to payment barrier*
 
-### Experiment #2: `[Short Title]`
-**Status:** 🔴 Not Started  
-**Priority Score:** `[Score]` *(Impact: X, Risk: Y, Effort: Z)*  
-**Riskiest Assumption:** *[What we're most uncertain about]*  
-**Planned Dates:** `[Start]` → `[End]`
+**Minimum Viable Test:**
+- **Method:** A/B test with 50/50 traffic split
+- **Success Criteria:** Primary: >60% completion rate, Guardrail: ≥35% 7-day retention
+- **What We're NOT Testing:** Full freemium model implementation
 
-#### Hypothesis Statement
-**We believe that** *[specific change]*  
-**For** *[target users]*  
-**Will achieve** *[expected outcome]*  
-**We will know this is true when** *[success criteria]*
+**Results:**
+- ✅ Primary metric: 78% completion (+73% vs control)
+- ⚠️ Guardrail violated: 31% retention (-11% vs control)
 
-#### Minimum Viable Test
-**Method:** *[Simplest way to test]*  
-**Success Criteria:**
-| Metric | Current | Success Threshold |
-|--------|---------|------------------|
-| *Primary:* | *[Current]* | *[Must exceed]* |
-
-**What We're NOT Testing Yet:** *[Scope boundaries]*
+</details>
 
 ---
 
-## Learning Library
+### HYPOTHESIS #4: Interactive Onboarding Checklist
 
-### ✅ Validated Assumptions
-*What we've proven to be true:*
+- **Status:** 🟡 **Testing** (Day 3 of 7)
+- **Decision:** ⏳ **Awaiting Data**
+- **Key Learning:** *Early signs suggest users prefer guided flow*
+- **Evidence:** `[→ Live Dashboard Link]`
 
-1. **Assumption:** *Example: Users prefer gradual onboarding over upfront configuration*
-   - **Evidence:** *Hypothesis #2 showed 50% increase in completion with progressive disclosure*
-   - **Confidence:** High (tested with 500+ users)
-   - **Implementation:** Shipped in v2.1
+<details>
+<summary>Click to expand details for Hypothesis #4</summary>
 
-2. **Assumption:** *[What we proved true]*
-   - **Evidence:** *[How we proved it]*
-   - **Confidence:** High / Medium
-   - **Implementation:** Shipped / Planned / Building
+**Hypothesis Statement:**  
+**We believe that** a 3-step interactive onboarding checklist  
+**For** users who sign up without payment info  
+**Will achieve** restoration of 7-day retention to 35%  
+**We will know this is true when** retention metrics return to baseline
 
-### ❌ Invalidated Assumptions  
-*What we've proven to be false (equally valuable!):*
+**Riskiest Assumption Being Tested:** *Users need more guidance, not less friction*
 
-1. **Assumption:** *Example: Advanced features drive initial adoption*
-   - **Evidence:** *Hypothesis #1 showed no change in signups despite adding 5 power features*
-   - **The Pivot:** We now believe simplicity drives adoption → See Hypothesis #4
-   - **Saved Us:** 3 months of unnecessary feature development
+**Minimum Viable Test:**
+- **Method:** A/B test on no-payment signups only
+- **Success Criteria:** Primary: ≥35% 7-day retention, Secondary: ≥80% complete checklist
+- **What We're NOT Testing:** Complex gamification or rewards
 
-2. **Assumption:** *[What we proved false]*
-   - **Evidence:** *[How we disproved it]*
-   - **The Pivot:** *[New direction based on learning]*
-   - **Saved Us:** *[Time/resources saved by learning this early]*
-
-### ❓ Inconclusive Tests
-*Tests that didn't give clear answers (and what we'll do differently):*
-
-1. **Test:** *Example: Pricing sensitivity test*
-   - **Issue:** Sample size too small (n=20)
-   - **Next Attempt:** Re-run with 200+ users using landing page test
+</details>
 
 ---
 
-## Hypothesis Backlog
+## 4. The Learning Library (Our Proven Truths)
 
-*Prioritized by Impact × Risk / Effort. What's the riskiest thing we need to learn next?*
+### ✅ Validated Assumptions (What we know is TRUE)
 
-### 🔥 Next Up (Start this week)
-| Priority | Hypothesis | Impact | Risk | Effort | Score | Why Now? |
-|----------|------------|--------|------|--------|-------|----------|
-| 1 | *Personalized onboarding increases activation 25%* | 5 | 4 | 2 | 10 | *40% drop-off in onboarding* |
-| 2 | *Mobile app drives 2x engagement* | 4 | 5 | 3 | 6.7 | *60% try to use mobile browser* |
-| 3 | *[Hypothesis]* | [1-5] | [1-5] | [1-5] | [Score] | *[Urgent reason]* |
+1. **Assumption:** Users prefer gradual onboarding over upfront configuration.
+   - **Evidence:** Hypothesis #2 showed 50% increase in completion with progressive disclosure.
+   - **Impact:** Became a core principle of our UX design. All new features use progressive reveal.
+   - **Confidence:** HIGH (tested with 500+ users)
 
-### 📋 On Deck (Next 2-4 weeks)
-1. **Hypothesis:** *Example: Freemium tier increases paid conversions*
-   - **Why Wait:** Need to validate core value prop first
-   - **Dependency:** Complete Hypothesis #1 first
+2. **Assumption:** Payment speed is a top-3 problem for freelancers.
+   - **Evidence:** Problem Validation Sprint - 8/10 interviewees ranked it #1 frustration.
+   - **Impact:** Validated our core value proposition. Shapes all marketing messages.
+   - **Confidence:** HIGH (validated through interviews + landing page tests)
 
-### 🗄️ Icebox (Interesting but not urgent)
-- *AI-powered features* - Wait until core product is validated
-- *International expansion* - Focus on local market first
-- *Enterprise features* - Not our initial target
+3. **Assumption:** Mobile usage is critical for our segment.
+   - **Evidence:** 60% of user sessions happen on mobile devices.
+   - **Impact:** Shifted to mobile-first development approach.
+   - **Confidence:** MEDIUM (observational data, not experimentally tested)
 
----
+### ❌ Invalidated Assumptions (What we know is FALSE - equally valuable!)
 
-## Quick Test Recipes
+1. **Assumption:** Advanced features drive initial adoption.
+   - **Evidence:** Hypothesis #1 showed no change in signups despite adding 5 power features.
+   - **Impact:** Saved us 3 months of dev time; pivoted to focus on simplicity-first approach.
+   - **Learning:** Users need to understand basic value before they care about advanced features.
 
-*Copy these templates for common test types:*
+2. **Assumption:** Enterprise customers will adopt bottom-up.
+   - **Evidence:** 0 out of 15 enterprise trials converted after 3 months of testing.
+   - **Impact:** Abandoned enterprise strategy, focused 100% on SMB/freelancer market.
+   - **Learning:** Enterprise requires top-down sales, different product, different team.
 
-### 🚪 Fake Door Test
-```
-1. Add feature button/link to product
-2. Track clicks for 1 week
-3. Show "Coming Soon" message
-4. Success = >10% click rate
-```
+3. **Assumption:** Users will pay immediately if value is clear.
+   - **Evidence:** Hypothesis #3 - removing payment barrier increased signups 73%.
+   - **Impact:** Implemented freemium tier, changed entire acquisition model.
+   - **Learning:** Even when value is clear, users want to "try before they buy."
 
-### 📄 Landing Page Test
-```
-1. Create landing page with value prop
-2. Drive 100+ visitors via ads/email
-3. Measure email signups
-4. Success = >15% conversion
-```
+### ❓ Inconclusive Tests (What we need to re-test)
 
-### 🎭 Wizard of Oz Test
-```
-1. Promise automated solution
-2. Do it manually behind scenes
-3. Measure satisfaction & retention
-4. Success = Users can't tell it's manual
-```
-
-### 💬 Customer Interview Sprint
-```
-1. Interview 5-10 target users
-2. Ask about problem, not solution
-3. Look for emotional responses
-4. Success = 7/10 confirm problem is painful
-```
+1. **Test:** Pricing sensitivity experiment
+   - **Issue:** Sample size was too small (n=20), high variance in results
+   - **Next Action:** Re-run with landing page test targeting 200+ users
+   - **Timeline:** Queue for next sprint after current onboarding test
 
 ---
 
-## Monthly Metrics Review
+## 5. Quick Decision Framework
 
-*Track hypothesis success rate to improve our prediction abilities:*
+*Use this when evaluating new hypothesis ideas:*
 
-| Month | Tests Run | Validated | Invalidated | Inconclusive | Success Rate | Avg Test Duration |
-|-------|-----------|-----------|-------------|--------------|--------------|-------------------|
-| *[Month]* | *[#]* | *[#]* | *[#]* | *[#]* | *[%]* | *[Days]* |
+### The RICE Filter
+**Reach:** How many users affected? (1-10)  
+**Impact:** How much will it move key metrics? (1-10)  
+**Confidence:** How sure are we this will work? (1-10)  
+**Effort:** How much work to test? (1-10, lower = less work)
 
-**Target:** 30-40% validation rate *(Too high = not taking enough risks, too low = poor assumptions)*
+**Score = (Reach × Impact × Confidence) / Effort**
+
+### Red Flags (Skip These Ideas)
+🚩 "Users will love this because I love this"  
+🚩 "It worked for [successful company], so it'll work for us"  
+🚩 "We can't know until we build the full feature"  
+🚩 "The data is unclear, but I have a strong feeling"
+
+### Green Lights (Test These Ideas)
+✅ Based on direct user feedback or observed behavior  
+✅ Addresses a validated pain point  
+✅ Can be tested with minimal development  
+✅ Has clear success/failure criteria
 
 ---
 
-## Team Learning Rituals
+## 6. Team Rituals & Cadence
 
 ### Weekly Hypothesis Review (Every Friday, 30 min)
-- Review active experiments
-- Make go/no-go decisions  
-- Prioritize next week's tests
-- Share surprising learnings
+**Attendees:** Product team + key stakeholders  
+**Agenda:**
+1. Review active test results (10 min)
+2. Make Ship/Pivot/Kill decisions (10 min)
+3. Select next hypothesis from backlog (10 min)
 
-### Monthly Pivot-or-Persevere (First Monday, 2 hours)
-- Review all validated/invalidated assumptions
-- Update product strategy based on learnings
-- Adjust hypothesis backlog priorities
-- Celebrate failures (we learned something!)
+**Decision Rules:**
+- **Ship:** If primary metric hit + guardrails maintained
+- **Pivot:** If primary metric missed but learnings suggest iteration
+- **Kill:** If primary metric missed + learnings suggest false assumption
+
+### Monthly Learning Review (First Monday, 90 min)
+**Attendees:** Full team  
+**Agenda:**
+1. Review Learning Library additions (30 min)
+2. Strategic implications discussion (30 min)
+3. Update Lean Canvas based on learnings (30 min)
+
+**Outputs:**
+- Updated assumptions in Lean Canvas
+- 3-month hypothesis roadmap
+- Strategic pivot decisions (if needed)
 
 ---
 
-*Document Version: 2.0 - Lean-focused*
-*Next Review: [Every Friday]*
-*Remember: If you're not embarrassed by your first test, you waited too long!*
+## 7. Experiment Pipeline Health
+
+*Track our learning velocity:*
+
+| Month | Hypotheses Tested | Validated | Invalidated | Inconclusive | Success Rate |
+|-------|-------------------|-----------|-------------|--------------|--------------|
+| Month 1 | 3 | 1 | 2 | 0 | 33% |
+| Month 2 | 5 | 2 | 2 | 1 | 40% |
+| Month 3 | 4 | 1 | 3 | 0 | 25% |
+
+**Target Success Rate:** 30-40% *(Too high = not taking enough risks, too low = poor assumptions)*  
+**Target Velocity:** 4-6 hypotheses tested per month  
+**Average Time to Decision:** 7 days (target: ≤10 days)
+
+---
+
+*"The only way to win is to learn faster than anyone else." - Eric Ries*
+
+*Template Version: 3.0 - Streamlined decision engine with bias protection*
