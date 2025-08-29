@@ -61,11 +61,13 @@
 **Riskiest Assumption Being Tested:** *Users are avoiding signup primarily due to payment barrier*
 
 **Minimum Viable Test:**
+
 - **Method:** A/B test with 50/50 traffic split
 - **Success Criteria:** Primary: >60% completion rate, Guardrail: ≥35% 7-day retention
 - **What We're NOT Testing:** Full freemium model implementation
 
 **Results:**
+
 - ✅ Primary metric: 78% completion (+73% vs control)
 - ⚠️ Guardrail violated: 31% retention (-11% vs control)
 
@@ -92,6 +94,7 @@
 **Riskiest Assumption Being Tested:** *Users need more guidance, not less friction*
 
 **Minimum Viable Test:**
+
 - **Method:** A/B test on no-payment signups only
 - **Success Criteria:** Primary: ≥35% 7-day retention, Secondary: ≥80% complete checklist
 - **What We're NOT Testing:** Complex gamification or rewards
@@ -150,6 +153,7 @@
 *Use this when evaluating new hypothesis ideas:*
 
 ### The RICE Filter
+
 **Reach:** How many users affected? (1-10)  
 **Impact:** How much will it move key metrics? (1-10)  
 **Confidence:** How sure are we this will work? (1-10)  
@@ -158,12 +162,14 @@
 **Score = (Reach × Impact × Confidence) / Effort**
 
 ### Red Flags (Skip These Ideas)
+
 🚩 "Users will love this because I love this"  
 🚩 "It worked for [successful company], so it'll work for us"  
 🚩 "We can't know until we build the full feature"  
 🚩 "The data is unclear, but I have a strong feeling"
 
 ### Green Lights (Test These Ideas)
+
 ✅ Based on direct user feedback or observed behavior  
 ✅ Addresses a validated pain point  
 ✅ Can be tested with minimal development  
@@ -174,25 +180,31 @@
 ## 6. Team Rituals & Cadence
 
 ### Weekly Hypothesis Review (Every Friday, 30 min)
+
 **Attendees:** Product team + key stakeholders  
 **Agenda:**
+
 1. Review active test results (10 min)
 2. Make Ship/Pivot/Kill decisions (10 min)
 3. Select next hypothesis from backlog (10 min)
 
 **Decision Rules:**
+
 - **Ship:** If primary metric hit + guardrails maintained
 - **Pivot:** If primary metric missed but learnings suggest iteration
 - **Kill:** If primary metric missed + learnings suggest false assumption
 
 ### Monthly Learning Review (First Monday, 90 min)
+
 **Attendees:** Full team  
 **Agenda:**
+
 1. Review Learning Library additions (30 min)
 2. Strategic implications discussion (30 min)
 3. Update Lean Canvas based on learnings (30 min)
 
 **Outputs:**
+
 - Updated assumptions in Lean Canvas
 - 3-month hypothesis roadmap
 - Strategic pivot decisions (if needed)

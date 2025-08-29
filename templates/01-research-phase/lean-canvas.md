@@ -34,16 +34,19 @@
 *Visual representation of our assumption confidence levels*
 
 🔴 **HIGH RISK (Test Immediately)**
+
 - That customers will pay $29/month
 - That our UVP resonates with target segment
 - That we can acquire customers for <$100
 
-🟡 **MEDIUM RISK (Test Soon)** 
+🟡 **MEDIUM RISK (Test Soon)**
+
 - That 7-day retention predicts LTV
 - That our advantage is defensible
 - That target channels will work
 
 🟢 **LOW RISK (Monitor)**
+
 - That we can build the MVP features
 - That our team can execute
 
@@ -52,6 +55,7 @@
 ## Next Canvas Review
 
 **Trigger Events for Canvas Update:**
+
 - [ ] Complete any experiment with VALIDATED or INVALIDATED result
 - [ ] Major market shift or competitor move
 - [ ] Pivot decision made
@@ -67,11 +71,13 @@
 *Keep these documents aligned:*
 
 **After updating this canvas:**
+
 - [ ] Sync riskiest assumptions with `hypothesis-list.md` backlog
-- [ ] Update strategic direction in `opportunity-landscape.md` 
+- [ ] Update strategic direction in `opportunity-landscape.md`
 - [ ] Ensure problem validation aligns with `problem-validation-sprint.md`
 
 **This canvas should be updated after:**
+
 - [ ] Any experiment summary shows VALIDATED/INVALIDATED result
 - [ ] Problem validation sprint concludes
 - [ ] Major strategic pivot discussion
