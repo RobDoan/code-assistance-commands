@@ -17,6 +17,8 @@
 
 ## Executive Summary & Decision
 
+**Original Hypothesis:** [State the original H₁ from the test plan]
+
 **Hypothesis Status:** ✅ VALIDATED / ❌ INVALIDATED / ⚠️ INCONCLUSIVE  
 **Recommendation:** [SHIP / ITERATE / ABANDON]  
 **Business Impact:** [Brief summary of the key result and its financial or strategic implication]
@@ -25,26 +27,19 @@
 
 ### Objective Findings (What the data says)
 > Stick to the facts. Report quantitative results and direct qualitative observations.
-- The primary metric [Metric Name] showed a relative change of [+/-X.X%] ([Confidence Interval]), with a p-value of [0.XX]. This result [is/is not] statistically significant at our 95% confidence threshold
+
+- The primary metric **[Metric Name]** showed a relative change of **[+/-X.X%]** (Target: [Y%]) with a p-value of **[0.XX]**
+- This result **[is/is not]** statistically significant at our 95% confidence threshold
+- The confidence interval for the change is **[X% to Y%]**
 - Guardrail metric [Metric Name] changed by [+/-Y.Y%], which [did/did not] breach our pre-defined limit
 - [X%] of users in the variant group mentioned [Theme Name] in feedback surveys
-- [Additional objective observations]
 
 ### Subjective Interpretation (What we think it means)
 > This is where we build our narrative and connect the dots.
+
 - We believe the improvement in the primary metric is because [our interpretation of user behavior]
 - Although the result wasn't statistically significant, the qualitative feedback suggests [our interpretation]
-- Our next iteration should focus on [specific change] to [expected outcome]
-
-## Original Hypothesis Review
-
-**We believed that:** [Original hypothesis from test plan]  
-**Success Criteria:** [Original target metric and threshold]
-
-**Evidence Summary:**
-- Primary metric achieved [X%] change (target was [Y%])
-- Statistical significance: [Achieved/Not achieved] at [X%] confidence
-- Practical significance: [Meaningful/Not meaningful] for business
+- The result was practically significant/insignificant because [explain why the magnitude of the change matters or doesn't matter to the business]
 
 ## Quantitative Results
 
@@ -66,7 +61,7 @@
 |--------|--------|-------------|-----------------|
 | [Metric] | [+/-X%] | [✅/❌] | [None/Investigation needed] |
 
-### Segment Analysis
+### Pre-Defined Segment Analysis
 | Segment | Sample Size | Primary Metric Change | Notable Behavior |
 |---------|-------------|----------------------|------------------|
 | New Users | [N] | [+/-X%] | [Insight] |
