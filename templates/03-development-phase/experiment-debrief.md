@@ -11,7 +11,7 @@
 
 ## 2. Key Learning
 
-- **What We Learned:** [The single most important insight from this experiment.]
+- **What We Learned:** [The single most important insight from this experiment, including what didn't work as expected.]
 - **What Surprised Us:** [The most unexpected outcome, qualitative or quantitative.]
 
 ## 3. The Decision
