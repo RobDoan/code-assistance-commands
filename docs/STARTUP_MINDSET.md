@@ -134,47 +134,43 @@
 
 ## Failure Modes & Fortifications
 
-*Every principle can be corrupted. Here's how to protect against it.*
+*Every principle can be corrupted. Here's how we fortify it. This is our cultural immune system.*
 
-### 🚨 **The Learning Loophole**
+### 🚨 **The Velocity Trap: Speed vs. Craft**
 
-**The Trap:** Using "experimentation" to excuse shipping low-quality, unfinished work that never graduates from prototype to product.
+**The Blind Spot:** Our relentless focus on speed can be weaponized to justify poor craft, technical debt, or shallow work. "Seek Velocity" can become an excuse for shipping low-quality products that never mature.
 
-**The Safeguard:** **Craftsmanship Debt Tracking**
-- Every experiment touching production gets a "Debt Score" (1-5) 
-- Score = effort needed to reach production quality
-- Teams with high debt scores must take "hardening sprints"
-- Make the cost of speed visible and manageable
+**The Safeguard: Craftsmanship Debt Tracking**
+- Every experiment gets a "Debt Score" (1-5) for production readiness.
+- High-debt scores trigger mandatory "hardening sprints."
+- **This makes the cost of speed visible and forces a conscious trade-off between velocity and quality.**
 
-### 🎭 **Weaponized Principles**
+### 🎭 **Weaponized Principles: Good Faith vs. Bad Faith**
 
-**The Trap:** Using principles to avoid difficult work or shut down bold ideas.
+**The Trap:** Using our shared language to avoid difficult work, shut down bold ideas, or justify personal bias. Intellectual honesty can be twisted into unkindness; celebrating failure can be used to kill ideas for political reasons.
 
-**"Celebrate Funerals" Weaponization:**
-- *Bad faith:* "We need to kill this risky idea" (to avoid personal discomfort)
-- *Good faith:* "This data clearly shows we should pivot" (evidence-based)
+**The Safeguard: Red Team Reviews**
+- **Mandate:** Assign 2 uninvested people to challenge every major experiment.
+- **Their Job:** Poke holes, question metrics, surface biases, and stress-test the hypothesis.
+- **The Goal:** Make intellectual dissent a shared responsibility, not an act of individual courage. Protects against weaponization by separating the idea from the person.
 
-**"Seek Velocity" Weaponization:**
-- *Bad faith:* "Let's ship something simple" (to avoid hard architectural work)  
-- *Good faith:* "Let's test core assumptions first" (to learn faster)
+**Examples of Weaponization:**
 
-**"Data Over Drama" Weaponization:**
-- *Bad faith:* "If you can't measure it, it doesn't matter" (dismissing qualitative insights)
-- *Good faith:* "Let's separate what we observed from what we interpret" (intellectual honesty)
+| Principle | Bad Faith (Weaponized) | Good Faith (Intended) |
+| :--- | :--- | :--- |
+| **Celebrate Funerals** | "We need to kill this risky idea." (Translation: *I'm uncomfortable with this.*) | "This data clearly invalidates our hypothesis. Let's pivot." |
+| **Seek Velocity** | "Let's just ship a simple version." (Translation: *I want to avoid hard architectural work.*) | "Let's test the core assumption with a simple experiment first." |
+| **Data Over Drama** | "If you can't measure it, it's not real." (Translation: *I want to dismiss this qualitative insight.*) | "Let's separate what we observed from our interpretation." |
 
-**The Safeguard:** **Red Team Reviews**
-- Assign 2 uninvested people to challenge every major experiment design
-- Their job: poke holes, question metrics, surface biases
-- Makes intellectual dissent a shared responsibility, not individual courage
+### ⚡ **The Pressure Test: Principles Under Fire**
 
-### ⚡ **Pressure Test Failures**
+**The Trap:** Abandoning our principles the moment pressure hits—a missed quarterly target, a looming deadline, a competitor's launch. This is when we are most vulnerable to making bad, fear-based decisions.
 
-**The Trap:** Abandoning principles when quarterly numbers are missed or deadlines loom.
+**The Safeguard: Crisis Protocols**
+- **Pre-commit to "tough times" frameworks** before the crisis. Define how decisions will be made when we're under stress.
+- **Ritualize the principles.** When pressure mounts, we don't abandon the mindset; we double down on it. The 3 AM test becomes our guide.
+- **Mantra:** **"Tough times are when we need these principles most, not least."** They are our shield, not a luxury.
 
-**The Safeguard:** **Crisis Protocols**
-- Pre-commit to decision frameworks before pressure hits
-- "Tough times are when we need these principles most, not least"
-- Create specific rituals that activate under stress, not disappear
 
 ---
 
@@ -225,40 +221,38 @@ Avoid these at all costs:
 
 ## Your Implementation Playbook
 
+*This is how we turn mindset into action. These are not just job descriptions; they are roles in our learning machine.*
+
 ### Founders
 
-- Make hypothesis-testing your default mode
-- **Institute "Failure of the Month" awards** - public celebration of experiments that saved time/money
-- Share failures transparently with dollar amounts saved
-- Pre-commit to decision frameworks before pressure hits
-- Your job: Chief Learning Officer who models intellectual courage
+- **Model intellectual courage.** Your primary job is to be the Chief Learning Officer.
+- **Ritualize learning.** Institute and lead the **"Failure of the Month"** award. Publicly celebrate the most valuable invalidated hypothesis, quantifying the time and money saved.
+- **Share failures transparently.** Talk about your own mistakes and what you learned from them.
+- **Defend the principles under pressure.** You are the final backstop for the Crisis Protocols. Your actions during tough times will define the culture.
 
 ### Product Managers
 
-- Write hypotheses, not requirements
-- Define failure before success  
-- **Track "Craftsmanship Debt" scores** for all experiments
-- Enforce Red Team reviews for major tests
-- Track learning velocity, not feature velocity
-- Your job: Truth Seeker with quality guardrails
+- **Act as the Truth Seeker.** Your allegiance is to the truth, not to a feature roadmap.
+- **Write hypotheses, not requirements.** Define failure conditions before you even think about success.
+- **Own the **Craftsmanship Debt Score** for all experiments. You are the gatekeeper of quality and must ensure the cost of speed is a conscious decision.
+- **Enforce Red Team Reviews** for all major experiments. Ensure intellectual rigor and protect the team from its own biases.
+- **Track learning velocity, not feature velocity.** Your success is measured by how fast the team learns, not just by how much it ships.
 
 ### Engineers
 
-- Build for learning, not scale (initially)
-- **Assign honest "Debt Scores"** to experimental code (1-5 scale)
-- Make rollbacks safe and shameless
-- Own your code end-to-end
-- Push back on "experiments" that are really just cutting corners
-- Your job: Rapid Experimenter with craftsman integrity
+- **Be a Rapid Experimenter with craftsman integrity.** Build to learn, but don't mistake an experiment for a shortcut.
+- **Assign honest **Debt Scores** (1-5) to your code. Your honesty here is critical for making the cost of speed visible.
+- **Build for resilience.** Make rollbacks safe, easy, and shameless. A fast rollback is a successful experiment.
+- **Push back on corner-cutting.** Challenge experiments that are not designed to produce clean learnings or that add unacceptable debt.
+- **Own your code end-to-end.** You are responsible for the experiment, the data it generates, and the debt it incurs.
 
 ### Data Scientists
 
-- Enforce rigor without being a bottleneck
-- **Lead Red Team reviews** - challenge experiment designs before they run
-- Make bias visible and preventable
-- Teach p-value literacy
-- Separate "what we observed" from "what it means"
-- Your job: Reality Checker and bias detector
+- **Serve as the Reality Checker.** You are the guardian of intellectual honesty in our experimentation process.
+- **Lead Red Team Reviews.** Your role is to be the lead challenger, questioning assumptions, surfacing biases, and preventing p-hacking before a single user sees the experiment.
+- **Make bias visible and preventable.** Design experiments that challenge our assumptions, not just confirm them.
+- **Separate observation from interpretation.** In every analysis, clearly distinguish "what the data says" from "what we think it means."
+- **Teach rigor.** Be a coach who raises the data literacy of the entire company.
 
 ---
 
