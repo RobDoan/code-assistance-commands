@@ -212,13 +212,14 @@ Avoid these at all costs:
 Everything awaits feedback. Everything can be improved. Everything must evolve.
 
 The templates went through five rounds of brutal feedback:
-1. Academic rigor
-2. Lean methodology
-3. Statistical validity
-4. Practical usability
-5. Cultural impact
 
-Each round didn't replace; it refined. This is how we build everything.
+1. **Academic rigor** → Added null hypothesis sections to prevent confirmation bias
+2. **Lean methodology** → Collapsed 5 research docs into 1 experiment brief
+3. **Statistical validity** → Pre-defined analysis segments to prevent p-hacking
+4. **Practical usability** → Copy-paste commands replaced abstract instructions
+5. **Cultural impact** → Added "Our Philosophy" sections to embed mindset
+
+Each round didn't replace; it refined. Round 3 killed our beloved "user journey maps" when data showed they predicted nothing. Round 4 turned our 20-step deployment process into 3 commands. This is how we build everything.
 
 ---
 
@@ -235,7 +236,7 @@ This is the startup mindset. Not a set of documents, but a way of thinking. Not 
 
 ---
 
-> *"In the beginner's mind there are many possibilities, but in the expert's mind there are few."*  
+> *"In the beginner's mind there are many possibilities, but in the expert's mind there are few."*
 > — Shunryu Suzuki
 
 **Stay hungry. Stay foolish. Stay learning.**
