@@ -4,6 +4,9 @@
 
 **Purpose:** Capture deployment insights, issues, and improvements for future releases.
 
+🛡️ **BLAMELESS LEARNING ZONE** 🛡️  
+This log is for learning and pattern recognition, not fault attribution. Focus on "what happened" and "how to improve," never "who did what wrong." The goal is to make the next deployment safer and smoother.
+
 ---
 
 ## Template Entry Format

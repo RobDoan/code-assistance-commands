@@ -12,6 +12,7 @@
 | **Risk Level** | `[Low / Medium / High]` |
 | **Jira Ticket(s)**| `[Link to tickets]` |
 | **On-Call Engineer**| `[@username]` |
+| **Secondary On-Call**| `[@username]` |
 | **Rollback Plan** | `[Previous stable version to rollback to]` |
 
 ## 2. Pre-Deployment Checklist (MANDATORY)
@@ -28,7 +29,7 @@
 
 ### Stage 1: Canary Rollout (10% Traffic)
 ```bash
-# REPLACE WITH EXACT DEPLOYMENT COMMAND
+# This must be the exact, copy-pasteable command. No templating.
 kubectl set image deployment/auth-service auth-service=registry.company.com/auth-service:v1.5.2
 kubectl patch service auth-service-canary --patch '{"spec":{"selector":{"version":"v1.5.2"}}}'
 # OR for Helm:
@@ -39,7 +40,7 @@ kubectl patch service auth-service-canary --patch '{"spec":{"selector":{"version
 
 ### Stage 2: Full Rollout (100% Traffic)
 ```bash
-# REPLACE WITH EXACT COMMAND FOR FULL DEPLOYMENT
+# This must be the exact, copy-pasteable command. No templating.
 kubectl patch service auth-service --patch '{"spec":{"selector":{"version":"v1.5.2"}}}'
 # OR for Helm:
 # helm upgrade auth-service ./charts/auth-service --set canary.weight=100
@@ -47,8 +48,10 @@ kubectl patch service auth-service --patch '{"spec":{"selector":{"version":"v1.5
 
 ## 4. Monitoring & Health Checks
 
-### Primary Dashboard
+### Primary Dashboard (REQUIRED)
 **LINK:** [DIRECT LINK TO PRE-FILTERED DASHBOARD - REPLACE THIS]
+
+⚠️ **DEPLOYMENT CANNOT PROCEED WITHOUT FUNCTIONAL DASHBOARD LINK** ⚠️
 
 ### Critical Metrics & Rollback Thresholds
 
@@ -104,10 +107,10 @@ kubectl logs -l app=auth-service --tail=50 --timestamps
 
 ### Rollback Command
 ```bash
-# REPLACE WITH EXACT, TESTED ROLLBACK COMMAND
+# This must be the exact, copy-pasteable rollback command. No templating.
 kubectl set image deployment/auth-service auth-service=registry.company.com/auth-service:v1.5.1
-# OR for Helm:
-# helm rollback auth-service 1
+# OR for Helm (find revision with: helm history auth-service):
+# helm rollback auth-service <REVISION_NUMBER>
 ```
 
 ### Rollback Verification
