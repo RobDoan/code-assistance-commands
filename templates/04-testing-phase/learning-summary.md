@@ -23,6 +23,8 @@
 **Recommendation:** [SHIP / ITERATE / ABANDON]  
 **Business Impact:** [Brief summary of the key result and its financial or strategic implication]
 
+> **If your hypothesis was INVALIDATED:** Congratulations! You've just saved the company significant time and resources by learning what doesn't work before building it fully. This is a successful experiment that prevented waste and generated valuable knowledge about your users.
+
 ## Objective Findings vs. Subjective Interpretation
 
 ### Objective Findings (What the data says)

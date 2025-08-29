@@ -1,5 +1,15 @@
 # Test Plan
 
+## Our Testing Manifesto
+
+> This document is a tool for learning, not just for winning. Our goal is to make smart bets and accelerate our understanding of our users. We value intellectual honesty, and we celebrate learning from our results, especially when they prove us wrong.
+
+> - **An invalidated hypothesis is a success.** It has saved us from investing in the wrong thing. We celebrate the learning.
+> - **We are skeptical of our own ideas.** The purpose of a test is to try to *kill* our idea, not to confirm it. The null hypothesis is our default assumption.
+> - **We commit to our decisions upfront.** This framework protects us from our own biases. We will honor the outcome we agreed to.
+
+---
+
 **Purpose:** Define the hypothesis, success metrics, and experimental design to enable objective decision-making through controlled testing.
 
 ## Test Overview
