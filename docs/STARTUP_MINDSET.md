@@ -132,6 +132,52 @@
 
 ---
 
+## Failure Modes & Fortifications
+
+*Every principle can be corrupted. Here's how to protect against it.*
+
+### 🚨 **The Learning Loophole**
+
+**The Trap:** Using "experimentation" to excuse shipping low-quality, unfinished work that never graduates from prototype to product.
+
+**The Safeguard:** **Craftsmanship Debt Tracking**
+- Every experiment touching production gets a "Debt Score" (1-5) 
+- Score = effort needed to reach production quality
+- Teams with high debt scores must take "hardening sprints"
+- Make the cost of speed visible and manageable
+
+### 🎭 **Weaponized Principles**
+
+**The Trap:** Using principles to avoid difficult work or shut down bold ideas.
+
+**"Celebrate Funerals" Weaponization:**
+- *Bad faith:* "We need to kill this risky idea" (to avoid personal discomfort)
+- *Good faith:* "This data clearly shows we should pivot" (evidence-based)
+
+**"Seek Velocity" Weaponization:**
+- *Bad faith:* "Let's ship something simple" (to avoid hard architectural work)  
+- *Good faith:* "Let's test core assumptions first" (to learn faster)
+
+**"Data Over Drama" Weaponization:**
+- *Bad faith:* "If you can't measure it, it doesn't matter" (dismissing qualitative insights)
+- *Good faith:* "Let's separate what we observed from what we interpret" (intellectual honesty)
+
+**The Safeguard:** **Red Team Reviews**
+- Assign 2 uninvested people to challenge every major experiment design
+- Their job: poke holes, question metrics, surface biases
+- Makes intellectual dissent a shared responsibility, not individual courage
+
+### ⚡ **Pressure Test Failures**
+
+**The Trap:** Abandoning principles when quarterly numbers are missed or deadlines loom.
+
+**The Safeguard:** **Crisis Protocols**
+- Pre-commit to decision frameworks before pressure hits
+- "Tough times are when we need these principles most, not least"
+- Create specific rituals that activate under stress, not disappear
+
+---
+
 ## The Seven Deadly Sins of Product Development
 
 Avoid these at all costs:
@@ -180,28 +226,39 @@ Avoid these at all costs:
 ## Your Implementation Playbook
 
 ### Founders
+
 - Make hypothesis-testing your default mode
-- Celebrate killed ideas publicly
-- Share failures transparently
-- Your job: Chief Learning Officer
+- **Institute "Failure of the Month" awards** - public celebration of experiments that saved time/money
+- Share failures transparently with dollar amounts saved
+- Pre-commit to decision frameworks before pressure hits
+- Your job: Chief Learning Officer who models intellectual courage
 
 ### Product Managers
+
 - Write hypotheses, not requirements
-- Define failure before success
+- Define failure before success  
+- **Track "Craftsmanship Debt" scores** for all experiments
+- Enforce Red Team reviews for major tests
 - Track learning velocity, not feature velocity
-- Your job: Truth Seeker
+- Your job: Truth Seeker with quality guardrails
 
 ### Engineers
+
 - Build for learning, not scale (initially)
+- **Assign honest "Debt Scores"** to experimental code (1-5 scale)
 - Make rollbacks safe and shameless
 - Own your code end-to-end
-- Your job: Rapid Experimenter
+- Push back on "experiments" that are really just cutting corners
+- Your job: Rapid Experimenter with craftsman integrity
 
 ### Data Scientists
+
 - Enforce rigor without being a bottleneck
+- **Lead Red Team reviews** - challenge experiment designs before they run
 - Make bias visible and preventable
 - Teach p-value literacy
-- Your job: Reality Checker
+- Separate "what we observed" from "what it means"
+- Your job: Reality Checker and bias detector
 
 ---
 
@@ -251,4 +308,18 @@ This is the startup mindset. Not a set of documents, but a way of thinking. Not 
 
 ---
 
-**Version:** 2.0 | **Last Updated:** Today | **Next Review:** After your next failure
+## When the Pressure Hits
+
+*The true test of these principles isn't when everything is going well - it's when the numbers are down, the deadline is looming, and everyone wants "predictable execution."*
+
+**That's exactly when you need this mindset most.**
+
+- We are truth-seekers, not feature-builders
+- We celebrate saving money and time, not just making it  
+- This mindset is our shield during tough times, not a luxury for good times
+
+**We will win by out-learning, out-thinking, and out-testing everyone else.**
+
+---
+
+**Version:** 3.0 | **Last Updated:** Today | **Next Review:** After your next failure
