@@ -6,10 +6,10 @@ You have a strong set of templates that are already better than what 90% of star
 
 My review focuses on transforming them from "forms to be filled" into a cohesive "operating system for validated learning." The key changes are designed to:
 
-1.  **Force Hypothesis-Driven Thinking:** Every entry on every document is reframed as a testable assumption, not a fact.
-2.  **Expose Risk & Bias:** The structure is redesigned to make it impossible for the team to hide from their riskiest assumptions or ignore disconfirming data.
-3.  **Accelerate Decision-Making:** The templates are streamlined to reduce bureaucratic drag and focus solely on the evidence needed for the next `Pivot, Persevere, or Kill` decision.
-4.  **Create a Learning Flywheel:** The documents are more explicitly linked, ensuring that a learning from one (e.g., an `Experiment Summary`) automatically updates the others (the `Lean Canvas` and `Hypothesis List`).
+1. **Force Hypothesis-Driven Thinking:** Every entry on every document is reframed as a testable assumption, not a fact.
+2. **Expose Risk & Bias:** The structure is redesigned to make it impossible for the team to hide from their riskiest assumptions or ignore disconfirming data.
+3. **Accelerate Decision-Making:** The templates are streamlined to reduce bureaucratic drag and focus solely on the evidence needed for the next `Pivot, Persevere, or Kill` decision.
+4. **Create a Learning Flywheel:** The documents are more explicitly linked, ensuring that a learning from one (e.g., an `Experiment Summary`) automatically updates the others (the `Lean Canvas` and `Hypothesis List`).
 
 This revised system will feel more demanding for the team, but it will dramatically increase your velocity of learning and reduce the risk of building something nobody wants.
 
@@ -25,17 +25,17 @@ My redesign forces every single box on the canvas to be treated as a hypothesis 
 
 ### 2. Deep-Dive Analysis
 
-*   **Section: The Canvas (One-Page Overview)**
-    *   **Tactical Feedback:** The standard 9-box grid is present. However, it presents all information with equal visual weight, implying all boxes are equally validated.
-    *   **Strategic Insight:** This format allows the **Eager Founder** to fill in the "Solution" and "Revenue Streams" boxes with pure speculation, which the **Skeptical Engineer** then sees as a feature list to be built and the **Time-Poor Executive** might mistake for a financial projection. It encourages **Solutioneering** and the **Planning Fallacy**.
+* **Section: The Canvas (One-Page Overview)**
+  * **Tactical Feedback:** The standard 9-box grid is present. However, it presents all information with equal visual weight, implying all boxes are equally validated.
+  * **Strategic Insight:** This format allows the **Eager Founder** to fill in the "Solution" and "Revenue Streams" boxes with pure speculation, which the **Skeptical Engineer** then sees as a feature list to be built and the **Time-Poor Executive** might mistake for a financial projection. It encourages **Solutioneering** and the **Planning Fallacy**.
 
-*   **Section: Riskiest Assumptions to Test First**
-    *   **Tactical Feedback:** It's excellent that this section exists and is separated. However, this separation allows the team to "park" the risks here while still viewing the main canvas as the "plan."
-    *   **Strategic Insight:** The risk isn't separate from the canvas; the risk *is* the canvas. By separating them, you dilute the core purpose of the tool. The redesign integrates risk assessment directly into each canvas block.
+* **Section: Riskiest Assumptions to Test First**
+  * **Tactical Feedback:** It's excellent that this section exists and is separated. However, this separation allows the team to "park" the risks here while still viewing the main canvas as the "plan."
+  * **Strategic Insight:** The risk isn't separate from the canvas; the risk *is* the canvas. By separating them, you dilute the core purpose of the tool. The redesign integrates risk assessment directly into each canvas block.
 
-*   **Section: Key Metrics Dashboard**
-    *   **Tactical Feedback:** Using targets for 3 and 12 months is good, but it frames them as a linear progression.
-    *   **Strategic Insight:** This encourages thinking of metrics as a project plan. The **Eager Founder** will put in ambitious numbers, creating an **Anchoring Bias** for the whole team. It should be reframed as "What metric are we trying to move *in our next experiment*?"
+* **Section: Key Metrics Dashboard**
+  * **Tactical Feedback:** Using targets for 3 and 12 months is good, but it frames them as a linear progression.
+  * **Strategic Insight:** This encourages thinking of metrics as a project plan. The **Eager Founder** will put in ambitious numbers, creating an **Anchoring Bias** for the whole team. It should be reframed as "What metric are we trying to move *in our next experiment*?"
 
 ### 3. Strategically Revised Template: `lean-canvas.md`
 
@@ -76,17 +76,17 @@ The strategic redesign focuses on maintaining the rigor while adding a "fast lan
 
 ### 2. Deep-Dive Analysis
 
-*   **Section: Hypothesis Framework & Prioritization**
-    *   **Tactical Feedback:** The `(Impact × Risk) / Effort` formula is a classic, but can lead to long debates over scoring.
-    *   **Strategic Insight:** This is where **Analysis Paralysis** can creep in. The goal is to be roughly right, quickly. The formula is a guide, not gospel. The redesign will add a note to this effect.
+* **Section: Hypothesis Framework & Prioritization**
+  * **Tactical Feedback:** The `(Impact × Risk) / Effort` formula is a classic, but can lead to long debates over scoring.
+  * **Strategic Insight:** This is where **Analysis Paralysis** can creep in. The goal is to be roughly right, quickly. The formula is a guide, not gospel. The redesign will add a note to this effect.
 
-*   **Section: Active Experiments**
-    *   **Tactical Feedback:** The structure is very detailed, which is good for rigor but can be visually noisy when you're trying to make a quick decision.
-    *   **Strategic Insight:** The **Time-Poor Executive** needs to see the status and the "so what?" immediately. The current format requires them to read through the whole block. The redesign will hoist the `Verdict` and `Decision` to the top.
+* **Section: Active Experiments**
+  * **Tactical Feedback:** The structure is very detailed, which is good for rigor but can be visually noisy when you're trying to make a quick decision.
+  * **Strategic Insight:** The **Time-Poor Executive** needs to see the status and the "so what?" immediately. The current format requires them to read through the whole block. The redesign will hoist the `Verdict` and `Decision` to the top.
 
-*   **Section: Learning Library**
-    *   **Tactical Feedback:** This is the most valuable part of the document for long-term learning. Separating validated, invalidated, and inconclusive is perfect.
-    *   **Strategic Insight:** This is a powerful guard against institutional amnesia and the **Sunk Cost Fallacy**. It celebrates learning from failure, which is critical for culture. No changes needed here, it's fantastic.
+* **Section: Learning Library**
+  * **Tactical Feedback:** This is the most valuable part of the document for long-term learning. Separating validated, invalidated, and inconclusive is perfect.
+  * **Strategic Insight:** This is a powerful guard against institutional amnesia and the **Sunk Cost Fallacy**. It celebrates learning from failure, which is critical for culture. No changes needed here, it's fantastic.
 
 ### 3. Strategically Revised Template: `hypothesis-list.md`
 
@@ -192,17 +192,17 @@ My revisions are minor but aim to sharpen the focus on the *pain* and *emotion* 
 
 ### 2. Deep-Dive Analysis
 
-*   **Section: Problem Validation Criteria**
-    *   **Tactical Feedback:** The criteria are specific and measurable. Excellent.
-    *   **Strategic Insight:** This is the core of the document's power. It forces the **Eager Founder** to define failure upfront, which is psychologically difficult but managerially essential. It provides a clear contract for the team.
+* **Section: Problem Validation Criteria**
+  * **Tactical Feedback:** The criteria are specific and measurable. Excellent.
+  * **Strategic Insight:** This is the core of the document's power. It forces the **Eager Founder** to define failure upfront, which is psychologically difficult but managerially essential. It provides a clear contract for the team.
 
-*   **Section: Problem Interview Script**
-    *   **Tactical Feedback:** A very solid script that focuses on past behavior over future speculation.
-    *   **Strategic Insight:** This script is a fantastic tool to disarm the **Eager Founder's** instinct to sell. It forces them to listen. For the **Skeptical Engineer**, the question "How do you handle this today?" is gold, as the answer (the workaround) often contains the seeds of the right solution.
+* **Section: Problem Interview Script**
+  * **Tactical Feedback:** A very solid script that focuses on past behavior over future speculation.
+  * **Strategic Insight:** This script is a fantastic tool to disarm the **Eager Founder's** instinct to sell. It forces them to listen. For the **Skeptical Engineer**, the question "How do you handle this today?" is gold, as the answer (the workaround) often contains the seeds of the right solution.
 
-*   **Section: Evidence Collection**
-    *   **Tactical Feedback:** The separation of quantitative and qualitative evidence is perfect.
-    *   **Strategic Insight:** The "Powerful Quotes" section is critical. The **Time-Poor Executive** may not read the whole report, but a single, painful quote can convey the market need more effectively than any chart. It provides the emotional texture needed to truly understand the user.
+* **Section: Evidence Collection**
+  * **Tactical Feedback:** The separation of quantitative and qualitative evidence is perfect.
+  * **Strategic Insight:** The "Powerful Quotes" section is critical. The **Time-Poor Executive** may not read the whole report, but a single, painful quote can convey the market need more effectively than any chart. It provides the emotional texture needed to truly understand the user.
 
 ### 3. Strategically Revised Template: `problem-validation-sprint.md`
 
@@ -321,17 +321,17 @@ The redesign reframes this as a "Strategy Sprint" artifact that culminates in a 
 
 ### 2. Deep-Dive Analysis
 
-*   **Section: Market Opportunities & Unmet Needs**
-    *   **Tactical Feedback:** Good for brainstorming, but can lead to a scattered list of unrelated ideas.
-    *   **Strategic Insight:** The **Eager Founder** loves this section and might generate 20 ideas, leading to a lack of focus. It needs a forcing function to converge these opportunities into a strategic direction.
+* **Section: Market Opportunities & Unmet Needs**
+  * **Tactical Feedback:** Good for brainstorming, but can lead to a scattered list of unrelated ideas.
+  * **Strategic Insight:** The **Eager Founder** loves this section and might generate 20 ideas, leading to a lack of focus. It needs a forcing function to converge these opportunities into a strategic direction.
 
-*   **Section: Competitor Teardown**
-    *   **Tactical Feedback:** Focusing on "Exploitable Weaknesses" is smart.
-    *   **Strategic Insight:** This is a great way to avoid the **Feature Parity Trap**. It frames competitors not as a list of features to copy, but as a set of assumptions to attack. The **Skeptical Engineer** can use this to define what *not* to build.
+* **Section: Competitor Teardown**
+  * **Tactical Feedback:** Focusing on "Exploitable Weaknesses" is smart.
+  * **Strategic Insight:** This is a great way to avoid the **Feature Parity Trap**. It frames competitors not as a list of features to copy, but as a set of assumptions to attack. The **Skeptical Engineer** can use this to define what *not* to build.
 
-*   **Section: Actionable Hypotheses**
-    *   **Tactical Feedback:** Excellent that it translates insights directly into testable hypotheses.
-    *   **Strategic Insight:** This is the bridge from abstract strategy to concrete action. It connects the "why" (the opportunity) to the "what" (the test), which is crucial for team alignment.
+* **Section: Actionable Hypotheses**
+  * **Tactical Feedback:** Excellent that it translates insights directly into testable hypotheses.
+  * **Strategic Insight:** This is the bridge from abstract strategy to concrete action. It connects the "why" (the opportunity) to the "what" (the test), which is crucial for team alignment.
 
 ### 3. Strategically Revised Template: `opportunity-landscape.md`
 
@@ -421,17 +421,17 @@ My revisions are minimal and focused on making it even more potent by adding the
 
 ### 2. Deep-Dive Analysis
 
-*   **Section: Executive Summary (60-Second Read)**
-    *   **Tactical Feedback:** The table format is brilliant. It's scannable and forces conciseness.
-    *   **Strategic Insight:** This is the perfect tool for the **Time-Poor Executive**. It respects their time while giving them the critical information. For the **Eager Founder**, it prevents them from burying bad news in a long report.
+* **Section: Executive Summary (60-Second Read)**
+  * **Tactical Feedback:** The table format is brilliant. It's scannable and forces conciseness.
+  * **Strategic Insight:** This is the perfect tool for the **Time-Poor Executive**. It respects their time while giving them the critical information. For the **Eager Founder**, it prevents them from burying bad news in a long report.
 
-*   **Section: Decision & Next Actions**
-    *   **Tactical Feedback:** Clear, action-oriented, and includes crucial housekeeping steps like updating other documents.
-    *   **Strategic Insight:** This section ensures that learning is immediately translated into action, preventing insights from sitting on a shelf. It closes the loop back to the `hypothesis-list.md` and `lean-canvas.md`, creating a true system.
+* **Section: Decision & Next Actions**
+  * **Tactical Feedback:** Clear, action-oriented, and includes crucial housekeeping steps like updating other documents.
+  * **Strategic Insight:** This section ensures that learning is immediately translated into action, preventing insights from sitting on a shelf. It closes the loop back to the `hypothesis-list.md` and `lean-canvas.md`, creating a true system.
 
-*   **Section: Most Important Learning**
-    *   **Tactical Feedback:** Framing this as a quote is a powerful way to make the learning memorable.
-    *   **Strategic Insight:** This is the narrative core of the document. It's the "why" behind the data. It helps the **Skeptical Engineer** understand the user impact of the numbers they see in the metrics table.
+* **Section: Most Important Learning**
+  * **Tactical Feedback:** Framing this as a quote is a powerful way to make the learning memorable.
+  * **Strategic Insight:** This is the narrative core of the document. It's the "why" behind the data. It helps the **Skeptical Engineer** understand the user impact of the numbers they see in the metrics table.
 
 ### 3. Strategically Revised Template: `experiment-summary.md`
 

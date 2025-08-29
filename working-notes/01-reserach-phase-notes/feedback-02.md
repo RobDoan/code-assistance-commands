@@ -4,15 +4,15 @@ Excellent progress. You've successfully integrated the first round of feedback, 
 
 **Main Strengths:**
 
-*   **Action-Oriented:** Most templates now explicitly drive towards a next action, a decision, or a new hypothesis. This is a huge leap forward.
-*   **Hypothesis-Driven:** The `hypothesis-list.md` is now clearly the central engine, with other documents like `opportunity-landscape.md` and `problem-validation-sprint.md` serving as inputs to it.
-*   **Lean Language:** The templates are infused with lean concepts like pivots, MVTs (Minimum Viable Tests), and risk prioritization.
+* **Action-Oriented:** Most templates now explicitly drive towards a next action, a decision, or a new hypothesis. This is a huge leap forward.
+* **Hypothesis-Driven:** The `hypothesis-list.md` is now clearly the central engine, with other documents like `opportunity-landscape.md` and `problem-validation-sprint.md` serving as inputs to it.
+* **Lean Language:** The templates are infused with lean concepts like pivots, MVTs (Minimum Viable Tests), and risk prioritization.
 
 **Main Weaknesses/Gaps for this Round:**
 
-*   **Template Bloat & Redundancy:** You've adopted the new lean templates (`opportunity-landscape.md`, `problem-validation-sprint.md`, `experiment-summary.md`) but the old, heavier ones (`competitive-analysis.md`, `problem-statement.md`, `user-research-summary.md`) still exist. This creates confusion. The first step is to **delete the old templates**.
-*   **Over-Engineering The Summary:** The `experiment-summary.md` is now so comprehensive it risks becoming a report again. A summary should be something you can read in 60 seconds to understand the outcome and decision.
-*   **Connecting the Dots:** While the documents *link* to each other, the *process* of updating them isn't yet baked into the templates themselves. We can add more explicit "housekeeping" steps.
+* **Template Bloat & Redundancy:** You've adopted the new lean templates (`opportunity-landscape.md`, `problem-validation-sprint.md`, `experiment-summary.md`) but the old, heavier ones (`competitive-analysis.md`, `problem-statement.md`, `user-research-summary.md`) still exist. This creates confusion. The first step is to **delete the old templates**.
+* **Over-Engineering The Summary:** The `experiment-summary.md` is now so comprehensive it risks becoming a report again. A summary should be something you can read in 60 seconds to understand the outcome and decision.
+* **Connecting the Dots:** While the documents *link* to each other, the *process* of updating them isn't yet baked into the templates themselves. We can add more explicit "housekeeping" steps.
 
 Here is the next round of feedback.
 
@@ -22,10 +22,10 @@ Here is the next round of feedback.
 
 Your folder contains both the old and new versions of several templates. This will cause confusion and lead to the wrong ones being used.
 
-*   **Specific Suggestion:**
-    *   Delete `competitive-analysis.md`. Its purpose is now served by `opportunity-landscape.md`.
-    *   Delete `problem-statement.md`. Its purpose is now served by `problem-validation-sprint.md`.
-    *   Delete `user-research-summary.md`. Its purpose is now served by `experiment-summary.md`.
+* **Specific Suggestion:**
+  * Delete `competitive-analysis.md`. Its purpose is now served by `opportunity-landscape.md`.
+  * Delete `problem-statement.md`. Its purpose is now served by `problem-validation-sprint.md`.
+  * Delete `user-research-summary.md`. Its purpose is now served by `experiment-summary.md`.
 
 ---
 
@@ -35,10 +35,10 @@ This is a vast improvement over the traditional competitive analysis. It's fast,
 
 **Section-by-Section Analysis:**
 
-*   **Overall:**
-    *   **Strength:** The focus on "exploitable weaknesses" and "their core assumptions" is brilliant. It turns analysis into a strategic exercise.
-    *   **Weakness/Gap:** The template is great for a single sprint, but doesn't have a mechanism to show how your understanding evolves over time.
-    *   **Specific Suggestion:** Add a "Version History" or "Log" at the bottom to track how your perception of the landscape changes after each major experiment. This turns it into a living document.
+* **Overall:**
+  * **Strength:** The focus on "exploitable weaknesses" and "their core assumptions" is brilliant. It turns analysis into a strategic exercise.
+  * **Weakness/Gap:** The template is great for a single sprint, but doesn't have a mechanism to show how your understanding evolves over time.
+  * **Specific Suggestion:** Add a "Version History" or "Log" at the bottom to track how your perception of the landscape changes after each major experiment. This turns it into a living document.
 
 ### **Revised & Improved Template: `opportunity-landscape.md`**
 
@@ -95,10 +95,10 @@ This template is incredibly thorough, but its length is now its biggest weakness
 
 **Section-by-Section Analysis:**
 
-*   **Overall:**
-    *   **Strength:** It captures every possible detail of an experiment.
-    *   **Weakness/Gap:** It's too long. A leader should be able to look at this and know the outcome and next step in 30 seconds. The most important information is buried.
-    *   **Specific Suggestion:** Create a "TL;DR" executive summary block at the very top that contains *only* the hypothesis, the verdict, the key insight, and the next action. Move the detailed sections to an "Appendix" for those who want to dig deeper.
+* **Overall:**
+  * **Strength:** It captures every possible detail of an experiment.
+  * **Weakness/Gap:** It's too long. A leader should be able to look at this and know the outcome and next step in 30 seconds. The most important information is buried.
+  * **Specific Suggestion:** Create a "TL;DR" executive summary block at the very top that contains *only* the hypothesis, the verdict, the key insight, and the next action. Move the detailed sections to an "Appendix" for those who want to dig deeper.
 
 ### **Revised & Improved Template: `experiment-summary.md`**
 
@@ -163,15 +163,15 @@ This is a fantastic template. It correctly frames problem discovery as an experi
 
 **Section-by-Section Analysis:**
 
-*   **Problem Interview Script:**
-    *   **Strength:** The script is great, especially the focus on "how do you handle this today?"
-    *   **Weakness/Gap:** It could be slightly more aggressive in sniffing out a lack of pain.
-    *   **Specific Suggestion:** Add a question like: **"What happens if you just ignore this problem?"** If the answer is "nothing, really," then it's not a painful enough problem.
+* **Problem Interview Script:**
+  * **Strength:** The script is great, especially the focus on "how do you handle this today?"
+  * **Weakness/Gap:** It could be slightly more aggressive in sniffing out a lack of pain.
+  * **Specific Suggestion:** Add a question like: **"What happens if you just ignore this problem?"** If the answer is "nothing, really," then it's not a painful enough problem.
 
-*   **Next Steps:**
-    *   **Strength:** Clear divergence for Validated vs. Invalidated paths.
-    *   **Weakness/Gap:** Doesn't explicitly mention updating the other core documents.
-    *   **Specific Suggestion:** Add a "Housekeeping" subsection to remind the team to update the `hypothesis-list.md` and `lean-canvas.md` with the learnings.
+* **Next Steps:**
+  * **Strength:** Clear divergence for Validated vs. Invalidated paths.
+  * **Weakness/Gap:** Doesn't explicitly mention updating the other core documents.
+  * **Specific Suggestion:** Add a "Housekeeping" subsection to remind the team to update the `hypothesis-list.md` and `lean-canvas.md` with the learnings.
 
 ### **Revised & Improved Template: `problem-validation-sprint.md` (Additions Only)**
 

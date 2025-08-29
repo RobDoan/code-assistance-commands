@@ -18,9 +18,9 @@ Here are the next-level refinements for each template.
 
 This is already very strong. The proposed change is to add more structure to our "Core Assumption" to help teams better categorize their risks.
 
-*   **Strength:** The focus on a single core assumption and a falsifiable hypothesis is now crystal clear.
-*   **Weakness/Gap:** Assumptions aren't all the same. Some are about the problem, some about the solution, and some about the customer. Explicitly identifying the *type* of assumption can improve the quality of the experiment.
-*   **Specific Suggestion:** I'm adding a "Type of Assumption" field. This forces the team to diagnose their risk more accurately. Is our biggest risk that we've misunderstood the problem, or that our proposed solution won't work?
+* **Strength:** The focus on a single core assumption and a falsifiable hypothesis is now crystal clear.
+* **Weakness/Gap:** Assumptions aren't all the same. Some are about the problem, some about the solution, and some about the customer. Explicitly identifying the *type* of assumption can improve the quality of the experiment.
+* **Specific Suggestion:** I'm adding a "Type of Assumption" field. This forces the team to diagnose their risk more accurately. Is our biggest risk that we've misunderstood the problem, or that our proposed solution won't work?
 
 ---
 
@@ -93,9 +93,9 @@ This is already very strong. The proposed change is to add more structure to our
 
 This template is very effective. The key refinement is to make the measurement plan more explicit.
 
-*   **Strength:** The focus on the critical path and potential drop-off points is excellent for keeping the scope tight.
-*   **Weakness/Gap:** While it lists risks, it doesn't explicitly state *how* we will measure the user's progression through the funnel.
-*   **Specific Suggestion:** I'm adding a `Measurement Plan` section to explicitly link steps in the journey to the analytics events that will be fired. This ensures that our data and product requirements are perfectly aligned from the start.
+* **Strength:** The focus on the critical path and potential drop-off points is excellent for keeping the scope tight.
+* **Weakness/Gap:** While it lists risks, it doesn't explicitly state *how* we will measure the user's progression through the funnel.
+* **Specific Suggestion:** I'm adding a `Measurement Plan` section to explicitly link steps in the journey to the analytics events that will be fired. This ensures that our data and product requirements are perfectly aligned from the start.
 
 ---
 
@@ -161,9 +161,9 @@ This template is very effective. The key refinement is to make the measurement p
 
 This is nearly perfect for its purpose. The only refinement is to create a single, consolidated home for all the copy.
 
-*   **Strength:** The "Job-to-be-Done" framing and low-fidelity ASCII visuals are excellent for maintaining speed and focus.
-*   **Weakness/Gap:** The key copy is scattered across different sections. While this works, a centralized copy section ensures consistency and makes it easier for review.
-*   **Specific Suggestion:** I'm adding a `Content & Copy` section at the top. This becomes the single source of truth for all strings in the prototype, making it easier to manage and hand off.
+* **Strength:** The "Job-to-be-Done" framing and low-fidelity ASCII visuals are excellent for maintaining speed and focus.
+* **Weakness/Gap:** The key copy is scattered across different sections. While this works, a centralized copy section ensures consistency and makes it easier for review.
+* **Specific Suggestion:** I'm adding a `Content & Copy` section at the top. This becomes the single source of truth for all strings in the prototype, making it easier to manage and hand off.
 
 ---
 
@@ -198,9 +198,11 @@ This is nearly perfect for its purpose. The only refinement is to create a singl
 
 **Visual:**
 ```
+
 +------------------------------------------------------+
 | ✨ [Hook Headline]              [ Hook CTA ]         |
 +------------------------------------------------------+
+
 ```
 
 ### Screen 2: The Pitch (e.g., Feature Landing Page)
@@ -209,6 +211,7 @@ This is nearly perfect for its purpose. The only refinement is to create a singl
 
 **Visual:**
 ```
+
 +----------------------------------+
 |      [Product Screenshot]        |
 |                                  |
@@ -219,6 +222,7 @@ This is nearly perfect for its purpose. The only refinement is to create a singl
 |       [ Pitch CTA ]              |
 |                                  |
 +----------------------------------+
+
 ```
 
 ### Screen 3: The Ask (e.g., 'Coming Soon' Modal)
@@ -227,6 +231,7 @@ This is nearly perfect for its purpose. The only refinement is to create a singl
 
 **Visual:**
 ```
+
 +----------------------------------+
 | # [Ask Headline]                 |
 |                                  |
@@ -236,6 +241,7 @@ This is nearly perfect for its purpose. The only refinement is to create a singl
 |       [ Ask CTA ]                |
 |                                  |
 +----------------------------------+
+
 ```
 
 ---
@@ -251,9 +257,9 @@ This is nearly perfect for its purpose. The only refinement is to create a singl
 
 This template is rock-solid. Just one minor addition to prevent unforeseen blockers.
 
-*   **Strength:** It's fast, simple, and forces a clear "Green/Yellow/Red" decision from engineering.
-*   **Weakness/Gap:** It doesn't account for external dependencies on other ongoing work.
-*   **Specific Suggestion:** Add one question: `"Does this experiment depend on any other work in progress?"` This can surface hidden blockers early.
+* **Strength:** It's fast, simple, and forces a clear "Green/Yellow/Red" decision from engineering.
+* **Weakness/Gap:** It doesn't account for external dependencies on other ongoing work.
+* **Specific Suggestion:** Add one question: `"Does this experiment depend on any other work in progress?"` This can surface hidden blockers early.
 
 ---
 

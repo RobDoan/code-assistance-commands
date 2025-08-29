@@ -9,9 +9,9 @@
 
 ## 1. Strategic Assessment
 
-This system of templates is a powerful engine for disciplined execution. It's statistically robust and logically sound. However, a perfect process run by a fearful team will produce timid outcomes. 
+This system of templates is a powerful engine for disciplined execution. It's statistically robust and logically sound. However, a perfect process run by a fearful team will produce timid outcomes.
 
-**The core "Job to be Done" of our testing process is to accelerate learning and de-risk our future by making small, smart bets.** These templates serve that job well *mechanically*, but they don't yet do it *culturally*. 
+**The core "Job to be Done" of our testing process is to accelerate learning and de-risk our future by making small, smart bets.** These templates serve that job well *mechanically*, but they don't yet do it *culturally*.
 
 **The most likely way this system will break is not through statistical error, but through social pressure.** A Product Manager, fearing that an "INVALIDATED" result on a `learning-summary.md` is a career-limiting move, will start proposing smaller, safer, less ambitious bets. The team will optimize for a high "win rate" on trivial tests, creating an illusion of progress while true innovation grinds to a halt. We will become very good at finding local maxima while ignoring the massive peaks in the distance.
 
@@ -23,24 +23,24 @@ Our opportunity is to explicitly frame this process not as a machine for judging
 
 ### `test-plan.md`
 
-*   **Tactical Feedback:** This document is our primary defense against cognitive bias. The Null Hypothesis, pre-defined segments, and pre-commitment framework are the tools of intellectual honesty.
-*   **Systemic Insight (Stress Test & Bias):**
-    *   **Hopeful PM:** This template is this PM's best friend and worst enemy. It forces them to confront their own assumptions in writing before the test begins. They can't easily spin a result because they already agreed on the definition of failure. This is a healthy, necessary tension.
-    *   **Cognitive Bias:** This is our strongest shield against **Confirmation Bias** and **Sunk Cost Fallacy**. By pre-committing to the "ABANDON" condition, we give the team social cover to kill a feature they've worked on for weeks. It wasn't their *decision* to kill it; it was the outcome of the *process* they committed to.
+* **Tactical Feedback:** This document is our primary defense against cognitive bias. The Null Hypothesis, pre-defined segments, and pre-commitment framework are the tools of intellectual honesty.
+* **Systemic Insight (Stress Test & Bias):**
+  * **Hopeful PM:** This template is this PM's best friend and worst enemy. It forces them to confront their own assumptions in writing before the test begins. They can't easily spin a result because they already agreed on the definition of failure. This is a healthy, necessary tension.
+  * **Cognitive Bias:** This is our strongest shield against **Confirmation Bias** and **Sunk Cost Fallacy**. By pre-committing to the "ABANDON" condition, we give the team social cover to kill a feature they've worked on for weeks. It wasn't their *decision* to kill it; it was the outcome of the *process* they committed to.
 
 ### `user-feedback-log.md`
 
-*   **Tactical Feedback:** The separation of observation, verbatim feedback, and interpretation is world-class. It prevents qualitative data from being immediately weaponized to support a pre-existing belief.
-*   **Systemic Insight (Stress Test & Bias):**
-    *   **Data-Overwhelmed Marketer:** This structure helps them immensely. Instead of a jumble of notes, they get clear, distinct buckets of information. They can trust the "Verbatim Feedback" section as ground truth, without having to parse the observer's bias.
+* **Tactical Feedback:** The separation of observation, verbatim feedback, and interpretation is world-class. It prevents qualitative data from being immediately weaponized to support a pre-existing belief.
+* **Systemic Insight (Stress Test & Bias):**
+  * **Data-Overwhelmed Marketer:** This structure helps them immensely. Instead of a jumble of notes, they get clear, distinct buckets of information. They can trust the "Verbatim Feedback" section as ground truth, without having to parse the observer's bias.
 
 ### `learning-summary.md`
 
-*   **Tactical Feedback:** The `Objective Findings vs. Subjective Interpretation` section is the most important part of this document. It cleanly separates what the data *says* from what we *think* it means.
-*   **Systemic Insight (Stress Test & Bias):**
-    *   **Hopeful PM:** This is where the PM might still try to spin the narrative. They can't change the Objective Findings, but they can write a very compelling story in the Subjective Interpretation. This is acceptable, as long as the two are clearly separated. It allows for passion while being grounded in facts.
-    *   **Impatient Executive:** The `Executive Summary & Decision` is perfect for this persona. It delivers the clarity they need. The fact that this summary is backed by the rigorous process documented below gives them the confidence to trust the recommendation.
-    *   **Cultural Impact:** The `INVALIDATED` status must be de-stigmatized. This document is the primary artifact where that happens. The sections on "What We Learned," "Invalidated Assumption," and "Follow-up Questions Generated" are crucial. They reframe an invalidated hypothesis as a successful discovery of what *isn't* true, which is just as valuable as discovering what is.
+* **Tactical Feedback:** The `Objective Findings vs. Subjective Interpretation` section is the most important part of this document. It cleanly separates what the data *says* from what we *think* it means.
+* **Systemic Insight (Stress Test & Bias):**
+  * **Hopeful PM:** This is where the PM might still try to spin the narrative. They can't change the Objective Findings, but they can write a very compelling story in the Subjective Interpretation. This is acceptable, as long as the two are clearly separated. It allows for passion while being grounded in facts.
+  * **Impatient Executive:** The `Executive Summary & Decision` is perfect for this persona. It delivers the clarity they need. The fact that this summary is backed by the rigorous process documented below gives them the confidence to trust the recommendation.
+  * **Cultural Impact:** The `INVALIDATED` status must be de-stigmatized. This document is the primary artifact where that happens. The sections on "What We Learned," "Invalidated Assumption," and "Follow-up Questions Generated" are crucial. They reframe an invalidated hypothesis as a successful discovery of what *isn't* true, which is just as valuable as discovering what is.
 
 ---
 

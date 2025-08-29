@@ -17,27 +17,27 @@ We need to gut them and focus on the absolute minimum required to build, measure
 
 ### `sprint-plan.md`
 
-*   **What to Keep:** `Experiment Context`, `Sprint Goals` (especially `Out of Scope`), and `Risk Assessment`. These are high-level alignment tools and are valuable.
-*   **What to Cut:** The `Sprint Backlog` table is 100% waste. It duplicates the `technical-task-breakdown.md` and will be instantly out of date. Project management does not belong in a Markdown file. The `Definition of Done` should be a team-level agreement, understood by all, not copied into a template for every sprint.
-*   **Verdict:** This document should be a 1-pager that answers "Why are we doing this?" and "What does success look like?". Nothing more.
+* **What to Keep:** `Experiment Context`, `Sprint Goals` (especially `Out of Scope`), and `Risk Assessment`. These are high-level alignment tools and are valuable.
+* **What to Cut:** The `Sprint Backlog` table is 100% waste. It duplicates the `technical-task-breakdown.md` and will be instantly out of date. Project management does not belong in a Markdown file. The `Definition of Done` should be a team-level agreement, understood by all, not copied into a template for every sprint.
+* **Verdict:** This document should be a 1-pager that answers "Why are we doing this?" and "What does success look like?". Nothing more.
 
 ### `technical-task-breakdown.md`
 
-*   **What to Keep:** The *act* of breaking down features into technical tasks is essential. The `Acceptance Criteria` are the most valuable part of this document.
-*   **What to Cut:** Everything else. The tables for `Estimate`, `Assigned`, and `Status` belong in our issue tracker (e.g., Jira, Linear, GitHub Issues), which is dynamic and designed for this purpose. The `Progress Tracking` and `Sprint Burndown` sections are pure administrative overhead that a proper tool automates. The Mermaid diagram is a nice thought that will never be maintained after day one.
-*   **Verdict:** This document is trying to be a project management tool, and it fails at it. The output of the breakdown exercise should be tickets in our issue tracker, not this file.
+* **What to Keep:** The *act* of breaking down features into technical tasks is essential. The `Acceptance Criteria` are the most valuable part of this document.
+* **What to Cut:** Everything else. The tables for `Estimate`, `Assigned`, and `Status` belong in our issue tracker (e.g., Jira, Linear, GitHub Issues), which is dynamic and designed for this purpose. The `Progress Tracking` and `Sprint Burndown` sections are pure administrative overhead that a proper tool automates. The Mermaid diagram is a nice thought that will never be maintained after day one.
+* **Verdict:** This document is trying to be a project management tool, and it fails at it. The output of the breakdown exercise should be tickets in our issue tracker, not this file.
 
 ### `release-checklist.md`
 
-*   **What to Keep:** The concept of a checklist is good for preventing stupid mistakes. The focus on `Monitoring`, `Feature Flags`, and `Rollback Procedures` is smart.
-*   **What to Cut:** At least 60% of this. Items like `Code Review Completed` and `Tests Passing` should be enforced by an automated CI/CD pipeline, not a manual checkbox. If you can manually check it, you can automate it. The `Sign-off` section is a classic bottleneck; the team owns the release, not a list of managers. The `Gradual Rollout` plan is too prescriptive for a template.
-*   **Verdict:** This should be a lean "Pre-Flight Checklist" that covers only the critical, non-automatable, release-specific steps and communication points.
+* **What to Keep:** The concept of a checklist is good for preventing stupid mistakes. The focus on `Monitoring`, `Feature Flags`, and `Rollback Procedures` is smart.
+* **What to Cut:** At least 60% of this. Items like `Code Review Completed` and `Tests Passing` should be enforced by an automated CI/CD pipeline, not a manual checkbox. If you can manually check it, you can automate it. The `Sign-off` section is a classic bottleneck; the team owns the release, not a list of managers. The `Gradual Rollout` plan is too prescriptive for a template.
+* **Verdict:** This should be a lean "Pre-Flight Checklist" that covers only the critical, non-automatable, release-specific steps and communication points.
 
 ### `experiment-results-log.md`
 
-*   **What to Keep:** This is the most valuable template of the bunch because it forces us to look at the data. `Hypothesis`, `Success Criteria`, `What We Learned`, and the `Go/No-Go Decision` are the heart of it.
-*   **What to Cut:** The ceremony. The `Business Impact Assessment` is pure speculation. The weekly tracking is too rigid. The `Sign-off` is, again, a bottleneck. The goal is to make a decision, not write an academic paper.
-*   **Verdict:** Keep the core, but make it a lean "Experiment Debrief". Focus on the data, the learnings, and the decision.
+* **What to Keep:** This is the most valuable template of the bunch because it forces us to look at the data. `Hypothesis`, `Success Criteria`, `What We Learned`, and the `Go/No-Go Decision` are the heart of it.
+* **What to Cut:** The ceremony. The `Business Impact Assessment` is pure speculation. The weekly tracking is too rigid. The `Sign-off` is, again, a bottleneck. The goal is to make a decision, not write an academic paper.
+* **Verdict:** Keep the core, but make it a lean "Experiment Debrief". Focus on the data, the learnings, and the decision.
 
 ---
 

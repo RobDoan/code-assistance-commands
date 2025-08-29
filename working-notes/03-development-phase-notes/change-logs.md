@@ -225,17 +225,22 @@ What Was Changed:
 What Was Rejected and Why:
 
 1. Dynamic Checklist Updates
-  - Creates version control nightmare
-  - Confuses teams about which version to use
-  - Violates "standard process" principle
+
+- Creates version control nightmare
+- Confuses teams about which version to use
+- Violates "standard process" principle
+
 2. Formal Trade-off Review Process
-  - Adds bureaucracy
-  - Trade-offs should be reviewed when relevant, not on schedule
-  - Trust teams to manage their own debt
+
+- Adds bureaucracy
+- Trade-offs should be reviewed when relevant, not on schedule
+- Trust teams to manage their own debt
+
 3. Additional Negative Results Sections
-  - Current format already captures failures (SUCCESS/FAILURE)
-  - "What Surprised Us" catches unexpected negatives
-  - More sections = more ceremony
+
+- Current format already captures failures (SUCCESS/FAILURE)
+- "What Surprised Us" catches unexpected negatives
+- More sections = more ceremony
 
 Final Assessment:
 

@@ -12,25 +12,25 @@ The goal is to make doing the right thing the easiest thing. These templates do 
 
 Here's a breakdown of why the current files are impractical.
 
-*   **`release-plan.md`**:
-    *   **Problem:** Mostly noise. "Business Goals," "Stakeholders," and "Timeline" are for project managers. The on-call engineer needs to know *what* to deploy, *how* to deploy it, and *what* to watch. The rest is clutter that hides the critical path.
-    *   **Verdict:** 90% fluff. The useful 10% (what's being released) will be merged into the new runbook.
+* **`release-plan.md`**:
+  * **Problem:** Mostly noise. "Business Goals," "Stakeholders," and "Timeline" are for project managers. The on-call engineer needs to know *what* to deploy, *how* to deploy it, and *what* to watch. The rest is clutter that hides the critical path.
+  * **Verdict:** 90% fluff. The useful 10% (what's being released) will be merged into the new runbook.
 
-*   **`deployment-guide.md`**:
-    *   **Problem:** It's a generic guide, but it's separate from the plan and the monitoring steps. An engineer has to switch between three documents to do one job. The steps are likely abstract ("Deploy the service") instead of specific, copy-pasteable commands.
-    *   **Verdict:** Critical information, but in the wrong place. This gets merged and made specific.
+* **`deployment-guide.md`**:
+  * **Problem:** It's a generic guide, but it's separate from the plan and the monitoring steps. An engineer has to switch between three documents to do one job. The steps are likely abstract ("Deploy the service") instead of specific, copy-pasteable commands.
+  * **Verdict:** Critical information, but in the wrong place. This gets merged and made specific.
 
-*   **`release-checklist.md`**:
-    *   **Problem:** A checklist is essential, but a separate file guarantees it will be skipped. It adds another step to an already busy process.
-    *   **Verdict:** Good intent, bad execution. This becomes a non-negotiable section within the single runbook.
+* **`release-checklist.md`**:
+  * **Problem:** A checklist is essential, but a separate file guarantees it will be skipped. It adds another step to an already busy process.
+  * **Verdict:** Good intent, bad execution. This becomes a non-negotiable section within the single runbook.
 
-*   **`monitoring-plan.md`**:
-    *   **Problem:** This is the most dangerous template of the bunch. It's vague. "Monitor system health" is not a plan; it's a wish. Without direct links to pre-built dashboards and explicit, numeric thresholds for what constitutes "bad," you are guaranteeing inconsistent monitoring and slow incident response.
-    *   **Verdict:** The most critical failure. This will be replaced with a highly specific, actionable "Monitoring & Verification" section in the runbook.
+* **`monitoring-plan.md`**:
+  * **Problem:** This is the most dangerous template of the bunch. It's vague. "Monitor system health" is not a plan; it's a wish. Without direct links to pre-built dashboards and explicit, numeric thresholds for what constitutes "bad," you are guaranteeing inconsistent monitoring and slow incident response.
+  * **Verdict:** The most critical failure. This will be replaced with a highly specific, actionable "Monitoring & Verification" section in the runbook.
 
-*   **`post-release-monitoring-log.md`**:
-    *   **Problem:** It looks like a form to be filled out, which feels like homework. Logging observations is good, but the format needs to be dead simple.
-    *   **Verdict:** We'll keep the *idea* but simplify it to a running log.
+* **`post-release-monitoring-log.md`**:
+  * **Problem:** It looks like a form to be filled out, which feels like homework. Logging observations is good, but the format needs to be dead simple.
+  * **Verdict:** We'll keep the *idea* but simplify it to a running log.
 
 ## 3. Revised & Improved Template
 

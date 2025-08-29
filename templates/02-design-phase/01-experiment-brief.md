@@ -54,6 +54,6 @@
 ---
 
 **Connected Documents:**
-- `02-user-journey-map.md`
-- `03-prototype-spec.md`
-- `04-tech-feasibility-check.md`
+* `02-user-journey-map.md`
+* `03-prototype-spec.md`
+* `04-tech-feasibility-check.md`

@@ -3,6 +3,7 @@
 ## 1. Strategic Assessment
 
 **Long-Term Risks:**
+
 - **Cultural:** If templates become rigid, they risk creating a compliance-driven culture, stifling initiative and slowing pivots.
 - **Technical:** Anchoring to initial plans may increase technical debt if trade-offs are not revisited. Confirmation bias may affect experiment results.
 - **Adaptability:** Bureaucratic perception may lead engineers to bypass templates, reducing their effectiveness and trust.
@@ -14,14 +15,17 @@
 ## 2. Deep-Dive Analysis
 
 ### build-plan.md
+
 - **Tactical Feedback:** Prompts for hypothesis, trade-offs, and risks. May anchor teams to initial plans.
 - **Systemic Insight:** If "Conscious Trade-offs" are not revisited, unnoticed technical debt can accumulate. Recommend regular review and updates.
 
 ### experiment-debrief.md
+
 - **Tactical Feedback:** Focuses on learning and decision-making. Celebrates both success and failure.
 - **Systemic Insight:** Without explicit prompts for negative results and surprises, confirmation bias may occur. Add sections for "What did not work?" and "Unexpected outcomes."
 
 ### pre-flight-checklist.md
+
 - **Tactical Feedback:** Empowers release owners to halt launches. Risks becoming a rubber stamp.
 - **Systemic Insight:** Checklist should be dynamic. Encourage teams to update based on incidents and learning.
 
@@ -39,15 +43,18 @@
 **Link to PRD:** [URL] | **Link to Epic:** [URL to Jira/Linear]
 
 ## 1. Hypothesis & Goal
+
 - **Hypothesis:** We believe that...
 - **Success Metric:** ...and we'll know we're right if [Metric] hits [Target].
 
 ## 2. Technical Plan & Trade-offs
+
 - **Approach:** [Brief overview of the architecture. What's new? What's changing?]
 - **Conscious Trade-offs:** [What corners are we cutting *on purpose* for speed? What is the expected cost?]
 - **Key Dependencies:** [List any blocking items from other teams or services.]
 
 ## 3. Risks
+
 | Risk | Mitigation |
 |------|------------|
 | *e.g., This approach creates tech debt in the billing system* | *e.g., We will schedule a refactor in Q4 if the experiment is successful.* |

@@ -21,16 +21,19 @@ graph TD
 ## Key Improvements
 
 ### 1. Early Technical De-risking
+
 - **00-tech-spike-check.md** happens FIRST (5 min assessment)
 - Identifies unknowns before any design work
 - Prevents wasted effort on technically infeasible ideas
 
 ### 2. Progressive Disclosure
+
 - Simple experiments bypass the spike
 - Complex experiments get investigated early
 - Production complexity estimated upfront
 
 ### 3. Two-Gate System
+
 - **Gate 1:** Initial spike check (can we even do this?)
 - **Gate 2:** Final feasibility (can we do this quickly?)
 
@@ -49,12 +52,14 @@ graph TD
 ## The Old Problem vs New Solution
 
 ### Old Problem
+
 - Technical issues discovered AFTER design work
 - Wasted effort on infeasible experiments
 - "Surprise" complexity during build
 - No early warning system
 
 ### New Solution
+
 - Technical gut check in first 5 minutes
 - Spike investigations before commitment
 - Progressive complexity awareness
@@ -70,6 +75,7 @@ graph TD
 ## Cultural Shift Required
 
 Teams must embrace:
+
 - "Fail fast on technical barriers"
 - "Spike before you design"
 - "5 minutes upfront saves 5 days later"

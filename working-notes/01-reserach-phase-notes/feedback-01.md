@@ -6,15 +6,15 @@ This is a strong, comprehensive suite of templates. You've clearly put a lot of 
 
 **Main Strengths:**
 
-*   **Comprehensiveness:** The templates cover the key activities of a research phase, from understanding the market and problem to formalizing hypotheses and summarizing user feedback.
-*   **Structure & Clarity:** They are well-organized, making them easy to follow. The use of Markdown and tables is effective.
-*   **Good Bones:** Many templates already include lean-adjacent concepts like identifying problems, customer segments, and success metrics. The `hypothesis-list.md` and `lean-canvas.md` are particularly well-aligned with lean principles.
+* **Comprehensiveness:** The templates cover the key activities of a research phase, from understanding the market and problem to formalizing hypotheses and summarizing user feedback.
+* **Structure & Clarity:** They are well-organized, making them easy to follow. The use of Markdown and tables is effective.
+* **Good Bones:** Many templates already include lean-adjacent concepts like identifying problems, customer segments, and success metrics. The `hypothesis-list.md` and `lean-canvas.md` are particularly well-aligned with lean principles.
 
 **Main Weaknesses (from a Lean Lens):**
 
-*   **Bias Towards Analysis over Action:** Several templates, especially the `competitive-analysis.md`, feel like heavy, academic research documents. They risk promoting "analysis paralysis" rather than driving quick, decisive action based on "good enough" information.
-*   **Assumptions are an Afterthought:** While some templates mention assumptions, they aren't consistently treated as the most critical, central element of the entire process. They should be the *starting point* for all activity, not just a section at the end.
-*   **Missing Feedback Loop:** The templates exist as separate documents but lack explicit connections. There isn't a clear, lightweight system forcing the team to connect a `user-research-summary` back to invalidating a `hypothesis` and updating the `lean-canvas`. The "Build-Measure-Learn" loop feels more like "Build... Measure... Learn..." as separate, disconnected steps.
+* **Bias Towards Analysis over Action:** Several templates, especially the `competitive-analysis.md`, feel like heavy, academic research documents. They risk promoting "analysis paralysis" rather than driving quick, decisive action based on "good enough" information.
+* **Assumptions are an Afterthought:** While some templates mention assumptions, they aren't consistently treated as the most critical, central element of the entire process. They should be the *starting point* for all activity, not just a section at the end.
+* **Missing Feedback Loop:** The templates exist as separate documents but lack explicit connections. There isn't a clear, lightweight system forcing the team to connect a `user-research-summary` back to invalidating a `hypothesis` and updating the `lean-canvas`. The "Build-Measure-Learn" loop feels more like "Build... Measure... Learn..." as separate, disconnected steps.
 
 Here is my section-by-section analysis and the revised templates.
 
@@ -26,17 +26,17 @@ This template is the most problematic from a lean perspective. It encourages a m
 
 **Section-by-Section Analysis:**
 
-*   **Analysis Overview & Market Landscape:**
-    *   **Weakness/Gap:** This sets the stage for a report, not an action plan. It encourages gathering extensive data that may not be relevant to the immediate, riskiest assumption.
-    *   **Specific Suggestion:** Reframe the entire document. Instead of "Competitive Analysis," call it **"Opportunity Landscape."** The goal isn't to *know everything* about competitors, but to find *gaps and opportunities* we can exploit quickly.
+* **Analysis Overview & Market Landscape:**
+  * **Weakness/Gap:** This sets the stage for a report, not an action plan. It encourages gathering extensive data that may not be relevant to the immediate, riskiest assumption.
+  * **Specific Suggestion:** Reframe the entire document. Instead of "Competitive Analysis," call it **"Opportunity Landscape."** The goal isn't to *know everything* about competitors, but to find *gaps and opportunities* we can exploit quickly.
 
-*   **Competitor Profiles & Feature Comparison Matrix:**
-    *   **Weakness/Gap:** This is a classic trap. Teams spend weeks filling out these matrices, creating a detailed map of the *past*. This is a lagging indicator and encourages feature parity, not innovation.
-    *   **Specific Suggestion:** Drastically simplify. Instead of a detailed profile, create a **"Competitor Teardown"** focused on *their assumptions* and weaknesses.
+* **Competitor Profiles & Feature Comparison Matrix:**
+  * **Weakness/Gap:** This is a classic trap. Teams spend weeks filling out these matrices, creating a detailed map of the *past*. This is a lagging indicator and encourages feature parity, not innovation.
+  * **Specific Suggestion:** Drastically simplify. Instead of a detailed profile, create a **"Competitor Teardown"** focused on *their assumptions* and weaknesses.
 
-*   **Strategic Recommendations:**
-    *   **Weakness/Gap:** The actions are based on a mountain of preceding analysis that is too slow to generate.
-    *   **Specific Suggestion:** Rename to **"Actionable Hypotheses."** Every insight must be framed as a testable hypothesis that links to your `hypothesis-list.md`.
+* **Strategic Recommendations:**
+  * **Weakness/Gap:** The actions are based on a mountain of preceding analysis that is too slow to generate.
+  * **Specific Suggestion:** Rename to **"Actionable Hypotheses."** Every insight must be framed as a testable hypothesis that links to your `hypothesis-list.md`.
 
 ### **Revised & Improved Template: `opportunity-landscape.md`**
 
@@ -112,17 +112,17 @@ This is your strongest template. The refinements make it even more action-orient
 
 **Section-by-Section Analysis:**
 
-*   **Active Hypotheses:**
-    *   **Weakness/Gap:** The "Learning & Insights" section is a bit generic.
-    *   **Specific Suggestion:** Add a field: **"Assumption Verdict: Validated / Invalidated / Inconclusive"** to force a clear decision.
+* **Active Hypotheses:**
+  * **Weakness/Gap:** The "Learning & Insights" section is a bit generic.
+  * **Specific Suggestion:** Add a field: **"Assumption Verdict: Validated / Invalidated / Inconclusive"** to force a clear decision.
 
-*   **Invalidated Hypotheses:**
-    *   **Weakness/Gap:** "Alternative Approach" could be more forward-looking.
-    *   **Specific Suggestion:** Rename to **"New Hypothesis (The Pivot)"** to explicitly link failure to the next experiment.
+* **Invalidated Hypotheses:**
+  * **Weakness/Gap:** "Alternative Approach" could be more forward-looking.
+  * **Specific Suggestion:** Rename to **"New Hypothesis (The Pivot)"** to explicitly link failure to the next experiment.
 
-*   **Hypothesis Prioritization Criteria:**
-    *   **Weakness/Gap:** "Confidence Level" is vague. Lean is about tackling the *riskiest* assumptions first.
-    *   **Specific Suggestion:** Replace with **"Risk Level (1-5, where 5 is highest risk)."** Prioritize high-impact, high-risk items to de-risk the business fastest.
+* **Hypothesis Prioritization Criteria:**
+  * **Weakness/Gap:** "Confidence Level" is vague. Lean is about tackling the *riskiest* assumptions first.
+  * **Specific Suggestion:** Replace with **"Risk Level (1-5, where 5 is highest risk)."** Prioritize high-impact, high-risk items to de-risk the business fastest.
 
 ### **Revised & Improved Template: `hypothesis-list.md`**
 
@@ -195,13 +195,13 @@ The key change here is to frame the entire canvas as a collection of assumptions
 
 **Section-by-Section Analysis:**
 
-*   **Overall:**
-    *   **Weakness/Gap:** It's presented as a form to be filled out. It needs to be explicitly positioned as a snapshot of beliefs.
-    *   **Specific Suggestion:** Add a preamble that frames the canvas correctly.
+* **Overall:**
+  * **Weakness/Gap:** It's presented as a form to be filled out. It needs to be explicitly positioned as a snapshot of beliefs.
+  * **Specific Suggestion:** Add a preamble that frames the canvas correctly.
 
-*   **Assumptions to Test:**
-    *   **Weakness/Gap:** It's at the bottom. The entire canvas *is* a set of assumptions.
-    *   **Specific Suggestion:** Rename to **"Riskiest Assumptions to Test First"** and link each assumption to a hypothesis ID.
+* **Assumptions to Test:**
+  * **Weakness/Gap:** It's at the bottom. The entire canvas *is* a set of assumptions.
+  * **Specific Suggestion:** Rename to **"Riskiest Assumptions to Test First"** and link each assumption to a hypothesis ID.
 
 ### **Revised & Improved Template: `lean-canvas.md`**
 
@@ -247,13 +247,13 @@ This template is good for deep dives, but we need to ensure it's used to frame a
 
 **Section-by-Section Analysis:**
 
-*   **Problem Evidence:**
-    *   **Weakness/Gap:** Assumes you already have evidence. The problem itself is often an assumption.
-    *   **Specific Suggestion:** Reframe "Problem Evidence" as **"Evidence to Collect."**
+* **Problem Evidence:**
+  * **Weakness/Gap:** Assumes you already have evidence. The problem itself is often an assumption.
+  * **Specific Suggestion:** Reframe "Problem Evidence" as **"Evidence to Collect."**
 
-*   **Success Criteria:**
-    *   **Weakness/Gap:** It frames success as "the problem has been successfully addressed," which is too big for an initial step.
-    *   **Specific Suggestion:** Reframe as **"Problem Validation Criteria."** What is the *minimum evidence* needed to confirm this problem is real and worth solving?
+* **Success Criteria:**
+  * **Weakness/Gap:** It frames success as "the problem has been successfully addressed," which is too big for an initial step.
+  * **Specific Suggestion:** Reframe as **"Problem Validation Criteria."** What is the *minimum evidence* needed to confirm this problem is real and worth solving?
 
 ### **Revised & Improved Template: `problem-validation-sprint.md`**
 
@@ -323,13 +323,13 @@ This template is well-structured. The key is to make it less of a final report a
 
 **Section-by-Section Analysis:**
 
-*   **Research Objectives:**
-    *   **Weakness/Gap:** The objectives should be directly tied to a hypothesis.
-    *   **Specific Suggestion:** Change the guiding question to: **"What hypothesis is this research designed to test?"**
+* **Research Objectives:**
+  * **Weakness/Gap:** The objectives should be directly tied to a hypothesis.
+  * **Specific Suggestion:** Change the guiding question to: **"What hypothesis is this research designed to test?"**
 
-*   **Recommendations:**
-    *   **Weakness/Gap:** From a lean perspective, the only recommendation that matters is "What do we do *next*?"
-    *   **Specific Suggestion:** Replace this section with a single, powerful one: **"Decision & Next Experiment."** This closes the loop.
+* **Recommendations:**
+  * **Weakness/Gap:** From a lean perspective, the only recommendation that matters is "What do we do *next*?"
+  * **Specific Suggestion:** Replace this section with a single, powerful one: **"Decision & Next Experiment."** This closes the loop.
 
 ### **Revised & Improved Template: `experiment-summary.md`**
 

@@ -2,7 +2,7 @@
 
 ## 1. Overall Assessment
 
-This is a success. The new `release-runbook.md` is exactly what a team needs: a single, actionable source of truth. The `post-release-log.md` is simple and fit for purpose. 
+This is a success. The new `release-runbook.md` is exactly what a team needs: a single, actionable source of truth. The `post-release-log.md` is simple and fit for purpose.
 
 My feedback now is focused on small, critical refinements to eliminate any possible confusion during a real-world deployment. These changes are about making the runbook completely foolproof.
 
@@ -16,7 +16,7 @@ This is strong. Here are four minor but important tweaks to harden it.
 
 A deployment without a pre-configured dashboard is a blind deployment. We need to make it visually clear that this is a mandatory prerequisite.
 
-*   **SUGGESTED CHANGE:**
+* **SUGGESTED CHANGE:**
 
     In the `Monitor Canary` section, change:
     `*   **PRIMARY DASHBOARD:** **[LINK TO PRE-FILTERED DATADOG/GRAFANA DASHBOARD]**`
@@ -29,9 +29,10 @@ A deployment without a pre-configured dashboard is a blind deployment. We need t
 
 An engineer under pressure shouldn't have to guess how to find the `<PREVIOUS_VERSION_NUMBER>`. We should tell them exactly how to get it.
 
-*   **SUGGESTED CHANGE:**
+* **SUGGESTED CHANGE:**
 
     In the `Rollback Procedure` section, change:
+
     ```bash
     # PASTE THE EXACT, TESTED ROLLBACK COMMAND HERE
     helm rollback auth-service <PREVIOUS_VERSION_NUMBER>
@@ -48,7 +49,7 @@ An engineer under pressure shouldn't have to guess how to find the `<PREVIOUS_VE
 
 If the primary on-call is unavailable or needs a second opinion, the escalation path should be obvious. No time should be wasted figuring out who to call.
 
-*   **SUGGESTED CHANGE:**
+* **SUGGESTED CHANGE:**
 
     In the `Overview` table, add a row for the secondary:
 
@@ -61,7 +62,7 @@ If the primary on-call is unavailable or needs a second opinion, the escalation 
 
 The placeholder comments are good, but let's be even more direct. These commands must be ready to copy-paste.
 
-*   **SUGGESTED CHANGE:**
+* **SUGGESTED CHANGE:**
 
     Change comments like `# PASTE THE EXACT COMMAND HERE` to something more direct:
 

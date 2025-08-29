@@ -13,6 +13,7 @@
 ## Feedback Summary
 
 ### Sentiment Distribution
+
 | Variant | Positive | Neutral | Negative | Total |
 |---------|----------|---------|----------|-------|
 | Control | 0 | 0 | 0 | 0 |
@@ -20,6 +21,7 @@
 | Variant B | 0 | 0 | 0 | 0 |
 
 ### Response Rate
+
 - **Invited:** [Number of users asked for feedback]
 - **Responded:** [Number who provided feedback]
 - **Response Rate:** [%]
@@ -27,6 +29,7 @@
 ## Thematic Analysis
 
 ### Top Themes Identified
+
 1. **[Theme Name]** (Mentioned by X% of respondents)
    - Variant Distribution: Control: X%, Variant A: Y%
    - Representative Quote: *"[User quote]"*
@@ -40,6 +43,7 @@
 ## Individual Feedback Entries
 
 ### Entry #001
+
 **Date:** [YYYY-MM-DD]  
 **User ID:** [Anonymized ID]  
 **Variant:** [Control/Variant A/B]  
@@ -48,20 +52,24 @@
 
 **1. Observed Behavior (The "What"):**
 > What did the user *do*? Describe their actions without interpretation.
+
 - *Example: "User scrolled to bottom of page, then back to top. Hovered over 'Save' button for 5 seconds without clicking. Used browser back button."*
 - [Actual observed behavior]
 
 **2. Verbatim Feedback (The "Why" - User's Words):**
 > Quote the user directly. Do not paraphrase.
+
 - *Example: "I don't get it. Where am I supposed to click to save my changes?"*
 - *"[Actual verbatim user feedback]"*
 
 **3. Observer's Interpretation (The "I Think" - Your Analysis):**
 > Your interpretation of the behavior and feedback. This section quarantines your bias.
+
 - *Example: "I think the user was confused because the primary CTA lacks contrast and is placed unconventionally, leading to uncertainty."*
 - [Your interpretation of what this means]
 
 **Context:**
+
 - Task Attempted: [What user was trying to do]
 - Task Success: [Yes/No/Partial]
 - Time on Task: [Duration]
@@ -73,21 +81,26 @@
 ---
 
 ### Entry #002
+
 **Date:** [YYYY-MM-DD]  
 **User ID:** [Anonymized ID]  
 **Variant:** [Control/Variant A/B]  
 **Collection Method:** [Survey/Interview/Support/Recording]
 
 **1. Observed Behavior (The "What"):**
+
 - [What the user did - actions only]
 
 **2. Verbatim Feedback (The "Why" - User's Words):**
+
 - *"[Exact user quote]"*
 
 **3. Observer's Interpretation (The "I Think" - Your Analysis):**
+
 - [Your interpretation of the behavior and feedback]
 
 **Context:**
+
 - Task Attempted: [What user was trying to do]
 - Task Success: [Yes/No/Partial]
 
@@ -113,15 +126,18 @@
 ## Behavioral Patterns Observed
 
 ### Task Completion Patterns
+
 - **Control:** [Common user path observed]
 - **Variant A:** [Common user path observed]
 - **Differences:** [Key behavioral differences noted]
 
 ### Confusion Points
+
 1. **[UI Element/Flow]:** [X%] of users struggled with [specific issue]
    - *Example observation: "User clicked wrong button 3 times before finding correct path"*
 
 ### Delight Moments
+
 1. **[Feature/Interaction]:** [X%] of users expressed positive surprise
    - *Example quote: "Oh wow, this is exactly what I needed!"*
 
@@ -135,47 +151,58 @@
 ## Key Insights
 
 ### What's Working Well
+
 1. [Insight based on positive feedback]
 2. [Insight based on successful behaviors]
 
 ### What Needs Improvement
+
 1. [Insight based on negative feedback]
 2. [Insight based on failed tasks]
 
 ### Surprising Discoveries
+
 1. [Unexpected user behavior or feedback]
 2. [Assumption that was proven wrong]
 
 ## Recommendations for Iteration
 
 ### Immediate Fixes (Before Full Rollout)
+
 - [ ] [Specific change based on feedback]
 - [ ] [Specific change based on feedback]
 
 ### Future Test Ideas
+
 - [ ] [New hypothesis to test based on feedback]
 - [ ] [New hypothesis to test based on feedback]
 
 ## Quotes for Stakeholders
 
 ### Supporting the Hypothesis
+>
 > *"[Powerful positive quote]"* - [User Segment], [Variant]
 
 ### Challenging the Hypothesis
+>
 > *"[Concerning negative quote]"* - [User Segment], [Variant]
 
 ### Unexpected Insight
+>
 > *"[Surprising quote]"* - [User Segment], [Variant]
 
 ## Collection Quality Notes
 
 **Sampling Bias Concerns:**
+
 - [Any noted bias in who responded]
 
 **Collection Challenges:**
+
 - [Issues with gathering feedback]
 
 **Confidence in Findings:**
+
 - [High/Medium/Low] - [Explanation]
 
 ## Next Steps

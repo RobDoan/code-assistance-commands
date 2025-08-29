@@ -22,9 +22,9 @@ Here is a breakdown of each template with specific feedback and a revised, copy-
 
 This is the most critical document. It sets the foundation for the entire experiment.
 
-*   **Strength:** It correctly identifies the need for a hypothesis, success metrics, and stakeholder sign-off. The connection to other documents is clear.
-*   **Weakness/Gap:** The term "Requirements" itself encourages a feature-list mindset. The "Core Hypothesis" is just one section among many, when it should be the absolute centerpiece. It asks for too much detail on the solution before the problem and assumption are crystal clear.
-*   **Specific Suggestion:** I'm renaming this to **`Experiment Brief`** to shift the focus from "building features" to "running a test." I'm radically simplifying it to focus almost exclusively on the hypothesis and the learning goal.
+* **Strength:** It correctly identifies the need for a hypothesis, success metrics, and stakeholder sign-off. The connection to other documents is clear.
+* **Weakness/Gap:** The term "Requirements" itself encourages a feature-list mindset. The "Core Hypothesis" is just one section among many, when it should be the absolute centerpiece. It asks for too much detail on the solution before the problem and assumption are crystal clear.
+* **Specific Suggestion:** I'm renaming this to **`Experiment Brief`** to shift the focus from "building features" to "running a test." I'm radically simplifying it to focus almost exclusively on the hypothesis and the learning goal.
 
 ---
 
@@ -93,9 +93,9 @@ This is the most critical document. It sets the foundation for the entire experi
 
 ### B. User Flows
 
-*   **Strength:** The template correctly separates the "happy path" from alternative paths and considers error states. It connects the flow to the hypothesis.
-*   **Weakness/Gap:** It's a bit too detailed for an initial design phase. The "User State" (how they feel) is speculative and adds cognitive load. The focus should be purely on the behavioral steps required to test the hypothesis.
-*   **Specific Suggestion:** Rename to **`User Journey Map`** and simplify it to focus on the critical path. Remove subjective fields and merge technical/design needs into a single "Requirements" section.
+* **Strength:** The template correctly separates the "happy path" from alternative paths and considers error states. It connects the flow to the hypothesis.
+* **Weakness/Gap:** It's a bit too detailed for an initial design phase. The "User State" (how they feel) is speculative and adds cognitive load. The focus should be purely on the behavioral steps required to test the hypothesis.
+* **Specific Suggestion:** Rename to **`User Journey Map`** and simplify it to focus on the critical path. Remove subjective fields and merge technical/design needs into a single "Requirements" section.
 
 ---
 
@@ -158,9 +158,9 @@ This is the most critical document. It sets the foundation for the entire experi
 
 ### C. Wireframes
 
-*   **Strength:** The use of ASCII art is great for enforcing low-fidelity. It correctly links wireframes to the hypothesis.
-*   **Weakness/Gap:** It's still too much of a "document." It asks for detailed interaction design, mobile considerations, and component lists that are overkill for a quick test. A wireframe's job is to communicate the *what*, not document every detail of it.
-*   **Specific Suggestion:** Reframe as a **`Prototype Spec`**. This is a lightweight spec, not a formal wireframe document. It should focus on visuals and key interactions only. The goal is to give the engineer just enough information to build the test.
+* **Strength:** The use of ASCII art is great for enforcing low-fidelity. It correctly links wireframes to the hypothesis.
+* **Weakness/Gap:** It's still too much of a "document." It asks for detailed interaction design, mobile considerations, and component lists that are overkill for a quick test. A wireframe's job is to communicate the *what*, not document every detail of it.
+* **Specific Suggestion:** Reframe as a **`Prototype Spec`**. This is a lightweight spec, not a formal wireframe document. It should focus on visuals and key interactions only. The goal is to give the engineer just enough information to build the test.
 
 ---
 
@@ -179,9 +179,11 @@ This is the most critical document. It sets the foundation for the entire experi
 
 **Visual:**
 ```
+
 +------------------------------------------------------+
 | ✨ New! Supercharge your reports. [ Learn More ]      |
 +------------------------------------------------------+
+
 ```
 **Key Copy:** "New! Supercharge your reports."
 **CTA Text:** "Learn More"
@@ -194,6 +196,7 @@ This is the most critical document. It sets the foundation for the entire experi
 
 **Visual:**
 ```
+
 +----------------------------------+
 |      [Product Screenshot]        |
 |                                  |
@@ -204,6 +207,7 @@ This is the most critical document. It sets the foundation for the entire experi
 |       [ Get Early Access ]       |
 |                                  |
 +----------------------------------+
+
 ```
 **Key Copy:** "Unlock Advanced Reporting"
 **CTA Text:** "Get Early Access"
@@ -216,6 +220,7 @@ This is the most critical document. It sets the foundation for the entire experi
 
 **Visual:**
 ```
+
 +----------------------------------+
 | # Coming Soon!                   |
 |                                  |
@@ -225,6 +230,7 @@ This is the most critical document. It sets the foundation for the entire experi
 |       [ Notify Me ]              |
 |                                  |
 +----------------------------------+
+
 ```
 **Key Copy:** "Coming Soon! Enter your email to be notified."
 **CTA Text:** "Notify Me"
@@ -240,9 +246,9 @@ This is the most critical document. It sets the foundation for the entire experi
 
 ### D. Architecture Outline
 
-*   **Strength:** It correctly thinks about feasibility, risk, and safe deployment via feature flags.
-*   **Weakness/Gap:** This document is dangerously heavyweight for a lean experiment. It encourages significant upfront technical planning, which can kill momentum and create waste if the hypothesis is invalidated. An "outline" should not include detailed API endpoints, data models, and phased implementation plans.
-*   **Specific Suggestion:** Rename to **`Tech Feasibility Check`**. This is not a plan; it's a quick gut check from engineering. It should be a short, simple Q&A format that can be filled out in 15 minutes. Its only job is to answer: "Can we build this test quickly and safely?"
+* **Strength:** It correctly thinks about feasibility, risk, and safe deployment via feature flags.
+* **Weakness/Gap:** This document is dangerously heavyweight for a lean experiment. It encourages significant upfront technical planning, which can kill momentum and create waste if the hypothesis is invalidated. An "outline" should not include detailed API endpoints, data models, and phased implementation plans.
+* **Specific Suggestion:** Rename to **`Tech Feasibility Check`**. This is not a plan; it's a quick gut check from engineering. It should be a short, simple Q&A format that can be filled out in 15 minutes. Its only job is to answer: "Can we build this test quickly and safely?"
 
 ---
 

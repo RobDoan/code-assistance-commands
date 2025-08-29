@@ -1,5 +1,21 @@
 # Release Runbook: [Service Name] - [Version/Build ID]
 
+---
+
+### Our Deployment Principles
+
+*This runbook is more than a checklist; it's a reflection of our engineering culture. Following it is not about compliance, it's about professional excellence.*
+
+1. **We Own Our Code, End-to-End.** The engineer who writes the code is responsible for its safe delivery to production. This runbook is your tool to fulfill that responsibility with confidence.
+
+2. **We Default to Safety.** We use canaries, pre-defined health checks, and clear rollback plans not because we expect failure, but because we respect the complexity of our systems. We make safety the easiest path.
+
+3. **A Rollback is a Successful Outcome.** A rollback is not a failure. It is a successful execution of our safety protocol. It demonstrates that our monitoring is working and that we are protecting our users and the business. There is no stigma attached to a rollback.
+
+4. **This is a Living Document.** The system is constantly changing, and so is this runbook. The owner of this runbook is obligated to improve it after every use. Correct a command, tighten a threshold, clarify a step. Leave it better than you found it.
+
+---
+
 **This is the single source of truth for this deployment. No other documents are needed.**
 
 ## 1. Overview
@@ -28,6 +44,7 @@
 ## 3. Deployment Commands
 
 ### Stage 1: Canary Rollout (10% Traffic)
+
 ```bash
 # This must be the exact, copy-pasteable command. No templating.
 kubectl set image deployment/auth-service auth-service=registry.company.com/auth-service:v1.5.2
@@ -39,6 +56,7 @@ kubectl patch service auth-service-canary --patch '{"spec":{"selector":{"version
 **Wait 10 minutes before proceeding to Stage 2.**
 
 ### Stage 2: Full Rollout (100% Traffic)
+
 ```bash
 # This must be the exact, copy-pasteable command. No templating.
 kubectl patch service auth-service --patch '{"spec":{"selector":{"version":"v1.5.2"}}}'
@@ -49,6 +67,7 @@ kubectl patch service auth-service --patch '{"spec":{"selector":{"version":"v1.5
 ## 4. Monitoring & Health Checks
 
 ### Primary Dashboard (REQUIRED)
+
 **LINK:** [DIRECT LINK TO PRE-FILTERED DASHBOARD - REPLACE THIS]
 
 ⚠️ **DEPLOYMENT CANNOT PROCEED WITHOUT FUNCTIONAL DASHBOARD LINK** ⚠️
@@ -65,6 +84,7 @@ kubectl patch service auth-service --patch '{"spec":{"selector":{"version":"v1.5
 | **Database Connections** | `sum:db.connections{service:auth-service}` | < 80 connections | > 100 connections |
 
 ### Health Check Commands
+
 ```bash
 # Service health endpoint
 curl -f https://api.company.com/auth/health
@@ -79,12 +99,14 @@ kubectl logs -l app=auth-service --tail=50 --timestamps
 ## 5. Progressive Rollout Timeline
 
 ### T+0: Canary Start
+
 - [ ] Execute Stage 1 deployment command
 - [ ] Verify canary pods are running: `kubectl get pods -l version=v1.5.2`
 - [ ] Check health endpoint responds: `curl https://api.company.com/auth/health`
 - [ ] **Monitor dashboard for 10 minutes**
 
 ### T+10: Canary Assessment
+
 - [ ] **GO/NO-GO DECISION POINT**
 - [ ] All metrics within success thresholds
 - [ ] No error rate spikes detected
@@ -93,11 +115,13 @@ kubectl logs -l app=auth-service --tail=50 --timestamps
 - [ ] **If NO-GO:** Execute Section 6 (Rollback)
 
 ### T+15: Full Rollout
+
 - [ ] Execute Stage 2 deployment command
 - [ ] Verify all traffic routing to new version
 - [ ] **Monitor dashboard for 15 minutes**
 
 ### T+30: Final Verification
+
 - [ ] All health checks passing
 - [ ] All metrics stable within thresholds
 - [ ] No concerning log patterns
@@ -106,6 +130,7 @@ kubectl logs -l app=auth-service --tail=50 --timestamps
 ## 6. Emergency Rollback (EXECUTE IMMEDIATELY IF NEEDED)
 
 ### Rollback Command
+
 ```bash
 # This must be the exact, copy-pasteable rollback command. No templating.
 kubectl set image deployment/auth-service auth-service=registry.company.com/auth-service:v1.5.1
@@ -114,6 +139,7 @@ kubectl set image deployment/auth-service auth-service=registry.company.com/auth
 ```
 
 ### Rollback Verification
+
 ```bash
 # Verify rollback completed
 kubectl get pods -l app=auth-service -o wide
@@ -124,7 +150,9 @@ curl -f https://api.company.com/auth/health
 ```
 
 ### Emergency Communication
+
 **Post immediately in #engineering-releases AND #incidents:**
+
 ```
 🚨 ROLLING BACK deployment of [Service Name] v[Version]
 Reason: [Brief reason - error rate spike/latency/etc]
@@ -135,13 +163,16 @@ Runbook: [Link to this document]
 ## 7. Post-Deployment Actions
 
 ### Immediate (Within 30 minutes)
+
 - [ ] **Final Health Confirmation:** All metrics stable for 30+ minutes
 - [ ] **Traffic Verification:** 100% of requests routing to new version
 - [ ] **Log Review:** No unexpected errors or warnings in application logs
 - [ ] **Database Health:** No performance degradation or connection issues
 
 ### Success Communication
+
 **Post in #engineering-releases:**
+
 ```
 ✅ Deployment of [Service Name] v[Version] COMPLETE and STABLE
 - Error rate: [current %]
@@ -151,6 +182,7 @@ Duration: [X] minutes
 ```
 
 ### Documentation
+
 - [ ] **Update post-release-log.md** with any notable observations
 - [ ] **File any follow-up tickets** for issues discovered during deployment
 - [ ] **Update runbook** with any command corrections or improvements
@@ -158,6 +190,7 @@ Duration: [X] minutes
 ## 8. Troubleshooting Guide
 
 ### If Canary Pods Won't Start
+
 ```bash
 # Check pod status and events
 kubectl describe pods -l version=[new-version]
@@ -169,6 +202,7 @@ kubectl describe nodes | grep -A5 "Allocated resources"
 ```
 
 ### If Health Checks Fail
+
 ```bash
 # Check service connectivity
 kubectl get svc auth-service -o wide
@@ -180,6 +214,7 @@ kubectl run debug --image=curlimages/curl -it --rm -- /bin/sh
 ```
 
 ### If Metrics Show Degradation
+
 1. **First:** Check if it's related to deployment or external factors
 2. **Compare:** Same time yesterday vs current metrics
 3. **Investigate:** Application logs for error patterns

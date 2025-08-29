@@ -25,6 +25,7 @@
 **Job-to-be-Done:** Grab the user's attention and get them to click.
 
 **Visual:**
+
 ```
 +------------------------------------------------------+
 | ✨ [Hook Headline]              [ Hook CTA ]         |
@@ -38,6 +39,7 @@
 **Job-to-be-Done:** Convince the user the feature is valuable enough to take the next step.
 
 **Visual:**
+
 ```
 +----------------------------------+
 |      [Product Screenshot]        |
@@ -58,6 +60,7 @@
 **Job-to-be-Done:** Capture the user's email as a signal of high intent.
 
 **Visual:**
+
 ```
 +----------------------------------+
 | # [Ask Headline]                 |
@@ -73,6 +76,6 @@
 ---
 
 **Connected Documents:**
-- `01-experiment-brief.md`
-- `02-user-journey-map.md`
-- `04-tech-feasibility-check.md`
+* `01-experiment-brief.md`
+* `02-user-journey-map.md`
+* `04-tech-feasibility-check.md`

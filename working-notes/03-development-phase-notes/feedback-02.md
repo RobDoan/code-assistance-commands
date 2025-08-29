@@ -7,7 +7,7 @@
 
 ## 1. Overall Assessment
 
-We've made progress, but this is not done. The new templates (`build-plan.md`, `pre-flight-checklist.md`, `experiment-debrief.md`) are a significant step in the right direction—they are leaner and more focused. 
+We've made progress, but this is not done. The new templates (`build-plan.md`, `pre-flight-checklist.md`, `experiment-debrief.md`) are a significant step in the right direction—they are leaner and more focused.
 
 However, they are still too verbose, and the continued existence of the old, bureaucratic templates (`release-checklist.md`, `experiment-results-log.md`) is unacceptable. This redundancy is not a minor issue; it is a guaranteed source of confusion, wasted effort, and process drift. It tells the team that we have two ways of doing things, which is the same as having no clear process at all.
 
@@ -17,18 +17,18 @@ However, they are still too verbose, and the continued existence of the old, bur
 
 ### The Redundancy Problem
 
--   **`experiment-results-log.md` vs. `experiment-debrief.md`**: These serve the same purpose. The `debrief` is better because it focuses on the decision. The `results-log` is a bloated academic paper. **Delete `experiment-results-log.md` immediately.**
--   **`release-checklist.md` vs. `pre-flight-checklist.md`**: The `pre-flight-checklist` correctly assumes automation and focuses on the critical, manual pre-launch steps. The `release-checklist` is a 100-item list of things our CI/CD pipeline should be doing for us. It encourages manual box-ticking over building a reliable, automated system. **Delete `release-checklist.md` immediately.**
+- **`experiment-results-log.md` vs. `experiment-debrief.md`**: These serve the same purpose. The `debrief` is better because it focuses on the decision. The `results-log` is a bloated academic paper. **Delete `experiment-results-log.md` immediately.**
+- **`release-checklist.md` vs. `pre-flight-checklist.md`**: The `pre-flight-checklist` correctly assumes automation and focuses on the critical, manual pre-launch steps. The `release-checklist` is a 100-item list of things our CI/CD pipeline should be doing for us. It encourages manual box-ticking over building a reliable, automated system. **Delete `release-checklist.md` immediately.**
 
 ### Critiques of the *New* Templates
 
 Even the new templates have room for improvement. They've caught a bit of the "template-itis" by trying to cover every possible scenario.
 
-1.  **`build-plan.md`**: This is solid, but the `Go-Live Plan` section is too detailed for a planning document. The rollout strategy and success validation belong closer to the release itself. This plan should focus on the *what* and *why*, not the *when* and *how* of the release.
+1. **`build-plan.md`**: This is solid, but the `Go-Live Plan` section is too detailed for a planning document. The rollout strategy and success validation belong closer to the release itself. This plan should focus on the *what* and *why*, not the *when* and *how* of the release.
 
-2.  **`pre-flight-checklist.md`**: Good, but too long. The `Prerequisites` section is unnecessary—it's stating the obvious that our pipeline should enforce. The `Post-Launch` section is also noise; release monitoring is a dynamic activity, not a static checklist item to be filled out after the fact.
+2. **`pre-flight-checklist.md`**: Good, but too long. The `Prerequisites` section is unnecessary—it's stating the obvious that our pipeline should enforce. The `Post-Launch` section is also noise; release monitoring is a dynamic activity, not a static checklist item to be filled out after the fact.
 
-3.  **`experiment-debrief.md`**: This is the best of the three. However, the `Process Learnings` and `Appendix` sections are optional nice-to-haves that can be cut. The core of this document is: What did we expect? What actually happened? What are we doing next? Everything else is secondary.
+3. **`experiment-debrief.md`**: This is the best of the three. However, the `Process Learnings` and `Appendix` sections are optional nice-to-haves that can be cut. The core of this document is: What did we expect? What actually happened? What are we doing next? Everything else is secondary.
 
 ---
 

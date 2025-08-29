@@ -21,36 +21,36 @@ With the proposed revisions, we can close these loopholes and turn these templat
 
 This is the most critical document. It's where biases are either introduced or eliminated.
 
-*   **Falsifiability: (Major Loophole)**
-    *   **Critique:** The template has a "Hypothesis Statement" and a "Decision Framework," but it never forces the team to explicitly state the **null hypothesis** (H₀). This is the default assumption that the change will have *no effect*. Without stating it, the team is psychologically primed to look for confirmation of their idea, not to challenge it. The goal of a test is to *disprove the null hypothesis*, not to prove the alternative.
-    *   **Suggestion:** Add a mandatory "Null Hypothesis" section.
+* **Falsifiability: (Major Loophole)**
+  * **Critique:** The template has a "Hypothesis Statement" and a "Decision Framework," but it never forces the team to explicitly state the **null hypothesis** (H₀). This is the default assumption that the change will have *no effect*. Without stating it, the team is psychologically primed to look for confirmation of their idea, not to challenge it. The goal of a test is to *disprove the null hypothesis*, not to prove the alternative.
+  * **Suggestion:** Add a mandatory "Null Hypothesis" section.
 
-*   **Avoiding Vanity Metrics: (Minor Loophole)**
-    *   **Critique:** The "Primary Metric" section is good, but it doesn't challenge the *quality* of the metric itself. A team could choose "clicks on the new button" as a primary metric, which is a classic vanity metric that doesn't guarantee business value.
-    *   **Suggestion:** Add an explicit question in the "Primary Metric" section: *"How does this metric causally link to long-term business value (e.g., retention, revenue, user satisfaction)?"*
+* **Avoiding Vanity Metrics: (Minor Loophole)**
+  * **Critique:** The "Primary Metric" section is good, but it doesn't challenge the *quality* of the metric itself. A team could choose "clicks on the new button" as a primary metric, which is a classic vanity metric that doesn't guarantee business value.
+  * **Suggestion:** Add an explicit question in the "Primary Metric" section: *"How does this metric causally link to long-term business value (e.g., retention, revenue, user satisfaction)?"*
 
-*   **Segmentation and Nuance: (Critical Loophole - P-Hacking Risk)**
-    *   **Critique:** The template has an "Audience Segmentation" section for targeting, but it completely lacks a section for pre-defining user segments for *analysis*. This is the single biggest risk for p-hacking. It allows the team to slice and dice the data *after* the test until they find a segment that "won" (e.g., "It didn't work for all users, but it worked for new users from Canada on iPhones!"). This is statistically invalid.
-    *   **Suggestion:** Add a mandatory "Pre-defined Analysis Segments" section where the team must state, *before the test begins*, which specific user segments they will analyze and what their hypothesis is for each.
+* **Segmentation and Nuance: (Critical Loophole - P-Hacking Risk)**
+  * **Critique:** The template has an "Audience Segmentation" section for targeting, but it completely lacks a section for pre-defining user segments for *analysis*. This is the single biggest risk for p-hacking. It allows the team to slice and dice the data *after* the test until they find a segment that "won" (e.g., "It didn't work for all users, but it worked for new users from Canada on iPhones!"). This is statistically invalid.
+  * **Suggestion:** Add a mandatory "Pre-defined Analysis Segments" section where the team must state, *before the test begins*, which specific user segments they will analyze and what their hypothesis is for each.
 
 ### `user-feedback-log.md`
 
 This template is well-structured but could do more to separate observation from interpretation.
 
-*   **Qualitative Rigor: (Minor Loophole)**
-    *   **Critique:** The template captures verbatim feedback, which is excellent. However, it combines observation and interpretation under "Themes" and "Context." This can lead to an observer's bias coloring the raw data.
-    *   **Suggestion:** Within each "Individual Feedback Entry," split the fields to enforce a clearer separation:
-        1.  **Observed Behavior:** What did the user *do*? (e.g., "Clicked the back button 3 times.")
-        2.  **Verbatim Feedback:** What did the user *say*?
-        3.  **Observer's Interpretation (Optional):** What do *you think* this means? (This quarantines the bias.)
+* **Qualitative Rigor: (Minor Loophole)**
+  * **Critique:** The template captures verbatim feedback, which is excellent. However, it combines observation and interpretation under "Themes" and "Context." This can lead to an observer's bias coloring the raw data.
+  * **Suggestion:** Within each "Individual Feedback Entry," split the fields to enforce a clearer separation:
+        1. **Observed Behavior:** What did the user *do*? (e.g., "Clicked the back button 3 times.")
+        2. **Verbatim Feedback:** What did the user *say*?
+        3. **Observer's Interpretation (Optional):** What do *you think* this means? (This quarantines the bias.)
 
 ### `learning-summary.md`
 
 This template is strong but can be improved to force a more honest synthesis.
 
-*   **Objective Synthesis: (Minor Loophole)**
-    *   **Critique:** It does a good job of separating quantitative and qualitative data. However, it doesn't force a clear, final distinction between what the data *proves* versus what the team *believes*. The "What We Learned" section can easily become a narrative that fits the desired outcome.
-    *   **Suggestion:** Add a section at the very top called **"Objective Findings vs. Subjective Interpretation."** This forces the author to separate "The data shows a 5% lift in clicks" from "We believe this means users love the new design."
+* **Objective Synthesis: (Minor Loophole)**
+  * **Critique:** It does a good job of separating quantitative and qualitative data. However, it doesn't force a clear, final distinction between what the data *proves* versus what the team *believes*. The "What We Learned" section can easily become a narrative that fits the desired outcome.
+  * **Suggestion:** Add a section at the very top called **"Objective Findings vs. Subjective Interpretation."** This forces the author to separate "The data shows a 5% lift in clicks" from "We believe this means users love the new design."
 
 ### `bug-tracker.md` & `test-case.md`
 

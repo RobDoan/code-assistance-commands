@@ -14,10 +14,10 @@ To close this gap, I am introducing a new, fifth template to our design phase pl
 
 ## 2. Analysis of Existing Templates (v2)
 
-*   **`01-experiment-brief.md`**: **No Changes.** This is now a sharp tool for defining the "why" and "what" of an experiment.
-*   **`02-user-journey-map.md`**: **No Changes.** It perfectly maps the critical path and measurement plan.
-*   **`03-prototype-spec.md`**: **No Changes.** It provides a "good enough" guide for engineering without creating unnecessary overhead.
-*   **`04-tech-feasibility-check.md`**: **No Changes.** It serves as a fast, effective gate to prevent over-investment.
+* **`01-experiment-brief.md`**: **No Changes.** This is now a sharp tool for defining the "why" and "what" of an experiment.
+* **`02-user-journey-map.md`**: **No Changes.** It perfectly maps the critical path and measurement plan.
+* **`03-prototype-spec.md`**: **No Changes.** It provides a "good enough" guide for engineering without creating unnecessary overhead.
+* **`04-tech-feasibility-check.md`**: **No Changes.** It serves as a fast, effective gate to prevent over-investment.
 
 These templates are working in concert beautifully. The focus of this review is to add the missing piece that completes the system.
 
@@ -27,9 +27,9 @@ These templates are working in concert beautifully. The focus of this review is 
 
 The purpose of an experiment is not to build a feature; it is to get a validated learning. The `Experiment Summary` is the artifact that banks that learning.
 
-*   **Why it's needed:** It forces the team to confront the results honestly, compare them against the original hypothesis, and make a conscious, documented decision. It prevents "zombie projects" that continue indefinitely without a clear verdict.
-*   **When it's used:** It is created by the Product Owner as soon as the experiment's data collection period is over.
-*   **Who it's for:** It is for the entire team and for future teams. It becomes a searchable, permanent record of what we've tried, what we've learned, and why we made the decisions we did.
+* **Why it's needed:** It forces the team to confront the results honestly, compare them against the original hypothesis, and make a conscious, documented decision. It prevents "zombie projects" that continue indefinitely without a clear verdict.
+* **When it's used:** It is created by the Product Owner as soon as the experiment's data collection period is over.
+* **Who it's for:** It is for the entire team and for future teams. It becomes a searchable, permanent record of what we've tried, what we've learned, and why we made the decisions we did.
 
 ### **New Template: `05-experiment-summary.md`**
 

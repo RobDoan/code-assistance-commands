@@ -8,8 +8,8 @@ This process embeds a culture of **Structured Freedom**.
 
 It is not a system of control, but a system of **scaffolding**. It provides strong, reliable guardrails that reduce the cognitive load of a deployment, freeing up engineers to focus on the creative, high-judgment aspects of their work. By making the "safe path" the "easy path," it empowers teams to move faster and with greater confidence.
 
-*   **Most Significant Benefit:** It builds **Psychological Safety**. The explicit, pre-defined rollback conditions and the blameless log normalize the act of rolling back. A rollback is not a failure; it is a planned, successful execution of the safety protocol. This is the single most important factor in creating a team that is not afraid to innovate and take calculated risks.
-*   **Most Significant Long-Term Risk:** **Complacent Adherence**. The process is so thorough that teams might follow it blindly without understanding the *why* behind the steps. They could become excellent at following the checklist but lose the ability to critically think about *new* or *unforeseen* failure modes. The process must be treated as a living document, constantly challenged and improved, not a sacred text.
+* **Most Significant Benefit:** It builds **Psychological Safety**. The explicit, pre-defined rollback conditions and the blameless log normalize the act of rolling back. A rollback is not a failure; it is a planned, successful execution of the safety protocol. This is the single most important factor in creating a team that is not afraid to innovate and take calculated risks.
+* **Most Significant Long-Term Risk:** **Complacent Adherence**. The process is so thorough that teams might follow it blindly without understanding the *why* behind the steps. They could become excellent at following the checklist but lose the ability to critically think about *new* or *unforeseen* failure modes. The process must be treated as a living document, constantly challenged and improved, not a sacred text.
 
 ---
 
@@ -21,10 +21,10 @@ It is not a system of control, but a system of **scaffolding**. It provides stro
 
 **Systemic Insight (Analysis):**
 
-*   **First Principles:** The "Job to be Done" is to ship value safely and quickly. This runbook achieves this by **empowering** the engineer. It doesn't ask for permission; it provides a clear, pre-approved flight plan.
-*   **Persona A (Junior Engineer):** For a junior engineer, this is a powerful **safety net**. It turns a terrifying "first deployment" into a structured, educational experience. They learn what to monitor, what "good" looks like, and that there's a clear escape hatch. It teaches them how to deploy correctly by doing.
-*   **Persona B (On-Call Veteran):** For the veteran at 3 AM, this is a godsend. The runbook for the last deployment provides immediate, high-signal context on "what changed." The explicit thresholds and dashboard links mean they aren't hunting for information; they are oriented and diagnosing within seconds. It respects their time and expertise.
-*   **Cognitive Bias:** It is a powerful antidote to **Normalcy Bias**. The "ROLLBACK IF" column forces the team to confront and define failure *before* they start. They cannot simply assume success; they must define its parameters and are pre-committed to action if those parameters are breached.
+* **First Principles:** The "Job to be Done" is to ship value safely and quickly. This runbook achieves this by **empowering** the engineer. It doesn't ask for permission; it provides a clear, pre-approved flight plan.
+* **Persona A (Junior Engineer):** For a junior engineer, this is a powerful **safety net**. It turns a terrifying "first deployment" into a structured, educational experience. They learn what to monitor, what "good" looks like, and that there's a clear escape hatch. It teaches them how to deploy correctly by doing.
+* **Persona B (On-Call Veteran):** For the veteran at 3 AM, this is a godsend. The runbook for the last deployment provides immediate, high-signal context on "what changed." The explicit thresholds and dashboard links mean they aren't hunting for information; they are oriented and diagnosing within seconds. It respects their time and expertise.
+* **Cognitive Bias:** It is a powerful antidote to **Normalcy Bias**. The "ROLLBACK IF" column forces the team to confront and define failure *before* they start. They cannot simply assume success; they must define its parameters and are pre-committed to action if those parameters are breached.
 
 ### On `post-release-log.md`
 
@@ -32,8 +32,8 @@ It is not a system of control, but a system of **scaffolding**. It provides stro
 
 **Systemic Insight (Analysis):**
 
-*   **Cultural Impact:** This document is the cornerstone of a **learning culture**. By separating the *log of events* from the *runbook of instructions*, it creates a dedicated space for reflection. The "Key Learnings" and "Action Items" sections turn every deployment—successful or not—into a structured learning opportunity. This is how an organization's collective intelligence grows.
-*   **Persona C (Product Manager):** While not a direct comms tool, the output of this log (specifically the "Action Items") provides a transparent, no-nonsense view into the health of the system. It builds trust when they see that the engineering team is proactively identifying and fixing issues, even small ones. It answers the question, "How are we making sure this doesn't happen again?"
+* **Cultural Impact:** This document is the cornerstone of a **learning culture**. By separating the *log of events* from the *runbook of instructions*, it creates a dedicated space for reflection. The "Key Learnings" and "Action Items" sections turn every deployment—successful or not—into a structured learning opportunity. This is how an organization's collective intelligence grows.
+* **Persona C (Product Manager):** While not a direct comms tool, the output of this log (specifically the "Action Items") provides a transparent, no-nonsense view into the health of the system. It builds trust when they see that the engineering team is proactively identifying and fixing issues, even small ones. It answers the question, "How are we making sure this doesn't happen again?"
 
 ---
 

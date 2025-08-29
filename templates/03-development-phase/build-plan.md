@@ -7,7 +7,7 @@
 
 ## 1. Hypothesis & Goal
 
-- **Hypothesis:** We believe that... 
+- **Hypothesis:** We believe that...
 - **Success Metric:** ...and we'll know we're right if [Metric] hits [Target].
 
 ## 2. Technical Plan & Trade-offs
@@ -21,4 +21,3 @@
 | Risk | Mitigation |
 |------|------------|
 | *e.g., This approach creates tech debt in the billing system* | *e.g., We will schedule a refactor in Q4 if the experiment is successful.* |
-

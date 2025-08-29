@@ -16,7 +16,8 @@
 
 **Test Name:** [Feature/Experiment Name]  
 **Test ID:** [YYYY-MM-DD-XXX]  
-**Related Documents:** 
+**Related Documents:**
+
 - Product Requirements: `../design/prd.md`
 - Hypothesis Source: `../research/hypothesis-list.md`
 - Previous Tests: [Link to related experiments]
@@ -24,9 +25,11 @@
 ## Hypothesis Framework
 
 ### Null Hypothesis (H₀)
+>
 > **The change we are introducing will have no statistically significant effect on the primary metric.** Our primary goal is to gather enough evidence to confidently reject this statement.
 
 ### Alternative Hypothesis (H₁)
+
 **We believe that:** [specific user segment]  
 **Will:** [expected behavior change]  
 **Because:** [underlying assumption about user needs]  
@@ -37,6 +40,7 @@
 ## Success Metrics
 
 ### Primary Metric
+
 - **Metric:** [Specific KPI]
 - **Business Value Connection:** [Explain how this metric causally links to long-term business value - why this isn't a vanity metric]
 - **Current Baseline:** [Current performance]
@@ -48,12 +52,14 @@
 *Example: Click-through rate on the 'upgrade' button connects to business value because it's a leading indicator of premium conversions, which drives LTV. Target: 15% relative improvement with 95% confidence.*
 
 ### Secondary Metrics
+
 | Metric | Baseline | Expected Change | Why Track |
 |--------|----------|-----------------|-----------|
 | [Metric 1] | [Value] | [+/- X%] | [Reason] |
 | [Metric 2] | [Value] | [+/- X%] | [Reason] |
 
 ### Guardrail Metrics
+
 - **[Critical metric that must not degrade]:** Maximum acceptable decrease: [X%]
 
 ## Experimental Design
@@ -64,12 +70,14 @@
 **Traffic Allocation:** [X% to control, Y% to variant(s)]
 
 ### Audience Targeting
+
 - **Include:** [Specific user criteria]
 - **Exclude:** [Users to exclude and why]
 - **Geographic Scope:** [Regions/countries]
 - **Platform:** [Web/Mobile/Both]
 
 ### Pre-defined Analysis Segments (Anti-P-Hacking)
+>
 > **Critical:** State any user segments you plan to analyze *before* the test starts. If a segment is not listed here, it cannot be used to declare victory later.
 
 | Segment | Hypothesis for this Segment | Why We Expect a Difference |
@@ -81,6 +89,7 @@
 *Example: New Users | Stronger positive effect expected | They haven't formed habits around the old interface*
 
 ### Variants
+
 1. **Control:** [Current experience description]
 2. **Variant A:** [Change description]
 3. **Variant B (if applicable):** [Change description]
@@ -106,15 +115,19 @@
 ## Decision Framework (Pre-commitment)
 
 **If the primary metric for the overall population shows statistically significant improvement ≥ MDE:**
+
 - **Action:** SHIP. Begin phased rollout to 100%
 
 **If the primary metric shows no significant change OR improvement < MDE:**
+
 - **Action:** ABANDON. The change did not meet our success threshold. Analyze secondary metrics and pre-defined segments for learnings only - do not ship
 
 **If a pre-defined segment shows significant improvement but overall population does not:**
+
 - **Action:** ITERATE. Form new targeted hypothesis for that segment and design a new experiment. Do not ship to all users
 
 **If any guardrail metric shows statistically significant degradation:**
+
 - **Action:** HALT & REVERT. Immediate rollback and root cause analysis
 
 ## Test Owner
