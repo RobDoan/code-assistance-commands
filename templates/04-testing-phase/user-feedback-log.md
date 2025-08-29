@@ -46,12 +46,24 @@
 **Collection Method:** [Survey/Interview/Support/Recording]  
 **User Segment:** [New/Returning/Power User]
 
-**Feedback:**  
-*"[Verbatim user feedback]"*
+**1. Observed Behavior (The "What"):**
+> What did the user *do*? Describe their actions without interpretation.
+- *Example: "User scrolled to bottom of page, then back to top. Hovered over 'Save' button for 5 seconds without clicking. Used browser back button."*
+- [Actual observed behavior]
+
+**2. Verbatim Feedback (The "Why" - User's Words):**
+> Quote the user directly. Do not paraphrase.
+- *Example: "I don't get it. Where am I supposed to click to save my changes?"*
+- *"[Actual verbatim user feedback]"*
+
+**3. Observer's Interpretation (The "I Think" - Your Analysis):**
+> Your interpretation of the behavior and feedback. This section quarantines your bias.
+- *Example: "I think the user was confused because the primary CTA lacks contrast and is placed unconventionally, leading to uncertainty."*
+- [Your interpretation of what this means]
 
 **Context:**
 - Task Attempted: [What user was trying to do]
-- Success: [Yes/No/Partial]
+- Task Success: [Yes/No/Partial]
 - Time on Task: [Duration]
 
 **Sentiment:** [Positive/Neutral/Negative]  
@@ -66,12 +78,18 @@
 **Variant:** [Control/Variant A/B]  
 **Collection Method:** [Survey/Interview/Support/Recording]
 
-**Feedback:**  
-*"[Verbatim user feedback]"*
+**1. Observed Behavior (The "What"):**
+- [What the user did - actions only]
+
+**2. Verbatim Feedback (The "Why" - User's Words):**
+- *"[Exact user quote]"*
+
+**3. Observer's Interpretation (The "I Think" - Your Analysis):**
+- [Your interpretation of the behavior and feedback]
 
 **Context:**
 - Task Attempted: [What user was trying to do]
-- Success: [Yes/No/Partial]
+- Task Success: [Yes/No/Partial]
 
 **Sentiment:** [Positive/Neutral/Negative]  
 **Themes:** [Theme tags]

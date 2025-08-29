@@ -11,8 +11,12 @@
 - Hypothesis Source: `../research/hypothesis-list.md`
 - Previous Tests: [Link to related experiments]
 
-## Hypothesis Statement
+## Hypothesis Framework
 
+### Null Hypothesis (H₀)
+> **The change we are introducing will have no statistically significant effect on the primary metric.** Our primary goal is to gather enough evidence to confidently reject this statement.
+
+### Alternative Hypothesis (H₁)
 **We believe that:** [specific user segment]  
 **Will:** [expected behavior change]  
 **Because:** [underlying assumption about user needs]  
@@ -24,11 +28,14 @@
 
 ### Primary Metric
 - **Metric:** [Specific KPI]
+- **Business Value Connection:** [Explain how this metric causally links to long-term business value - why this isn't a vanity metric]
 - **Current Baseline:** [Current performance]
-- **Target:** [Minimum detectable effect]
-- **Statistical Significance:** [Confidence level, typically 95%]
+- **Target (Minimum Detectable Effect):** [Minimum meaningful change, e.g., +5%]
+- **Statistical Thresholds:**
+  - **Confidence Level:** 95% (p-value < 0.05)
+  - **Statistical Power:** 80%
 
-*Example: Success is a 15% or greater click-through rate on the 'new feature' button for the test group, with 95% statistical confidence.*
+*Example: Click-through rate on the 'upgrade' button connects to business value because it's a leading indicator of premium conversions, which drives LTV. Target: 15% relative improvement with 95% confidence.*
 
 ### Secondary Metrics
 | Metric | Baseline | Expected Change | Why Track |
@@ -46,11 +53,22 @@
 **Test Duration:** [Start Date] to [End Date] ([X days/weeks])  
 **Traffic Allocation:** [X% to control, Y% to variant(s)]
 
-### Audience Segmentation
+### Audience Targeting
 - **Include:** [Specific user criteria]
 - **Exclude:** [Users to exclude and why]
 - **Geographic Scope:** [Regions/countries]
 - **Platform:** [Web/Mobile/Both]
+
+### Pre-defined Analysis Segments (Anti-P-Hacking)
+> **Critical:** State any user segments you plan to analyze *before* the test starts. If a segment is not listed here, it cannot be used to declare victory later.
+
+| Segment | Hypothesis for this Segment | Why We Expect a Difference |
+|---------|----------------------------|----------------------------|
+| New vs. Returning Users | [Expected effect difference] | [Reasoning] |
+| Mobile vs. Desktop | [Expected effect difference] | [Reasoning] |
+| [Custom segment] | [Hypothesis] | [Justification] |
+
+*Example: New Users | Stronger positive effect expected | They haven't formed habits around the old interface*
 
 ### Variants
 1. **Control:** [Current experience description]
@@ -75,16 +93,19 @@
 - [ ] Bug tracking system ready (`bug-tracker.md`)
 - [ ] User feedback collection prepared (`user-feedback-log.md`)
 
-## Decision Framework
+## Decision Framework (Pre-commitment)
 
-**If primary metric improves by ≥[X%] with statistical significance:**
-- Action: Roll out to 100%
+**If the primary metric for the overall population shows statistically significant improvement ≥ MDE:**
+- **Action:** SHIP. Begin phased rollout to 100%
 
-**If primary metric shows no significant change:**
-- Action: Analyze secondary metrics and user feedback for insights
+**If the primary metric shows no significant change OR improvement < MDE:**
+- **Action:** ABANDON. The change did not meet our success threshold. Analyze secondary metrics and pre-defined segments for learnings only - do not ship
 
-**If primary metric degrades or guardrails are violated:**
-- Action: Immediate rollback and root cause analysis
+**If a pre-defined segment shows significant improvement but overall population does not:**
+- **Action:** ITERATE. Form new targeted hypothesis for that segment and design a new experiment. Do not ship to all users
+
+**If any guardrail metric shows statistically significant degradation:**
+- **Action:** HALT & REVERT. Immediate rollback and root cause analysis
 
 ## Test Owner
 

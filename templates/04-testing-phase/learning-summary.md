@@ -15,16 +15,33 @@
 - User Feedback: `user-feedback-log.md`
 - Original Hypothesis: `../research/hypothesis-list.md`
 
-## Hypothesis Validation
+## Executive Summary & Decision
 
-### Original Hypothesis
+**Hypothesis Status:** ✅ VALIDATED / ❌ INVALIDATED / ⚠️ INCONCLUSIVE  
+**Recommendation:** [SHIP / ITERATE / ABANDON]  
+**Business Impact:** [Brief summary of the key result and its financial or strategic implication]
+
+## Objective Findings vs. Subjective Interpretation
+
+### Objective Findings (What the data says)
+> Stick to the facts. Report quantitative results and direct qualitative observations.
+- The primary metric [Metric Name] showed a relative change of [+/-X.X%] ([Confidence Interval]), with a p-value of [0.XX]. This result [is/is not] statistically significant at our 95% confidence threshold
+- Guardrail metric [Metric Name] changed by [+/-Y.Y%], which [did/did not] breach our pre-defined limit
+- [X%] of users in the variant group mentioned [Theme Name] in feedback surveys
+- [Additional objective observations]
+
+### Subjective Interpretation (What we think it means)
+> This is where we build our narrative and connect the dots.
+- We believe the improvement in the primary metric is because [our interpretation of user behavior]
+- Although the result wasn't statistically significant, the qualitative feedback suggests [our interpretation]
+- Our next iteration should focus on [specific change] to [expected outcome]
+
+## Original Hypothesis Review
+
 **We believed that:** [Original hypothesis from test plan]  
 **Success Criteria:** [Original target metric and threshold]
 
-### Result
-**Hypothesis Status:** ✅ VALIDATED / ❌ INVALIDATED / ⚠️ INCONCLUSIVE
-
-**Evidence:**
+**Evidence Summary:**
 - Primary metric achieved [X%] change (target was [Y%])
 - Statistical significance: [Achieved/Not achieved] at [X%] confidence
 - Practical significance: [Meaningful/Not meaningful] for business
@@ -72,7 +89,9 @@
 - [Behavior or feedback we didn't anticipate]
 - [Side effect that emerged during testing]
 
-## What We Learned
+## Detailed Analysis
+
+### What We Learned
 
 ### About Our Users
 1. **Validated Assumption:** [What we correctly understood]
