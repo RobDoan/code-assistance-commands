@@ -121,6 +121,7 @@
 * [ ] None of the above → Red Team Optional
 
 **If Required:**
+
 * **Red Team Members:** [Assigned by Data Science Lead]
 * **Review Date:** [Within 48 hours of request]
 * **Key Concerns to Address:** [What you want Red Team to focus on]
