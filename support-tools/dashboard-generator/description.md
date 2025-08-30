@@ -1,9 +1,11 @@
 # Mission Control Dashboard Generator
 
 ## Purpose
+
 Transforms the static README.md into a dynamic "Mission Control" dashboard that provides real-time visibility into the team's learning process, active experiments, and system health.
 
 ## Functionality
+
 This generator creates a live dashboard by:
 
 1. **Scanning Documentation**: Parses all template directories for current state:
@@ -29,6 +31,7 @@ This generator creates a live dashboard by:
 5. **Publishing**: Deploys to team-accessible location
 
 ## Output Format
+
 ```html
 <!-- Mission Control Dashboard -->
 <div class="dashboard">
@@ -65,6 +68,7 @@ This generator creates a live dashboard by:
 ```
 
 ## Configuration
+
 ```yaml
 # config.yaml
 source_directories:
@@ -87,12 +91,14 @@ theme: "light"  # or "dark"
 ```
 
 ## Trigger Conditions
+
 - Runs on every commit to main branch
 - Scheduled generation every hour
 - Manual trigger via command
 - Triggered by significant events (experiment completion, incident)
 
 ## Benefits
+
 - Ambient awareness of team's learning state
 - Reduces need to search through documents
 - Makes learning velocity visible and measurable
@@ -100,6 +106,7 @@ theme: "light"  # or "dark"
 - Provides executive-friendly view of technical progress
 
 ## Implementation Notes
+
 - Should gracefully handle incomplete/malformed templates
 - Must be performant even with hundreds of documents
 - Caches parsed data to avoid repeated file reads
@@ -107,6 +114,7 @@ theme: "light"  # or "dark"
 - Accessible without special tools (just a browser)
 
 ## Integration Points
+
 - Static site generators (MkDocs, Jekyll, Docusaurus)
 - CI/CD pipelines for automatic updates
 - Team wikis or portals
@@ -114,6 +122,7 @@ theme: "light"  # or "dark"
 - Slack/Teams for snapshot sharing
 
 ## Future Enhancements
+
 - Real-time WebSocket updates
 - Personalized views based on team role
 - Predictive analytics on experiment success

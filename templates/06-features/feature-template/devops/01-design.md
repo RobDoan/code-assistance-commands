@@ -8,9 +8,11 @@
 ---
 
 ## Why
+
 *Infrastructure design rationale and operational philosophy*
 
 ### Infrastructure Goals
+>
 > **What are we optimizing for in our infrastructure?**
 
 1. **Reliability:** 99.9% uptime with graceful degradation patterns
@@ -21,6 +23,7 @@
 6. **Developer Experience:** Self-service capabilities and fast feedback loops
 
 ### Architectural Principles
+
 - **Infrastructure as Code:** Everything version-controlled and reproducible
 - **Immutable Infrastructure:** Replace, don't modify
 - **Microservices-Ready:** Designed for independent service deployment
@@ -29,6 +32,7 @@
 - **GitOps:** Configuration changes through version control
 
 ### Technology Decisions
+
 | Decision | Choice | Rationale | Trade-offs |
 |----------|--------|-----------|------------|
 | **Container Orchestration** | Kubernetes (EKS) | Industry standard, rich ecosystem | Complexity overhead |
@@ -41,9 +45,11 @@
 ---
 
 ## What
+
 *Infrastructure architecture and components*
 
 ### High-Level Architecture
+
 ```
 ┌─────────────────────────────────────────────────────┐
 │                    Internet / CDN                           │
@@ -92,6 +98,7 @@
 ### Environment Architecture
 
 #### Production Environment
+
 ```yaml
 production:
   regions:
@@ -133,6 +140,7 @@ production:
 ```
 
 #### Staging Environment
+
 ```yaml
 staging:
   regions:
@@ -165,6 +173,7 @@ staging:
 ### Network Architecture
 
 #### VPC Design
+
 ```yaml
 vpc:
   cidr: "10.0.0.0/16"
@@ -200,6 +209,7 @@ vpc:
 ### Security Architecture
 
 #### Identity and Access Management
+
 ```yaml
 iam_roles:
   cluster_service_role:
@@ -228,6 +238,7 @@ iam_roles:
 ```
 
 #### Network Security
+
 ```yaml
 security_groups:
   alb_sg:
@@ -274,11 +285,13 @@ security_groups:
 ---
 
 ## How
+
 *Implementation approach and deployment patterns*
 
 ### Infrastructure as Code
 
 #### Terraform Structure
+
 ```
 infrastructure/
 ├── environments/
@@ -305,6 +318,7 @@ infrastructure/
 ```
 
 #### EKS Cluster Module
+
 ```hcl
 # modules/eks/main.tf
 module "eks" {
@@ -382,6 +396,7 @@ module "eks" {
 ### Kubernetes Manifests
 
 #### Application Deployment
+
 ```yaml
 # k8s/deployments/feature-api.yml
 apiVersion: apps/v1
@@ -470,6 +485,7 @@ spec:
 ```
 
 #### Service Definition
+
 ```yaml
 # k8s/services/feature-api.yml
 apiVersion: v1
@@ -491,6 +507,7 @@ spec:
 ```
 
 #### Horizontal Pod Autoscaler
+
 ```yaml
 # k8s/autoscaling/hpa.yml
 apiVersion: autoscaling/v2
@@ -539,6 +556,7 @@ spec:
 ### CI/CD Pipeline
 
 #### GitLab CI Configuration
+
 ```yaml
 # .gitlab-ci.yml
 stages:
@@ -662,6 +680,7 @@ verify:production:
 ### Monitoring Configuration
 
 #### Prometheus Configuration
+
 ```yaml
 # monitoring/prometheus/values.yml
 prometheus:
@@ -712,6 +731,7 @@ prometheus:
 ```
 
 #### Grafana Dashboards
+
 ```json
 {
   "dashboard": {
@@ -763,6 +783,7 @@ prometheus:
 ### Disaster Recovery
 
 #### Backup Strategy
+
 ```yaml
 # backup/velero-config.yml
 apiVersion: velero.io/v1
@@ -806,6 +827,7 @@ spec:
 ```
 
 #### Database Backup Automation
+
 ```bash
 #!/bin/bash
 # scripts/database-backup.sh
@@ -854,6 +876,7 @@ echo "Database backup completed successfully"
 ### Resource Right-sizing
 
 #### Cost Analysis
+
 | Resource Category | Current Monthly Cost | Optimized Cost | Savings |
 |------------------|---------------------|----------------|----------|
 | **EKS Cluster** | $73 | $73 | $0 |
@@ -867,6 +890,7 @@ echo "Database backup completed successfully"
 | **Total** | **$1,548** | **$1,173** | **$375** |
 
 #### Optimization Strategies
+
 ```yaml
 # cost-optimization/spot-instances.yml
 apiVersion: karpenter.sh/v1beta1
@@ -911,9 +935,11 @@ data:
 ---
 
 ## Our Philosophy
+>
 > *"Infrastructure as Code: Everything should be version-controlled and reproducible."*
 
 **DevOps Principles:**
+
 - **Automate Everything:** Manual processes don't scale and introduce errors
 - **Security by Default:** Build security into every layer from day one
 - **Observability First:** You can't operate what you can't see
@@ -925,6 +951,7 @@ data:
 ## Compliance & Governance
 
 ### Compliance Requirements
+
 | Requirement | Implementation | Validation |
 |-------------|---------------|-----------|
 | **Data Encryption** | TLS 1.3, AES-256 at rest | Automated scanning |
@@ -935,6 +962,7 @@ data:
 | **Vulnerability Management** | Weekly security scans | Automated remediation |
 
 ### Governance Automation
+
 ```yaml
 # governance/policy-as-code.yml
 apiVersion: config.gatekeeper.sh/v1beta1
@@ -973,6 +1001,7 @@ spec:
 ---
 
 **Links:**
+
 - **Infrastructure Repository:** *[Link to Terraform code]*
 - **Kubernetes Manifests:** *[Link to K8s configuration]*
 - **Monitoring Dashboards:** *[Link to Grafana]*

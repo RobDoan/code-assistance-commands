@@ -1,7 +1,7 @@
 # Development Phase: Building to Learn
 
 > **"We're building an experiment, not a product."**
-> 
+>
 > Development is about validating assumptions through working software, not creating comprehensive solutions.
 
 ## Our Philosophy
@@ -16,6 +16,7 @@ Development Phase embodies the **Learning Machine Manifesto**:
 ## The Development Toolkit
 
 ### 📋 **Build Plan**
+
 *[00-build-plan.md](00-build-plan.md)*
 
 **When to Use:** Before writing any code for a new experiment
@@ -24,7 +25,8 @@ Development Phase embodies the **Learning Machine Manifesto**:
 
 **3 AM Test Question:** *"What's the minimum code needed to validate our hypothesis?"*
 
-### ✅ **Pre-Flight Checklist** 
+### ✅ **Pre-Flight Checklist**
+
 *[pre-flight-checklist.md](pre-flight-checklist.md)*
 
 **When to Use:** Before deploying any experiment to users
@@ -34,6 +36,7 @@ Development Phase embodies the **Learning Machine Manifesto**:
 **3 AM Test Question:** *"Is this experiment ready to produce reliable data?"*
 
 ### 📋 **Experiment Debrief**
+
 *[experiment-debrief.md](experiment-debrief.md)*
 
 **When to Use:** After every development iteration to capture technical learning
@@ -47,16 +50,19 @@ Development Phase embodies the **Learning Machine Manifesto**:
 ## Development Anti-Patterns We Avoid
 
 ### 🏗️ **Gold Plating Experiments**
+
 - **The Trap:** Building production-ready code for early experiments
 - **The Reality:** Most experiments will be killed or completely rewritten
 - **Safeguard:** Explicit Craftsmanship Debt Scores (1-5) for every build decision
 
 ### 🎯 **Perfect Architecture Paralysis**
+
 - **The Trap:** Designing perfect systems before understanding requirements
 - **The Reality:** Requirements change based on user feedback from experiments
 - **Safeguard:** Start with hardcoded values, abstract only after validation
 
 ### 🚀 **Premature Optimization**
+
 - **The Trap:** Optimizing for scale before proving product-market fit
 - **The Reality:** Dead products don't have scaling problems
 - **Safeguard:** "Can it handle 10x current load?" test before any optimization
@@ -96,6 +102,7 @@ Before moving to Testing Phase, answer these:
 ## Development Workflow Guide
 
 ### Week 1: Planning & Architecture
+
 1. **Create [Build Plan](build-plan.md)**
    - Define minimum viable implementation for hypothesis testing
    - Set explicit Craftsmanship Debt Score based on experiment maturity
@@ -107,6 +114,7 @@ Before moving to Testing Phase, answer these:
    - Design monitoring for critical experiment metrics
 
 ### Week 2-3: Implementation
+
 3. **Code with Measurement**
    - Build instrumentation as you build features
    - Focus on core user flow that validates hypothesis
@@ -118,6 +126,7 @@ Before moving to Testing Phase, answer these:
    - Validate monitoring and alerting are functional
 
 ### Week 4: Launch & Learn
+
 5. **Ship & Monitor**
    - Deploy experiment with appropriate user exposure
    - Monitor both business and technical metrics closely
@@ -133,18 +142,21 @@ Before moving to Testing Phase, answer these:
 ## Integration with Other Phases
 
 ### From Design Phase
+
 - **Validated prototypes** become implementation specifications
 - **Technical feasibility assessments** guide architecture decisions
 - **User flow definitions** inform development priorities
 - **Success metrics** become measurement requirements
 
 ### To Testing Phase
+
 - **Working experiments** ready for user validation
 - **Measurement infrastructure** collecting reliable data
 - **Technical monitoring** tracking system health
 - **Rollback procedures** ready for quick failures
 
 ### Cross-Cutting Connections
+
 - **Craftsmanship Debt Tracker:** Core tool for balancing speed vs. quality
 - **Red Team Review:** Challenge technical approaches and architecture decisions
 - **Crisis Framework:** Maintain development quality under shipping pressure
@@ -154,12 +166,14 @@ Before moving to Testing Phase, answer these:
 ## Development Success Metrics
 
 ### Development Velocity Indicators
+
 - **Code-to-Ship Time:** <1 week from code complete to user-facing experiment
 - **Rollback Speed:** <1 hour from problem detection to rollback completion
 - **Measurement Latency:** Data available within 24 hours of user interaction
 - **Iteration Frequency:** New experiment versions every 1-2 weeks
 
 ### Quality of Technical Learning
+
 - Clear insights about system performance under real user load
 - Understanding of which technical approaches work vs. don't work
 - Evidence-based decisions about where to invest in technical quality
@@ -170,18 +184,21 @@ Before moving to Testing Phase, answer these:
 ## Development Team Roles
 
 ### For Engineers
+
 - **Think like experimenters:** Build to learn, not just to work
 - **Track debt consciously:** Use Craftsmanship Debt Scores honestly
 - **Plan for rollbacks:** Make failure recovery fast and safe
 - **Share technical insights:** Document what code taught you about users/system
 
 ### For Product Managers
+
 - **Define minimum viable experiments:** Help engineers build less, learn more
 - **Protect learning focus:** Resist feature creep that dilutes experiment validity
 - **Support debt decisions:** Understand when speed is worth technical shortcuts
 - **Connect technical to business:** Help engineers see how their work drives learning
 
 ### For DevOps/Infrastructure
+
 - **Enable fast iteration:** Make deployment and rollback routine operations
 - **Ensure measurement capability:** Infrastructure that captures experiment data reliably
 - **Monitor experiment health:** Distinguish between expected and concerning system behavior
@@ -192,16 +209,19 @@ Before moving to Testing Phase, answer these:
 ## Common Development Challenges
 
 ### Balancing Experiment Code vs. Production Code
+
 - **Start with Debt Score 1-2:** Hardcode first, abstract after validation
 - **Plan debt paydown:** If experiment succeeds, immediately plan quality improvements
 - **Separate experiment from core:** Keep experimental code isolated from stable systems
 
 ### Managing Technical Risk in Experiments
+
 - **Circuit breakers everywhere:** Experiments shouldn't break core functionality
 - **Feature flags are essential:** Ability to turn off experiments instantly
 - **Monitoring is non-negotiable:** You can't learn from experiments you can't measure
 
 ### Maintaining Development Speed Under Uncertainty
+
 - **Embrace throwaway code:** Most experiment code will never make it to production
 - **Optimize for learning speed:** Time to user feedback beats time to perfect code
 - **Document insights, not code:** The learning is more valuable than the implementation
@@ -212,17 +232,20 @@ Before moving to Testing Phase, answer these:
 
 ### Debt Score Guidelines
 
-**Score 1 (Hardcoded Experiment):** 
+**Score 1 (Hardcoded Experiment):**
+
 - Acceptable for: First version of any new feature
 - Must upgrade if: Experiment shows user traction
 - Timeline: Can stay at this level for 1-2 months max
 
 **Score 2-3 (Structured but Expedient):**
+
 - Acceptable for: Validated experiments scaling to more users  
 - Must upgrade if: Becomes core user workflow
 - Timeline: Good for 3-6 months of experimentation
 
 **Score 4-5 (Production Quality):**
+
 - Required for: Core user workflows, proven features
 - Investment justified by: User adoption and business impact
 - Maintenance: Ongoing quality investment needed

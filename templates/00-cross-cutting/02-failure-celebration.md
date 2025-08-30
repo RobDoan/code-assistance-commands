@@ -30,12 +30,14 @@
 ## Winner Selection Criteria
 
 **The winning failure should be:**
+
 1. **Genuinely believed** - We really thought it would work
 2. **Properly tested** - We ran a real experiment, not just an opinion poll
 3. **Quickly killed** - We stopped fast when data said stop
 4. **Lesson-rich** - We learned something applicable beyond this case
 
 **NOT eligible:**
+
 - Failures from not trying (inaction)
 - Failures from obviously bad ideas (no learning)
 - Production incidents (different category)
@@ -50,16 +52,19 @@
 **Lifetime:** [How long from hypothesis to funeral]
 
 ### The Hypothesis
+
 *What we believed would happen and why*
 
 Example: "We believed that adding social features would increase retention by 20% because users said they wanted to see what their peers were doing."
 
 ### The Experiment
+
 *How we tested it (quickly and cheaply)*
 
 Example: "We created a fake 'Activity Feed' button that showed a coming soon page. Tracked clicks and email signups for interest."
 
 ### The Moment of Truth
+
 *The specific data that killed it*
 
 Example: "Only 2% of users clicked the button. Of those, 90% immediately bounced. User interviews revealed they come here to work alone, not socialize."
@@ -89,6 +94,7 @@ Example: "We learned our users are 'single-player mode' people. This killed our 
 5. **The Celebration (1 min):** Thank people who helped kill it fast
 
 ### Presentation Rules
+
 - No apologies allowed ("Sorry this didn't work" = banned phrase)
 - No hedging ("It might have worked if..." = banned)
 - Own it with pride ("We killed this fast and saved $X")
@@ -112,16 +118,19 @@ Example: "We learned our users are 'single-player mode' people. This killed our 
 ## The Anti-Patterns (Don't Do This)
 
 ### Fake Failures
+
 - Killing something that was never really tried
 - Calling pivots "failures" for the award
 - Manufactured failures to look learning-oriented
 
 ### Blame Disguised as Learning
+
 - "We learned that [other team] can't execute"
 - "We learned that customers are stupid"
 - "We learned that the market isn't ready" (usually BS)
 
 ### Success Theater
+
 - Only celebrating trivial failures
 - Avoiding discussion of painful failures
 - Leadership never winning the award
@@ -131,12 +140,14 @@ Example: "We learned our users are 'single-player mode' people. This killed our 
 ## The Ritual
 
 ### Pre-Meeting
+
 - [ ] Nominations collected by last Thursday
 - [ ] Winner selected by leadership + previous winner
 - [ ] Presenter prepares 10-min story
 - [ ] Trophy updated with new nameplate
 
 ### During All-Hands
+
 1. Last month's winner introduces this month's award
 2. 10-minute presentation of the winning failure
 3. Physical trophy handover (yes, we have an actual trophy)
@@ -144,8 +155,9 @@ Example: "We learned our users are 'single-player mode' people. This killed our 
 5. Trophy sits on winner's desk for the month
 
 ### The Trophy
+
 - Actual physical object (not just a Slack emoji)
-- Engraved with "Killed It Fast" 
+- Engraved with "Killed It Fast"
 - Previous winners' nameplates attached
 - Travels to winner's desk/workspace
 
@@ -154,12 +166,14 @@ Example: "We learned our users are 'single-player mode' people. This killed our 
 ## Leadership Commitment
 
 **To make this real, leadership must:**
+
 - Present their own failures (go first)
 - Never punish someone who wins this award
 - Reference these learnings in strategy discussions
 - Treat the trophy with actual respect
 
 **Red flags this is becoming theater:**
+
 - Same people never nominated
 - Only small failures celebrated
 - Winners face subtle negative consequences
@@ -173,11 +187,11 @@ Example: "We learned our users are 'single-player mode' people. This killed our 
 
 **Body:**
 > This month we celebrated [Owner] for quickly killing [Hypothesis].
-> 
+>
 > We learned: [Key learning]
 > We saved: [Time and money]
 > We're doing instead: [New direction]
-> 
+>
 > Remember: Every killed hypothesis is a victory for the company.
 
 ---

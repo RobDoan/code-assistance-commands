@@ -1,4 +1,5 @@
 # We Are a Learning Machine
+
 ### The Startup Mindset Manifesto
 
 **This is our playbook. It's the mindset that turns good ideas into great products. It's not about new rules; it's about a new way of thinking.**
@@ -14,6 +15,7 @@
 **The Mindset:** Every belief, every feature, every decision is a hypothesis to be tested, not a fact to be executed.
 
 **In Practice:**
+
 - Start with "We believe..." not "We know..."
 - Define success metrics BEFORE you build
 - Pre-commit to decisions based on data, not feelings
@@ -30,6 +32,7 @@
 **The Mindset:** Find out what's wrong as quickly as possible. Ship experiments, not features.
 
 **In Practice:**
+
 - Ship experiments, not features
 - Use "fake doors" and landing pages before building
 - Choose 1-day tests over 3-month builds
@@ -46,6 +49,7 @@
 **The Mindset:** Killing a bad idea early is success, not failure. We reward teams for finding the truth, even when it hurts.
 
 **In Practice:**
+
 - Define "kill criteria" upfront
 - Make rollbacks a celebrated safety protocol
 - Track invalidated assumptions in a "Learning Library"
@@ -62,6 +66,7 @@
 **The Mindset:** The null hypothesis is our default. We try to prove ourselves wrong, not right.
 
 **In Practice:**
+
 - State the null hypothesis first
 - Define analysis segments BEFORE seeing data
 - Separate "Observed Behavior" from "Interpretation"
@@ -78,6 +83,7 @@
 **The Mindset:** Process should empower speed, not hinder it. Structured freedom beats both chaos and control.
 
 **In Practice:**
+
 - One source of truth, not five documents
 - Copy-pasteable commands, not abstract instructions
 - Pre-built dashboards with explicit thresholds
@@ -94,6 +100,7 @@
 **The Mindset:** This isn't a process you follow; it's how you exist as a startup.
 
 **In Practice:**
+
 - Every action generates a hypothesis
 - Every hypothesis leads to an experiment
 - Every experiment produces learning
@@ -110,6 +117,7 @@
 **The Mindset:** Templates don't build products; people do. Culture eats strategy for breakfast.
 
 **In Practice:**
+
 - Add "Our Philosophy" sections to critical documents
 - Celebrate learning over being right
 - Make psychological safety explicit
@@ -120,6 +128,7 @@
 ---
 
 ## The 3 AM Test
+
 *Can you answer these instantly, even if woken up at 3 AM?*
 
 1. **What's your riskiest assumption right now?**
@@ -141,6 +150,7 @@
 **The Blind Spot:** Our relentless focus on speed can be weaponized to justify poor craft, technical debt, or shallow work. "Seek Velocity" can become an excuse for shipping low-quality products that never mature.
 
 **The Safeguard: Craftsmanship Debt Tracking**
+
 - Every experiment gets a "Debt Score" (1-5) for production readiness.
 - High-debt scores trigger mandatory "hardening sprints."
 - **This makes the cost of speed visible and forces a conscious trade-off between velocity and quality.**
@@ -150,6 +160,7 @@
 **The Trap:** Using our shared language to avoid difficult work, shut down bold ideas, or justify personal bias. Intellectual honesty can be twisted into unkindness; celebrating failure can be used to kill ideas for political reasons.
 
 **The Safeguard: Red Team Reviews**
+
 - **Mandate:** Assign 2 uninvested people to challenge every major experiment.
 - **Their Job:** Poke holes, question metrics, surface biases, and stress-test the hypothesis.
 - **The Goal:** Make intellectual dissent a shared responsibility, not an act of individual courage. Protects against weaponization by separating the idea from the person.
@@ -167,10 +178,10 @@
 **The Trap:** Abandoning our principles the moment pressure hits—a missed quarterly target, a looming deadline, a competitor's launch. This is when we are most vulnerable to making bad, fear-based decisions.
 
 **The Safeguard: Crisis Protocols**
+
 - **Pre-commit to "tough times" frameworks** before the crisis. Define how decisions will be made when we're under stress.
 - **Ritualize the principles.** When pressure mounts, we don't abandon the mindset; we double down on it. The 3 AM test becomes our guide.
 - **Mantra:** **"Tough times are when we need these principles most, not least."** They are our shield, not a luxury.
-
 
 ---
 
@@ -193,26 +204,31 @@ Avoid these at all costs:
 ### From Documentation to Discovery
 
 **Phase 1: Research**
+
 - Before: 100-page competitive analysis
 - After: 3-day problem validation sprint
 - Mindset Shift: From "know everything" to "learn the riskiest thing first"
 
 **Phase 2: Design**
+
 - Before: Detailed PRDs and architectural documents
 - After: One-page experiment briefs
 - Mindset Shift: From "plan the solution" to "test the assumption"
 
 **Phase 3: Development**
+
 - Before: Complex sprint plans with Gantt charts
 - After: Simple build plans with conscious trade-offs
 - Mindset Shift: From "follow the plan" to "own the outcome"
 
 **Phase 4: Testing**
+
 - Before: Success-oriented test plans
 - After: Null hypothesis and pre-committed decisions
 - Mindset Shift: From "prove it works" to "try to break it"
 
 **Phase 5: Deployment**
+
 - Before: Five-document deployment process
 - After: Single runbook with exact commands
 - Mindset Shift: From "hope it works" to "make safety easy"

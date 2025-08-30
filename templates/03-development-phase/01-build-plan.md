@@ -19,6 +19,7 @@
 ## 2. Technical Approach
 
 ### What We're Building
+
 - **Core Functionality:** [The minimum that must work]
 - **User Path:** [The exact flow we're testing]
 - **Architecture Choice:** [Why this approach vs. alternatives]
@@ -35,6 +36,7 @@
 **Team Debt Ceiling:** 15 points (current total: [X])
 
 ### What MUST Work Well
+
 - [ ] Core happy path (no exceptions)
 - [ ] Rollback mechanism
 - [ ] Basic monitoring
@@ -43,18 +45,21 @@
 ## 3. Build Phases
 
 ### Phase 1: Minimum Testable (Days 1-3)
+
 - [ ] Core feature working locally
 - [ ] Basic happy path test
 - [ ] Feature flag implemented
 - [ ] Rollback tested
 
 ### Phase 2: Experiment Ready (Days 4-5)
+
 - [ ] Deployed to staging
 - [ ] Monitoring dashboard ready
 - [ ] Analytics events verified
 - [ ] Red Team review (if required)
 
 ### Phase 3: Learning Mode (Days 6+)
+
 - [ ] Progressive rollout (10% → 50% → 100%)
 - [ ] Daily metric reviews
 - [ ] Quick iterations based on data
@@ -69,6 +74,7 @@
 | Users hate it | Unknown | Medium | Fast user feedback | < 5 min via flag |
 
 ### Rollback Plan
+
 - **Trigger:** [Specific metrics that trigger rollback]
 - **Method:** Feature flag / Deployment revert
 - **Command:** `[exact command to execute]`
@@ -78,6 +84,7 @@
 ## 5. The Weaponization Check
 
 Are we using "experimentation" to justify:
+
 - [ ] Shipping broken code? (No - core path must work)
 - [ ] Avoiding hard problems? (No - addressing the core risk)
 - [ ] Delaying decisions? (No - clear success criteria)
@@ -88,16 +95,19 @@ Are we using "experimentation" to justify:
 ## 6. Success Criteria & Next Steps
 
 ### If Successful (Metric > Target)
+
 1. Immediate: Celebrate the learning
 2. Next Sprint: Pay down debt to score ≤ 2
 3. Then: Scale to broader audience
 
 ### If Failed (Metric < Target)
+
 1. Immediate: Kill it (no sunk cost fallacy)
 2. Document: Add to Learning Library
 3. Nominate: Failure of the Month Award
 
 ### If Inconclusive (Close to Target)
+
 1. Extend: One more week maximum
 2. Modify: Adjust one variable
 3. Decide: Ship, kill, or pivot
@@ -105,6 +115,7 @@ Are we using "experimentation" to justify:
 ## 7. Learning Extraction Plan
 
 **We will know we've learned something when we can answer:**
+
 - [ ] Was our hypothesis correct? (Yes/No/Partially)
 - [ ] What surprised us?
 - [ ] What would we do differently?
@@ -113,6 +124,7 @@ Are we using "experimentation" to justify:
 ## 8. The Engineer's 3 AM Test
 
 Before shipping, you must be able to answer:
+
 1. **What breaks if this fails?**
 2. **How do we roll back in 5 minutes?**
 3. **What debt are we creating?**

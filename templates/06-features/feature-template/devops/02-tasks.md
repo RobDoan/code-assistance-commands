@@ -9,6 +9,7 @@
 ---
 
 ## Experiment Context
+>
 > **Connecting the "Why" to the "How" - Infrastructure serves the hypothesis**
 
 **Hypothesis Being Tested:** *[Copy from requirements.md - e.g., "We believe that users will adopt the new dashboard because it reduces report generation time"]*  
@@ -19,6 +20,7 @@
 ---
 
 ## Task Overview
+
 *Infrastructure and deployment tasks supporting the feature experiment*
 
 **Total Story Points:** *[Sum of all tasks]*  
@@ -31,6 +33,7 @@
 ## Sprint Tasks
 
 ### 🔥 Critical Infrastructure (Must Have)
+
 *Tasks that block deployment or cause service disruption*
 
 - [ ] **[DO-001]** Provision infrastructure resources *(5 points)*
@@ -55,6 +58,7 @@
   - **Success Criteria:** All key metrics monitored with proper alerts
 
 ### 🔒 Security & Compliance (Should Have)
+
 *Security-critical tasks that protect the system*
 
 - [ ] **[DO-004]** Configure security controls *(3 points)*
@@ -78,6 +82,7 @@
   - **Success Criteria:** All compliance requirements tracked
 
 ### 🎨 Optimization (Nice to Have)
+
 *Performance and cost optimization tasks*
 
 - [ ] **[DO-007]** Optimize resource utilization *(2 points)*
@@ -97,6 +102,7 @@
 ## Infrastructure Architecture
 
 ### Production Environment
+
 ```
 ┌─────────────────────┐
 │     Load Balancer       │
@@ -120,6 +126,7 @@
 ```
 
 ### Resource Requirements
+
 | Component | Staging | Production | Scaling |
 |-----------|---------|------------|----------|
 | **Application Pods** | 2 x 1 CPU, 2GB RAM | 3 x 2 CPU, 4GB RAM | HPA: 3-10 pods |
@@ -132,6 +139,7 @@
 ## Deployment Strategy
 
 ### Blue-Green Deployment Process
+
 1. **Pre-deployment Checks**
    - [ ] All tests passing in CI/CD
    - [ ] Database migrations tested
@@ -158,6 +166,7 @@
    - [ ] Validate business metrics
 
 ### Rollback Procedures
+
 ```bash
 # Emergency rollback script
 #!/bin/bash
@@ -188,6 +197,7 @@ fi
 ## Monitoring & Observability
 
 ### Key Metrics to Monitor
+
 | Metric Category | Specific Metrics | Alert Threshold | Action |
 |----------------|------------------|-----------------|--------|
 | **Application** | Response time (P95) | >200ms for 5min | Page on-call |
@@ -200,6 +210,7 @@ fi
 | **Security** | Failed auth attempts | >100/min | Block IP |
 
 ### Monitoring Stack Configuration
+
 ```yaml
 # monitoring/prometheus-config.yml
 global:
@@ -227,6 +238,7 @@ scrape_configs:
 ```
 
 ### Alert Rules
+
 ```yaml
 # monitoring/alert-rules.yml
 groups:
@@ -264,6 +276,7 @@ groups:
 ## Security Configuration
 
 ### Infrastructure Security
+
 ```yaml
 # security/network-policies.yml
 apiVersion: networking.k8s.io/v1
@@ -303,6 +316,7 @@ spec:
 ```
 
 ### Secrets Management
+
 ```yaml
 # security/secrets.yml
 apiVersion: v1
@@ -322,6 +336,7 @@ stringData:
 ## Backup & Disaster Recovery
 
 ### Backup Strategy
+
 | Data Type | Frequency | Retention | Recovery Time Objective |
 |-----------|-----------|-----------|------------------------|
 | **Database** | Every 6 hours | 30 days | <1 hour |
@@ -330,6 +345,7 @@ stringData:
 | **Metrics Data** | Real-time | 1 year | N/A |
 
 ### Disaster Recovery Plan
+
 ```bash
 #!/bin/bash
 # disaster-recovery/restore-database.sh
@@ -372,6 +388,7 @@ fi
 ## Performance Optimization
 
 ### Auto-scaling Configuration
+
 ```yaml
 # scaling/hpa.yml
 apiVersion: autoscaling/v2
@@ -408,6 +425,7 @@ spec:
 ```
 
 ### Database Performance Tuning
+
 ```sql
 -- Database optimization settings
 ALTER SYSTEM SET shared_buffers = '256MB';
@@ -428,6 +446,7 @@ SELECT pg_reload_conf();
 ## Cost Optimization
 
 ### Resource Right-sizing
+
 | Resource | Current | Optimized | Monthly Savings |
 |----------|---------|-----------|----------------|
 | **Application Instances** | 3 x m5.large | 3 x m5.medium | $45 |
@@ -437,6 +456,7 @@ SELECT pg_reload_conf();
 | **Total** | | | **$335/month** |
 
 ### Cost Monitoring Alerts
+
 ```yaml
 # cost/budget-alerts.yml
 apiVersion: v1
@@ -455,6 +475,7 @@ data:
 ---
 
 ## Definition of Done
+
 *Checklist for every DevOps task*
 
 - [ ] Infrastructure deployed and accessible
@@ -473,17 +494,20 @@ data:
 ## Dependencies & Blockers
 
 ### External Dependencies
+
 - [ ] **Cloud Provider:** Resource quotas increased
 - [ ] **Security Team:** Security review completed
 - [ ] **Network Team:** Firewall rules configured
 - [ ] **Compliance:** Audit requirements clarified
 
 ### Internal Blockers
+
 - **Application Team:** Container images need health check endpoints
 - **Database Team:** Migration scripts need review
 - **Security Team:** Secrets rotation policy needs definition
 
 ### Blocking Others
+
 - **QA Team:** Staging environment needed by *[date]*
 - **Product Team:** Analytics dashboards required by *[date]*
 - **Support Team:** Monitoring access needed by *[date]*
@@ -504,9 +528,11 @@ data:
 ---
 
 ## Our Philosophy
+>
 > *"Guardrails, Not Handcuffs - Our process exists to make the safe path the easy path."*
 
 **DevOps Principles:**
+
 - **Automation First:** Manual processes are error-prone and don't scale
 - **Infrastructure as Code:** Everything should be version-controlled and reproducible
 - **Security by Design:** Build security into every layer from the start
@@ -518,6 +544,7 @@ data:
 ## Operational Runbooks
 
 ### Common Operational Tasks
+
 | Task | Frequency | Automation Level | Runbook Link |
 |------|-----------|------------------|---------------|
 | **Deploy new version** | As needed | Fully automated | *[Link to deployment runbook]* |
@@ -530,15 +557,18 @@ data:
 ---
 
 ## Learning Log
+
 *Capturing operational insights*
 
 ### Infrastructure Decisions: *[Date]*
+
 - **Decision:** *[e.g., Chose Kubernetes over ECS]*
 - **Rationale:** *[Why this choice was made]*
 - **Outcome:** *[How it worked out in practice]*
 - **Lessons:** *[What we learned]*
 
 ### Incident Learnings: *[Date]*
+
 - **Incident:** *[Brief description]*
 - **Root Cause:** *[What actually caused the issue]*
 - **Resolution:** *[How we fixed it]*
@@ -547,6 +577,7 @@ data:
 ---
 
 **Links:**
+
 - **Infrastructure Diagrams:** *[Link to architecture documentation]*
 - **Monitoring Dashboards:** *[Link to Grafana/DataDog]*
 - **Runbooks:** *[Link to operational procedures]*

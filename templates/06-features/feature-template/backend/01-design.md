@@ -8,9 +8,11 @@
 ---
 
 ## Why
+
 *Backend-specific design rationale and architectural decisions*
 
 ### System Design Goals
+>
 > **What are we optimizing for in the backend?**
 
 1. **Reliability:** 99.9% uptime, graceful degradation
@@ -20,6 +22,7 @@
 5. **Maintainability:** Single team can own and operate the service
 
 ### Architectural Principles
+
 - **Domain-Driven Design:** Clear bounded contexts and business logic separation
 - **Hexagonal Architecture:** Ports and adapters pattern for testability
 - **CQRS Pattern:** Separate read and write models for optimal performance
@@ -27,6 +30,7 @@
 - **Circuit Breaker:** Fail fast and protect downstream services
 
 ### Technology Choices
+
 | Decision | Choice | Rationale | Trade-offs |
 |----------|--------|-----------|------------|
 | **Runtime** | Node.js 18+ | Team expertise, ecosystem | Single-threaded for CPU-intensive tasks |
@@ -38,9 +42,11 @@
 ---
 
 ## What
+
 *Backend technical specification and contracts*
 
 ### Service Architecture
+
 ```
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
 │   API Gateway   │────▶│   Feature API   │────▶│   Database      │
@@ -59,6 +65,7 @@
 #### Core Endpoints
 
 **Create Feature Item**
+
 ```http
 POST /api/v1/features
 Content-Type: application/json
@@ -75,6 +82,7 @@ Authorization: Bearer {jwt_token}
 ```
 
 **Response (201 Created):**
+
 ```json
 {
   "data": {
@@ -98,12 +106,14 @@ Authorization: Bearer {jwt_token}
 ```
 
 **List Feature Items**
+
 ```http
 GET /api/v1/features?limit=20&offset=0&status=active&sort=created_at:desc
 Authorization: Bearer {jwt_token}
 ```
 
 **Response (200 OK):**
+
 ```json
 {
   "data": [
@@ -129,6 +139,7 @@ Authorization: Bearer {jwt_token}
 ```
 
 #### Error Response Format
+
 ```json
 {
   "error": {
@@ -154,6 +165,7 @@ Authorization: Bearer {jwt_token}
 ### Database Design
 
 #### Primary Tables
+
 ```sql
 -- Features table
 CREATE TABLE features (
@@ -198,6 +210,7 @@ CREATE INDEX idx_feature_audit_log_created_at ON feature_audit_log(created_at DE
 ```
 
 #### Database Optimization Strategy
+
 - **Partitioning:** Partition audit log by month for performance
 - **Soft Deletes:** Use `deleted_at` timestamp instead of hard deletes
 - **JSONB Indexing:** GIN indexes on metadata for fast JSON queries
@@ -207,11 +220,13 @@ CREATE INDEX idx_feature_audit_log_created_at ON feature_audit_log(created_at DE
 ### Caching Strategy
 
 #### Cache Layers
+
 1. **Application Cache:** In-memory LRU cache for hot data
 2. **Redis Cache:** Distributed cache for shared data
 3. **CDN Cache:** Static content and API responses
 
 #### Cache Patterns
+
 ```javascript
 // Cache-aside pattern
 async function getFeature(id) {
@@ -246,6 +261,7 @@ async function updateFeature(id, data) {
 ### Security Design
 
 #### Authentication & Authorization
+
 ```javascript
 // JWT middleware
 const authenticateJWT = (req, res, next) => {
@@ -274,6 +290,7 @@ const authorize = (roles) => (req, res, next) => {
 ```
 
 #### Input Validation
+
 ```javascript
 const { body, validationResult } = require('express-validator');
 
@@ -316,9 +333,11 @@ const validateRequest = (req, res, next) => {
 ---
 
 ## How
+
 *Implementation details and patterns*
 
 ### Project Structure
+
 ```
 src/
 ├── controllers/          # Request handlers
@@ -585,12 +604,14 @@ class Metrics {
 ## Performance Optimization
 
 ### Database Optimization
+
 - **Connection Pooling:** PgBouncer with 25 connections per instance
 - **Query Optimization:** Explain plans for all queries >10ms
 - **Indexing Strategy:** Composite indexes for common query patterns
 - **Partitioning:** Time-based partitioning for audit logs
 
 ### Caching Strategy
+
 ```javascript
 // Multi-level caching
 class CacheManager {
@@ -625,6 +646,7 @@ class CacheManager {
 ```
 
 ### Load Testing Configuration
+
 ```javascript
 // Artillery.js load test
 module.exports = {
@@ -669,6 +691,7 @@ module.exports = {
 ## Deployment Architecture
 
 ### Container Configuration
+
 ```dockerfile
 # Dockerfile
 FROM node:18-alpine
@@ -700,6 +723,7 @@ CMD ["npm", "start"]
 ```
 
 ### Kubernetes Deployment
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -752,9 +776,11 @@ spec:
 ---
 
 ## Our Philosophy
+>
 > *"Build-Measure-Learn isn't a phase; it's how we breathe."*
 
 **Backend Design Principles:**
+
 - **Observability First:** Every component must be measurable
 - **Fail Explicitly:** Clear error messages and proper status codes
 - **Defense in Depth:** Multiple layers of validation and security
@@ -778,6 +804,7 @@ spec:
 ---
 
 **Links:**
+
 - **OpenAPI Spec:** *[Link to API documentation]*
 - **Database Schema:** *[Link to ERD]*
 - **Monitoring Dashboard:** *[Link to Grafana/DataDog]*

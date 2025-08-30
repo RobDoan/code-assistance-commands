@@ -1,7 +1,7 @@
 # Research Phase: Turning Guesses into Hypotheses
 
 > **"We believe this problem exists, and here's how we'll find out if we're wrong."**
-> 
+>
 > Research isn't about proving ourselves right - it's about getting less wrong, faster.
 
 ## Our Philosophy
@@ -16,6 +16,7 @@ Research Phase embodies the **Learning Machine Manifesto**:
 ## The Research Toolkit
 
 ### 🔍 **Problem Validation Sprint**
+
 *[problem-validation-sprint.md](problem-validation-sprint.md)*
 
 **When to Use:** Before building anything, validate the problem exists
@@ -24,7 +25,8 @@ Research Phase embodies the **Learning Machine Manifesto**:
 
 **3 AM Test Question:** *"How do we know this problem is worth solving?"*
 
-### 💡 **Hypothesis List** 
+### 💡 **Hypothesis List**
+
 *[hypothesis-list.md](hypothesis-list.md)*
 
 **When to Use:** Convert every assumption into testable statements
@@ -34,6 +36,7 @@ Research Phase embodies the **Learning Machine Manifesto**:
 **3 AM Test Question:** *"What are we assuming that we haven't tested?"*
 
 ### 🗺️ **Lean Canvas**
+
 *[03-lean-canvas.md](03-lean-canvas.md)*
 
 **When to Use:** Map your business model assumptions on one page
@@ -43,6 +46,7 @@ Research Phase embodies the **Learning Machine Manifesto**:
 **3 AM Test Question:** *"What's our riskiest business assumption?"*
 
 ### 🌄 **Opportunity Landscape**
+
 *[opportunity-landscape.md](opportunity-landscape.md)*
 
 **When to Use:** Find exploitable gaps in 3 hours instead of 3 months of analysis
@@ -52,6 +56,7 @@ Research Phase embodies the **Learning Machine Manifesto**:
 **3 AM Test Question:** *"Where can we win that others can't?"*
 
 ### 📋 **Experiment Summary**
+
 *[experiment-summary.md](experiment-summary.md)*
 
 **When to Use:** After every research experiment to capture learning
@@ -65,16 +70,19 @@ Research Phase embodies the **Learning Machine Manifesto**:
 ## Research Anti-Patterns We Avoid
 
 ### 📚 **Analysis Paralysis**
+
 - **The Trap:** Researching competitors instead of talking to customers
 - **The Reality:** You learn more from 5 customer interviews than 50 competitor analyses
 - **Safeguard:** 3-day sprint limit on any research activity
 
 ### 🎯 **Confirmation Bias Research**
+
 - **The Trap:** Looking for data that supports what we want to build
 - **The Reality:** We should try to prove ourselves wrong, not right
 - **Safeguard:** State the null hypothesis first in every research plan
 
 ### 📄 **Perfect Plan Syndrome**
+
 - **The Trap:** Creating comprehensive research documents instead of quick tests
 - **The Reality:** An imperfect test beats a perfect plan
 - **Safeguard:** If you can't test it in a week, break it down further
@@ -104,6 +112,7 @@ Before moving to Design Phase, answer these:
 ## Research Workflow Guide
 
 ### Week 1: Problem Discovery
+
 1. **Start with [Problem Validation Sprint](problem-validation-sprint.md)**
    - Define the problem hypothesis
    - Interview 10+ potential customers
@@ -115,6 +124,7 @@ Before moving to Design Phase, answer these:
    - Define what would prove each hypothesis wrong
 
 ### Week 2: Market Understanding  
+
 3. **Map [Opportunity Landscape](opportunity-landscape.md)**
    - Find competitors and adjacent solutions
    - Identify market gaps and positioning opportunities
@@ -126,6 +136,7 @@ Before moving to Design Phase, answer these:
    - Plan tests for each assumption
 
 ### Week 3: Solution Validation
+
 5. **Test Solution Hypotheses**
    - Show mockups, not build products
    - Measure intent, not opinions
@@ -141,12 +152,14 @@ Before moving to Design Phase, answer these:
 ## Integration with Other Phases
 
 ### To Design Phase
+
 - **Validated problem** becomes design requirements
 - **User insights** inform user experience decisions  
 - **Market positioning** guides product positioning
 - **Technical constraints** influence architecture choices
 
 ### Cross-Cutting Connections
+
 - **Red Team Review:** Challenge research methodology and bias
 - **Failure Celebration:** Celebrate invalidated market assumptions
 - **Crisis Framework:** Maintain research rigor under pressure to ship
@@ -156,12 +169,14 @@ Before moving to Design Phase, answer these:
 ## Research Success Metrics
 
 ### Learning Velocity Indicators
+
 - **Customer Contact Rate:** 10+ customer conversations per week
 - **Assumption Testing Rate:** 3+ hypotheses tested per week  
 - **Pivot Speed:** <1 week from invalidated assumption to new test
 - **Research-to-Action Time:** <3 days from learning to next experiment
 
 ### Quality of Learning Signs
+
 - Specific, actionable insights (not generic feedback)
 - Behavioral evidence (not just stated preferences)
 - Contradictory data that challenges assumptions
@@ -172,18 +187,21 @@ Before moving to Design Phase, answer these:
 ## Common Research Templates Usage
 
 ### For Startups (Pre-Product Market Fit)
+
 - Use **all templates** - you're testing everything
 - Focus heavily on Problem Validation Sprint and Hypothesis List
 - Update Lean Canvas weekly based on learnings
 - Celebrate every invalidated assumption
 
 ### For New Features (Existing Product)
+
 - Start with Opportunity Landscape to understand competitive context
 - Use Hypothesis List for feature-specific assumptions
 - Lighter touch on Lean Canvas (focus on new business model elements)
 - Quick Problem Validation Sprint (3-5 customer interviews)
 
 ### For Market Expansion
+
 - Heavy use of Opportunity Landscape for new market understanding
 - Hypothesis List focused on market-specific assumptions
 - Problem Validation Sprint in new customer segments
@@ -194,18 +212,21 @@ Before moving to Design Phase, answer these:
 ## Research Team Roles
 
 ### For Product Managers
+
 - Own the Problem Validation Sprint process
 - Maintain and prioritize the Hypothesis List
 - Ensure research connects to business outcomes
 - Protect team from analysis paralysis
 
 ### For UX Researchers  
+
 - Design research methodologies that minimize bias
 - Focus on behavioral evidence vs. stated preferences
 - Challenge team assumptions through structured research
 - Make research insights actionable for design and development
 
 ### For Founders
+
 - Model intellectual curiosity and comfort with being wrong
 - Prioritize customer contact over competitor research
 - Celebrate pivot decisions based on research insights

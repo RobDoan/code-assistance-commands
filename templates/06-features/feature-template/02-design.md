@@ -10,6 +10,7 @@
 ---
 
 ## Fidelity Guide
+>
 > **Match documentation effort to experiment maturity**
 
 - **🧪 Low-Fidelity Experiment:** For initial hypothesis testing - focus on core assumptions, minimal documentation
@@ -21,9 +22,11 @@
 ---
 
 ## Why
+
 *The design rationale and architectural decisions*
 
 ### Design Goals
+>
 > **What are we optimizing for?**
 
 1. **Primary:** *[e.g., Developer experience - sub-5 minute onboarding]*
@@ -31,6 +34,7 @@
 3. **Tertiary:** *[e.g., Maintainability - single team ownership]*
 
 ### Key Design Decisions
+>
 > **What are the major technical choices and their rationale?**
 
 | Decision | Choice | Rationale | Trade-off |
@@ -40,14 +44,17 @@
 | *[e.g., Database]* | *[e.g., PostgreSQL]* | *[e.g., ACID compliance]* | *[e.g., Horizontal scaling complexity]* |
 
 ### Constraints & Assumptions
+>
 > **What boundaries are we working within?**
 
 **Technical Constraints:**
+
 - *[e.g., Must work with existing authentication system]*
 - *[e.g., Cannot modify core database schema]*
 - *[e.g., Must support IE11 (😢)]*
 
 **Assumptions We're Making:**
+
 - *[e.g., Users have stable internet connections]*
 - *[e.g., Traffic patterns follow current usage]*
 - *[e.g., Third-party API maintains 99.9% uptime]*
@@ -55,9 +62,11 @@
 ---
 
 ## What
+
 *The technical specification and interfaces*
 
 ### System Architecture
+
 ```
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
 │                 │     │                 │     │                 │
@@ -76,11 +85,13 @@
 ```
 
 ### API Contract
+>
 > **What are the key interfaces?**
 
 **Endpoint:** `POST /api/v1/[feature-name]`
 
 **Request:**
+
 ```json
 {
   "action": "[action-type]",
@@ -92,6 +103,7 @@
 ```
 
 **Response (Success):**
+
 ```json
 {
   "status": "success",
@@ -107,6 +119,7 @@
 ```
 
 **Response (Error):**
+
 ```json
 {
   "status": "error",
@@ -119,9 +132,11 @@
 ```
 
 ### Data Model
+>
 > **How is data structured and stored?**
 
 **Primary Entity:**
+
 ```sql
 CREATE TABLE feature_data (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -136,6 +151,7 @@ CREATE INDEX idx_feature_created ON feature_data(created_at);
 ```
 
 ### State Management
+>
 > **How does data flow through the system?**
 
 ```
@@ -145,6 +161,7 @@ User Action → UI Event → Action Creator → API Call → State Update → UI
 ```
 
 ### Security Considerations
+
 - **Authentication:** *[e.g., JWT tokens with 15-minute expiry]*
 - **Authorization:** *[e.g., Role-based access control (RBAC)]*
 - **Data Protection:** *[e.g., AES-256 encryption at rest]*
@@ -154,29 +171,34 @@ User Action → UI Event → Action Creator → API Call → State Update → UI
 ---
 
 ## How
+
 *The implementation details and rollout plan*
 
 ### Implementation Phases
 
 **Phase 1: Foundation** *(Sprint 1)*
+
 - [ ] Set up project structure and CI/CD
 - [ ] Implement core data models
 - [ ] Create basic API endpoints
 - [ ] Deploy to staging environment
 
 **Phase 2: Core Features** *(Sprint 2)*
+
 - [ ] Build primary user flows
 - [ ] Implement business logic
 - [ ] Add monitoring and logging
 - [ ] Internal testing with team
 
 **Phase 3: Polish & Harden** *(Sprint 3)*
+
 - [ ] Performance optimization
 - [ ] Error handling and recovery
 - [ ] Security audit
 - [ ] Load testing
 
 ### Rollout Strategy
+>
 > **How do we safely deploy this?**
 
 1. **Canary Release** *(5% of traffic)*
@@ -190,6 +212,7 @@ User Action → UI Event → Action Creator → API Call → State Update → UI
    - Monitor key metrics at each stage
 
 3. **Feature Flags**
+
    ```javascript
    if (featureFlag.isEnabled('new-feature', userId)) {
      return renderNewExperience();
@@ -200,16 +223,19 @@ User Action → UI Event → Action Creator → API Call → State Update → UI
 ### Monitoring & Observability
 
 **Key Metrics to Track:**
+
 - **Business:** *[e.g., Conversion rate, user engagement]*
 - **Performance:** *[e.g., API latency (p50, p95, p99)]*
 - **Reliability:** *[e.g., Error rate, success rate]*
 - **Infrastructure:** *[e.g., CPU usage, memory consumption]*
 
 **Dashboards:**
+
 - *[Link to Grafana dashboard]*
 - *[Link to business metrics dashboard]*
 
 **Alerts:**
+
 | Metric | Threshold | Action |
 |--------|-----------|--------|
 | Error Rate | >5% for 5 min | Page on-call engineer |
@@ -219,6 +245,7 @@ User Action → UI Event → Action Creator → API Call → State Update → UI
 ### Failure Modes & Recovery
 
 **Potential Failures:**
+
 1. **Database Connection Pool Exhaustion**
    - **Detection:** Connection timeout errors
    - **Mitigation:** Circuit breaker pattern
@@ -237,6 +264,7 @@ User Action → UI Event → Action Creator → API Call → State Update → UI
 ---
 
 ## Red Team Review
+>
 > **Structured challenge process to prevent blind spots and bias**
 
 **Review Status:** ⏳ Pending | 🔍 In Progress | ✅ Complete  
@@ -258,26 +286,32 @@ User Action → UI Event → Action Creator → API Call → State Update → UI
 | **Resource Allocation** | *[e.g., "Is this experiment worth the opportunity cost?"]* | *[e.g., "We might delay higher-impact features for this"]* | 🔴 High / 🟡 Medium / 🟢 Low |
 
 ### Recommended Actions
+
 Based on red team review, these actions should be taken before proceeding:
 
 **🔴 High Risk Items (Must Address):**
+
 - *[Action item 1 - e.g., "Add user interviews with casual users, not just power users"]*
 - *[Action item 2 - e.g., "Define statistical significance thresholds upfront"]*
 
 **🟡 Medium Risk Items (Should Consider):**
+
 - *[Action item 3 - e.g., "Plan for database scaling if experiment succeeds"]*
 - *[Action item 4 - e.g., "Add guardrail metrics to prevent negative impacts"]*
 
 **🟢 Low Risk Items (Monitor):**
+
 - *[Item to keep an eye on during experiment]*
 
 ### Alternative Approaches Considered
+
 | Approach | Pros | Cons | Why Not Chosen | Reviewer Opinion |
 |----------|------|------|----------------|-----------------|
 | *[Alternative 1]* | *[Benefits]* | *[Drawbacks]* | *[Original reasoning]* | *[Red team perspective]* |
 | *[Alternative 2]* | *[Benefits]* | *[Drawbacks]* | *[Original reasoning]* | *[Red team perspective]* |
 
 ### Review Sign-off
+
 - [ ] **Lead Reviewer Approval:** *@reviewer1* - *[Date]*  
 - [ ] **Secondary Reviewer Approval:** *@reviewer2* - *[Date]*  
 - [ ] **High-risk items addressed** - *[Date]*  
@@ -286,9 +320,11 @@ Based on red team review, these actions should be taken before proceeding:
 ---
 
 ## Our Philosophy
+>
 > *"Seek Velocity, Not Perfection"*
 
 This design embodies our principles:
+
 - **🚀 Ship Experiments:** This is v1, not v10. We'll iterate based on learnings.
 - **🎯 Conscious Trade-offs:** We explicitly chose [X] over [Y] because [reason].
 - **💀 Reversible Decisions:** Everything here can be rolled back in <5 minutes.
@@ -297,6 +333,7 @@ This design embodies our principles:
 ---
 
 ## Craftsmanship Debt Ledger
+
 *Track the conscious trade-offs we're making*
 
 | Item | Debt Score (1-5) | Justification | Payback Plan |
@@ -312,6 +349,7 @@ This design embodies our principles:
 ---
 
 ## Links & References
+
 - **Requirements:** [../requirements.md](../requirements.md)
 - **Frontend Design:** [frontend/design.md](frontend/design.md)
 - **Backend Design:** [backend/design.md](backend/design.md)

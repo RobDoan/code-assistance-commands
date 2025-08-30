@@ -76,6 +76,7 @@
 ---
 
 **Connected Documents:**
+
 * `01-experiment-brief.md`
 * `02-user-journey-map.md`
 * `04-tech-feasibility-check.md`

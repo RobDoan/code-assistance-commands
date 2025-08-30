@@ -1,5 +1,4 @@
 
-
 # **A Lean Framework for Engineering Documentation: The Docs-as-Code Approach**
 
 ## **Part I: Foundational Principles for Lean Technical Documentation**
@@ -135,9 +134,9 @@ For each option, a more detailed analysis should be provided, covering its pros,
 
 ### **Analysis of Option 1**
 
-* ## **Pros:** 
+* ## **Pros:**
 
-* ## **Cons:** 
+* ## **Cons:**
 
 ### **Analysis of Option 2**
 

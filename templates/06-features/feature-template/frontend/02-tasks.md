@@ -9,6 +9,7 @@
 ---
 
 ## Experiment Context
+>
 > **Connecting the "Why" to the "How" - Keep the hypothesis front and center**
 
 **Hypothesis Being Tested:** *[Copy from requirements.md - e.g., "We believe that users will adopt the new dashboard because it reduces report generation time"]*  
@@ -19,6 +20,7 @@
 ---
 
 ## Task Overview
+
 *Breaking down the "How" from parent specs into actionable frontend tasks*
 
 **Total Story Points:** *[Sum of all tasks]*  
@@ -30,6 +32,7 @@
 ## Implementation Phases
 
 ### Phase 1: Foundation & Setup
+
 *Getting the experiment infrastructure ready*
 
 - [ ] **[FE-001]** Set up feature flag integration *(2 points)*
@@ -43,6 +46,7 @@
   - Set up component hierarchy and TypeScript interfaces for the experiment
 
 ### Phase 2: Core Experiment Implementation
+
 *Building the minimum viable experiment to test our hypothesis*
 
 - [ ] **[FE-003]** Implement core user flow *(5 points)*
@@ -56,6 +60,7 @@
   - Track user interactions and conversion funnel events for hypothesis validation
 
 ### Phase 3: Production Readiness
+
 *Making the experiment robust enough for real users*
 
 - [ ] **[FE-005]** Add error handling and recovery *(3 points)*
@@ -69,6 +74,7 @@
   - Add skeleton screens and loading indicators to prevent UI jank
 
 ### Phase 4: Optimization (If Experiment Succeeds)
+
 *Polish and optimize based on initial learnings*
 
 - [ ] **[FE-007]** Polish animations and transitions *(2 points)*
@@ -84,6 +90,7 @@
 ---
 
 ## Definition of Done
+
 *Checklist for every task*
 
 - [ ] Code reviewed by at least one team member
@@ -100,6 +107,7 @@
 ---
 
 ## Technical Decisions Log
+
 *Decisions made during implementation*
 
 | Decision | Choice | Rationale | Date |
@@ -112,17 +120,20 @@
 ## Dependencies & Blockers
 
 ### Waiting On
+
 - [ ] **Backend:** API endpoint `/api/v1/[feature]` deployed to staging
 - [ ] **Design:** Final Figma designs for error states
 - [ ] **Product:** Clarification on *[specific requirement]*
 
 ### Blocking Others
+
 - **QA:** Test plan requires component completion by *[date]*
 - **Backend:** API integration testing needs frontend by *[date]*
 
 ---
 
 ## Risk Register
+
 *What could derail these tasks?*
 
 | Risk | Probability | Impact | Mitigation |
@@ -134,6 +145,7 @@
 ---
 
 ## Daily Standup Template
+
 ```markdown
 **Yesterday:** Completed [FE-XXX] - [brief description]
 **Today:** Working on [FE-XXX] - [what specifically]
@@ -144,6 +156,7 @@
 ---
 
 ## Our Philosophy
+>
 > *"The goal is not to be right; it's to get less wrong, faster."*
 
 - **Ship small, ship often:** Each task should be deployable independently
@@ -153,9 +166,11 @@
 ---
 
 ## Learning Log
+
 *What we discovered while building*
 
 ### Task [FE-XXX]: *[Date]*
+
 - **Expected:** *[What we thought would happen]*
 - **Actual:** *[What actually happened]*
 - **Learning:** *[What we learned]*

@@ -1,9 +1,11 @@
 # ADR Review Reminder Bot
 
 ## Purpose
+
 Transforms Architecture Decision Records from static documents into live, accountable records by automating review reminders and tracking validation outcomes against predicted success metrics.
 
 ## Functionality
+
 This bot scans ADRs and manages their lifecycle:
 
 1. **Scan Decision Records**: Parses all ADR files in the `decisions/` directory
@@ -20,23 +22,27 @@ This bot scans ADRs and manages their lifecycle:
 5. **Track Outcomes**: Records whether decisions met their success criteria
 
 ## Trigger Conditions
+
 - Daily scan for upcoming reviews (within 7 days)
 - Weekly summary of overdue reviews
 - Triggered when ADR status changes
 - Manual check via command
 
 ## Input
+
 - decisions/ directory with ADR files
 - Team calendar for review scheduling
 - Metrics/monitoring systems for validation data
 
 ## Output
+
 - Slack/Teams notifications with review reminders
 - Updated ADR files with review outcomes
 - Review compliance dashboard
 - Monthly decision effectiveness report
 
 ## Message Templates
+
 ```markdown
 📊 ADR Review Reminder
 
@@ -56,6 +62,7 @@ Please update the ADR with:
 ```
 
 ## Configuration
+
 ```yaml
 # config.yaml
 adr_directory: "./decisions"
@@ -73,24 +80,28 @@ metrics_sources:
 ```
 
 ## Benefits
+
 - Ensures decisions are validated against outcomes
 - Creates accountability for architectural choices
 - Builds institutional knowledge about decision quality
 - Prevents "set and forget" decision making
 
 ## Implementation Notes
+
 - Must parse various ADR formats (maintain backwards compatibility)
 - Should handle decisions with no measurable metrics gracefully
 - Integrates with team calendar systems
 - Respects timezone differences for global teams
 
 ## Integration Points
+
 - Communication platforms (Slack, Teams, Discord)
 - Calendar systems for scheduling reviews
 - Metrics platforms for automated validation
 - Version control for ADR updates
 
 ## Future Enhancements
+
 - Automatic metric collection from monitoring systems
 - Decision quality scoring based on prediction accuracy
 - Pattern detection across multiple ADRs

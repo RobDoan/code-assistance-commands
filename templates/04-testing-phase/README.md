@@ -1,7 +1,7 @@
 # Testing Phase: Learning Through Validation
 
 > **"We're not testing if it works - we're testing if our hypothesis was right."**
-> 
+>
 > Testing isn't quality assurance; it's hypothesis validation through user behavior.
 
 ## Our Philosophy
@@ -16,6 +16,7 @@ Testing Phase embodies the **Learning Machine Manifesto**:
 ## The Testing Toolkit
 
 ### 📋 **Test Plan**
+
 *[test-plan.md](test-plan.md)*
 
 **When to Use:** Before exposing any experiment to users
@@ -24,7 +25,8 @@ Testing Phase embodies the **Learning Machine Manifesto**:
 
 **3 AM Test Question:** *"What user behavior would prove our hypothesis wrong?"*
 
-### 🧪 **Test Case Templates** 
+### 🧪 **Test Case Templates**
+
 *[test-case.md](test-case.md)*
 
 **When to Use:** For each specific hypothesis you're validating
@@ -34,6 +36,7 @@ Testing Phase embodies the **Learning Machine Manifesto**:
 **3 AM Test Question:** *"What specific behavior are we looking for?"*
 
 ### 🐛 **Bug Tracker**
+
 *[bug-tracker.md](bug-tracker.md)*
 
 **When to Use:** When experiments break or behave unexpectedly
@@ -43,6 +46,7 @@ Testing Phase embodies the **Learning Machine Manifesto**:
 **3 AM Test Question:** *"Is this bad data or bad behavior?"*
 
 ### 👥 **User Feedback Log**
+
 *[03-user-feedback-log.md](03-user-feedback-log.md)*
 
 **When to Use:** Capturing and analyzing qualitative user responses
@@ -52,6 +56,7 @@ Testing Phase embodies the **Learning Machine Manifesto**:
 **3 AM Test Question:** *"What are users actually saying vs. what we want to hear?"*
 
 ### 📊 **Learning Summary**
+
 *[learning-summary.md](learning-summary.md)*
 
 **When to Use:** After every testing cycle to extract insights
@@ -65,16 +70,19 @@ Testing Phase embodies the **Learning Machine Manifesto**:
 ## Testing Anti-Patterns We Avoid
 
 ### 🎯 **Vanity Metric Testing**
+
 - **The Trap:** Testing metrics that make us feel good but don't drive decisions
 - **The Reality:** Page views don't matter if users aren't completing their jobs
 - **Safeguard:** Every metric must connect to a business decision we'll make
 
 ### 🧑‍⚖️ **Judge & Jury Testing**
+
 - **The Trap:** Designing tests to prove we're right instead of seeking truth
 - **The Reality:** Users don't care about our opinions, only about their outcomes
 - **Safeguard:** State the null hypothesis first - what would prove us wrong?
 
 ### 📊 **Data Theater**
+
 - **The Trap:** Collecting tons of data but never acting on insights
 - **The Reality:** Data without decisions is just expensive storage
 - **Safeguard:** Pre-commit to what action each test result will trigger
@@ -114,6 +122,7 @@ Before moving to Deployment Phase, answer these:
 ## Testing Workflow Guide
 
 ### Week 1: Test Design & Launch
+
 1. **Create [Test Plan](test-plan.md)**
    - Define null hypothesis (what would prove us wrong)
    - Set statistical significance thresholds upfront
@@ -125,6 +134,7 @@ Before moving to Deployment Phase, answer these:
    - Include both success and failure metrics
 
 ### Week 2-3: Data Collection & Monitoring
+
 3. **Monitor [Bug Tracker](bug-tracker.md)**
    - Distinguish technical bugs from user behavior insights
    - Fix issues that invalidate experiment data
@@ -136,6 +146,7 @@ Before moving to Deployment Phase, answer these:
    - Identify gaps between expected and actual user behavior
 
 ### Week 4: Analysis & Decision
+
 5. **Conduct Statistical Analysis**
    - Apply proper significance testing to avoid false conclusions
    - Analyze pre-defined user segments for differential effects
@@ -151,18 +162,21 @@ Before moving to Deployment Phase, answer these:
 ## Integration with Other Phases
 
 ### From Development Phase
+
 - **Working experiments** ready for user testing
 - **Measurement infrastructure** capturing user behavior
 - **Technical monitoring** distinguishing bugs from features
 - **Rollback capability** for experiments that fail badly
 
 ### To Deployment Phase
+
 - **Validated experiments** ready for broader rollout
 - **Statistical evidence** supporting business decisions
 - **User segment insights** guiding rollout strategy
 - **Technical confidence** in system stability
 
 ### Cross-Cutting Connections
+
 - **Failure Celebration:** Turn invalidated hypotheses into learning victories
 - **Red Team Review:** Challenge testing methodology and statistical interpretation
 - **Crisis Framework:** Maintain testing rigor under pressure to ship
@@ -172,12 +186,14 @@ Before moving to Deployment Phase, answer these:
 ## Testing Success Metrics
 
 ### Testing Velocity Indicators
+
 - **Test Launch Time:** <1 week from experiment ready to users exposed
 - **Result Interpretation Time:** <3 days from data complete to decision made
 - **Statistical Confidence Achievement:** >80% power within planned timeline
 - **Learning-to-Action Speed:** <1 week from insight to next experiment
 
 ### Quality of Learning Signs
+
 - Clear differentiation between user segments that respond differently
 - Behavioral evidence that contradicts team assumptions
 - Statistical significance achieved with practical business significance
@@ -188,18 +204,21 @@ Before moving to Deployment Phase, answer these:
 ## Testing Team Roles
 
 ### For Product Managers
+
 - **Design meaningful tests:** Focus on metrics that drive real business decisions
 - **Interpret results honestly:** Separate what you want to see from what data shows
 - **Act on insights quickly:** Convert learning into next experiments or product changes
 - **Maintain statistical rigor:** Don't compromise methodology for faster results
 
 ### For Data Scientists
+
 - **Design unbiased experiments:** Protect against confirmation bias in test design
 - **Apply proper statistics:** Use appropriate significance tests and power analysis
 - **Educate team on data literacy:** Help everyone understand what results actually mean
 - **Challenge interpretation:** Push back when team wants to see patterns that aren't there
 
 ### For UX Researchers  
+
 - **Connect quantitative and qualitative:** Use user feedback to explain behavioral data
 - **Design user studies:** When data shows unexpected behavior, investigate why
 - **Validate metrics with user value:** Ensure measured behavior connects to user satisfaction
@@ -210,16 +229,19 @@ Before moving to Deployment Phase, answer these:
 ## Common Testing Challenges
 
 ### Statistical Significance vs. Practical Significance
+
 - **The trap:** Celebrating tiny improvements that are statistically significant but meaningless
 - **The solution:** Define minimum meaningful effect size before testing
 - **The check:** Would you change your product roadmap based on this result?
 
 ### Confounding Variables and External Factors
+
 - **The trap:** Attributing results to your experiment when other factors changed
 - **The solution:** Control for seasonal effects, marketing campaigns, competitor actions
 - **The check:** Could something else explain these results?
 
 ### Segment Analysis Without P-Hacking
+
 - **The trap:** Finding segments that respond well after seeing disappointing overall results
 - **The solution:** Pre-define segments of interest before looking at data
 - **The check:** Did you predict this segment would respond differently?
@@ -229,17 +251,20 @@ Before moving to Deployment Phase, answer these:
 ## Testing Methodologies
 
 ### A/B Testing Best Practices
+
 - **Minimum effect size:** Define before testing what change is worth making
 - **Statistical power:** Plan for 80%+ power to detect meaningful effects
 - **Multiple testing correction:** Adjust significance levels when testing multiple metrics
 - **Segment pre-definition:** Decide which segments to analyze before seeing results
 
 ### Qualitative Research Integration
+
 - **User interviews on confusing results:** When data surprises you, ask users why
 - **Behavior observation:** Watch users interact with experiments, don't just measure clicks
 - **Journey mapping:** Understand how experiments fit into broader user workflows
 
 ### Long-term Impact Assessment
+
 - **Retention analysis:** Do experiment effects persist over time?
 - **Cannibalization checks:** Does improving one metric hurt another?
 - **User satisfaction tracking:** Do behavioral improvements translate to happier users?

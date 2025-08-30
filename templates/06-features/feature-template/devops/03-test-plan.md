@@ -8,9 +8,11 @@
 ---
 
 ## Testing Philosophy
+>
 > *"Infrastructure should be tested as rigorously as application code."*
 
 **Our Infrastructure Testing Strategy:**
+
 - **Infrastructure Tests (40%):** Terraform validation and compliance
 - **Deployment Tests (30%):** CI/CD pipeline and deployment validation
 - **Operational Tests (20%):** Monitoring, backup, and recovery testing
@@ -24,6 +26,7 @@
 ## Test Coverage Strategy
 
 ### What We're Testing
+>
 > **Mapping infrastructure tests to requirements and design decisions**
 
 | Component/Requirement | Test Type | Success Criteria | Risk Level |
@@ -49,81 +52,84 @@
 ---
 
 ## Infrastructure Tests
+
 *Testing infrastructure as code and provisioning*
 
 ### Terraform Validation Tests
 
 #### Unit Tests for Terraform Modules
+
 ```go
 // tests/terraform/eks_test.go
 package test
 
 import (
-	"testing"
-	"github.com/gruntwork-io/terratest/modules/terraform"
-	"github.com/stretchr/testify/assert"
+ "testing"
+ "github.com/gruntwork-io/terratest/modules/terraform"
+ "github.com/stretchr/testify/assert"
 )
 
 func TestEKSModule(t *testing.T) {
-	terraformOptions := &terraform.Options{
-		TerraformDir: "../../modules/eks",
-		Vars: map[string]interface{}{
-			"cluster_name":      "test-cluster",
-			"kubernetes_version": "1.28",
-			"vpc_id":            "vpc-12345",
-			"private_subnet_ids": []string{"subnet-1", "subnet-2"},
-			"environment":       "test",
-		},
-		NoColor: true,
-	}
+ terraformOptions := &terraform.Options{
+  TerraformDir: "../../modules/eks",
+  Vars: map[string]interface{}{
+   "cluster_name":      "test-cluster",
+   "kubernetes_version": "1.28",
+   "vpc_id":            "vpc-12345",
+   "private_subnet_ids": []string{"subnet-1", "subnet-2"},
+   "environment":       "test",
+  },
+  NoColor: true,
+ }
 
-	defer terraform.Destroy(t, terraformOptions)
+ defer terraform.Destroy(t, terraformOptions)
 
-	// Validate Terraform plan
-	planOutput := terraform.InitAndPlan(t, terraformOptions)
-	assert.Contains(t, planOutput, "Plan: ")
-	assert.NotContains(t, planOutput, "Error: ")
+ // Validate Terraform plan
+ planOutput := terraform.InitAndPlan(t, terraformOptions)
+ assert.Contains(t, planOutput, "Plan: ")
+ assert.NotContains(t, planOutput, "Error: ")
 
-	// Apply the configuration
-	terraform.Apply(t, terraformOptions)
+ // Apply the configuration
+ terraform.Apply(t, terraformOptions)
 
-	// Validate outputs
-	clusterEndpoint := terraform.Output(t, terraformOptions, "cluster_endpoint")
-	assert.NotEmpty(t, clusterEndpoint)
+ // Validate outputs
+ clusterEndpoint := terraform.Output(t, terraformOptions, "cluster_endpoint")
+ assert.NotEmpty(t, clusterEndpoint)
 
-	clusterName := terraform.Output(t, terraformOptions, "cluster_name")
-	assert.Equal(t, "test-cluster", clusterName)
+ clusterName := terraform.Output(t, terraformOptions, "cluster_name")
+ assert.Equal(t, "test-cluster", clusterName)
 }
 
 func TestRDSModule(t *testing.T) {
-	terraformOptions := &terraform.Options{
-		TerraformDir: "../../modules/rds",
-		Vars: map[string]interface{}{
-			"identifier":         "test-db",
-			"engine":            "postgres",
-			"engine_version":    "15.4",
-			"instance_class":    "db.t3.micro",
-			"allocated_storage": 20,
-			"db_name":           "testdb",
-			"username":          "testuser",
-			"vpc_id":            "vpc-12345",
-			"subnet_ids":        []string{"subnet-1", "subnet-2"},
-		},
-		NoColor: true,
-	}
+ terraformOptions := &terraform.Options{
+  TerraformDir: "../../modules/rds",
+  Vars: map[string]interface{}{
+   "identifier":         "test-db",
+   "engine":            "postgres",
+   "engine_version":    "15.4",
+   "instance_class":    "db.t3.micro",
+   "allocated_storage": 20,
+   "db_name":           "testdb",
+   "username":          "testuser",
+   "vpc_id":            "vpc-12345",
+   "subnet_ids":        []string{"subnet-1", "subnet-2"},
+  },
+  NoColor: true,
+ }
 
-	defer terraform.Destroy(t, terraformOptions)
+ defer terraform.Destroy(t, terraformOptions)
 
-	terraform.InitAndApply(t, terraformOptions)
+ terraform.InitAndApply(t, terraformOptions)
 
-	// Validate RDS instance is accessible
-	dbEndpoint := terraform.Output(t, terraformOptions, "db_instance_endpoint")
-	assert.NotEmpty(t, dbEndpoint)
-	assert.Contains(t, dbEndpoint, "rds.amazonaws.com")
+ // Validate RDS instance is accessible
+ dbEndpoint := terraform.Output(t, terraformOptions, "db_instance_endpoint")
+ assert.NotEmpty(t, dbEndpoint)
+ assert.Contains(t, dbEndpoint, "rds.amazonaws.com")
 }
 ```
 
 #### Compliance Testing
+
 ```yaml
 # tests/compliance/checkov-config.yml
 framework:
@@ -152,6 +158,7 @@ skip_checks:
 ```
 
 #### Policy as Code Testing
+
 ```bash
 #!/bin/bash
 # tests/compliance/policy-test.sh
@@ -180,6 +187,7 @@ echo "All compliance tests passed!"
 ```
 
 ### Network Connectivity Tests
+
 ```python
 # tests/network/connectivity_test.py
 import pytest
@@ -294,9 +302,11 @@ class TestNetworkConnectivity:
 ---
 
 ## Deployment Tests
+
 *Testing CI/CD pipeline and deployment processes*
 
 ### Pipeline Integration Tests
+
 ```yaml
 # tests/pipeline/pipeline-test.yml
 apiVersion: argoproj.io/v1alpha1
@@ -398,6 +408,7 @@ spec:
 ```
 
 ### Blue-Green Deployment Tests
+
 ```bash
 #!/bin/bash
 # tests/deployment/blue-green-test.sh
@@ -484,6 +495,7 @@ echo "Blue-green deployment test completed successfully"
 ```
 
 ### Canary Deployment Tests
+
 ```python
 # tests/deployment/canary_test.py
 import time
@@ -628,9 +640,11 @@ class TestCanaryDeployment:
 ---
 
 ## Operational Tests
+
 *Testing monitoring, backup, and recovery procedures*
 
 ### Monitoring Tests
+
 ```python
 # tests/monitoring/monitoring_test.py
 import pytest
@@ -764,6 +778,7 @@ class TestMonitoring:
 ```
 
 ### Backup and Recovery Tests
+
 ```bash
 #!/bin/bash
 # tests/backup/backup-recovery-test.sh
@@ -897,6 +912,7 @@ echo "All backup and recovery tests passed!"
 ```
 
 ### Disaster Recovery Tests
+
 ```python
 # tests/disaster-recovery/dr_test.py
 import pytest
@@ -1119,9 +1135,11 @@ class TestDisasterRecovery:
 ---
 
 ## Security Tests
+
 *Testing security controls and vulnerability management*
 
 ### Vulnerability Scanning Tests
+
 ```bash
 #!/bin/bash
 # tests/security/vulnerability-scan.sh
@@ -1224,6 +1242,7 @@ echo "All security tests completed successfully!"
 ```
 
 ### Penetration Testing
+
 ```python
 # tests/security/pentest.py
 import requests
@@ -1448,6 +1467,7 @@ class TestPenetrationTesting:
 ## Test Automation & Reporting
 
 ### Test Execution Pipeline
+
 ```yaml
 # .github/workflows/infrastructure-tests.yml
 name: Infrastructure Tests
@@ -1559,6 +1579,7 @@ jobs:
 ```
 
 ### Test Metrics & Reporting
+
 ```python
 # tests/reporting/test_metrics.py
 import json
@@ -1691,9 +1712,11 @@ if __name__ == "__main__":
 ---
 
 ## Our Philosophy
+>
 > *"Infrastructure should be tested as rigorously as application code."*
 
 **DevOps Testing Principles:**
+
 - **Shift Left:** Test infrastructure early in the development cycle
 - **Automate Everything:** Manual testing doesn't scale
 - **Test in Production:** Monitor and validate in real environments
@@ -1703,6 +1726,7 @@ if __name__ == "__main__":
 ---
 
 **Links:**
+
 - **Test Results Dashboard:** *[Link to test metrics dashboard]*
 - **Infrastructure Repository:** *[Link to Terraform tests]*
 - **Security Reports:** *[Link to security scan results]*

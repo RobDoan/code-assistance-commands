@@ -18,6 +18,7 @@
 ## Crisis Activation Triggers
 
 **This framework activates automatically when:**
+
 - [ ] Missed quarterly revenue target by >20%
 - [ ] Competitor launches category-defining feature
 - [ ] Major customer churns (>10% of revenue)
@@ -26,6 +27,7 @@
 - [ ] Team morale crisis (>3 key people threaten to leave)
 
 **Activation Steps:**
+
 1. Any leader calls "Crisis Framework Active" in #leadership
 2. Schedule emergency session within 4 hours
 3. This document drives the meeting (no freestyle panic)
@@ -58,6 +60,7 @@
 - **Resources available:** [People, money, time - be realistic]
 
 **Banned phrases during Reality Check:**
+
 - "We're fucked"
 - "This changes everything"
 - "We need to pivot completely"
@@ -67,12 +70,14 @@
 ### Step 2: Core vs. Context (20 minutes)
 
 **What must survive (Core):**
+
 - [ ] Customer trust
 - [ ] Team psychological safety
 - [ ] Learning velocity
 - [ ] [Your specific core value]
 
 **What can be sacrificed (Context):**
+
 - [ ] Feature timeline
 - [ ] Perfect execution
 - [ ] Competitive parity
@@ -85,21 +90,25 @@
 Generate exactly 3 options (force creativity):
 
 #### Option A: Double Down
+
 - Stick to current strategy but execute faster
 - When it works: Problem is execution, not strategy
 - Risk: Doing the wrong thing harder
 
 #### Option B: Tactical Pivot
+
 - Keep strategy, adjust tactics significantly
 - When it works: Direction is right, approach is wrong
 - Risk: Half-measures that please no one
 
 #### Option C: Strategic Shift
+
 - Fundamental change in approach
 - When it works: Core assumption proven false
 - Risk: Panic-driven overcorrection
 
 **For each option, fill out:**
+
 - Hypothesis: What must be true for this to work
 - Success metric: How we'll know it's working
 - Kill criteria: When we'd abandon this path
@@ -120,12 +129,14 @@ Generate exactly 3 options (force creativity):
 **Decision:** Option [A/B/C]
 
 **Why this option:**
+
 - Protects: [Which core values]
 - Sacrifices: [What we're giving up]
 - Hypothesis: [What we believe will happen]
 - Evidence: [Why we believe it]
 
 **Commitment Checklist:**
+
 - [ ] All leaders aligned (not necessarily agreeing)
 - [ ] Success metrics defined
 - [ ] Kill criteria established
@@ -137,21 +148,25 @@ Generate exactly 3 options (force creativity):
 ## Anti-Patterns to Avoid
 
 ### The Hail Mary
+
 - Symptom: "This one weird trick will save us"
 - Reality: Magical thinking disguised as boldness
 - Instead: Multiple small bets with fast learning
 
 ### The Everything Pivot
+
 - Symptom: "Our entire strategy is wrong"
 - Reality: Panic-driven overcorrection
 - Instead: Change one variable at a time
 
 ### The Hero Complex
+
 - Symptom: "I'll handle everything myself"
 - Reality: Burnout disguised as leadership
 - Instead: Distribute ownership, maintain sustainability
 
 ### The Ostrich
+
 - Symptom: "This is temporary, stay the course"
 - Reality: Denial disguised as strength
 - Instead: Acknowledge reality, adapt intelligently
@@ -166,19 +181,21 @@ Generate exactly 3 options (force creativity):
 
 **Message:**
 > Team,
-> 
+>
 > We're facing [specific challenge]. We've activated our Crisis Decision Framework.
-> 
+>
 > What this means:
+>
 > - We're following our pre-committed playbook
 > - We're protecting [core values]
 > - We're adjusting [specific changes]
-> 
+>
 > What this doesn't mean:
+>
 > - We're not panicking
 > - We're not abandoning our principles
 > - We're not making permanent decisions
-> 
+>
 > Next review: [Date]
 > Your role: [Specific ask]
 
@@ -193,18 +210,21 @@ Keep it simple, factual, forward-looking. No drama.
 **After crisis ends (or 30 days max):**
 
 ### What We Did Right
+
 - Followed framework? Y/N
 - Protected core? Y/N
 - Learned fast? Y/N
 - Team stayed aligned? Y/N
 
 ### What We Learned
+
 - About our assumptions:
 - About our resilience:
 - About our customers:
 - About our market:
 
 ### Framework Updates Needed
+
 - What should trigger activation:
 - What options we didn't consider:
 - What anti-patterns we fell into:

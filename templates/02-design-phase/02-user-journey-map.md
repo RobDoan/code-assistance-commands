@@ -59,5 +59,6 @@
 ---
 
 **Connected Documents:**
+
 * `01-experiment-brief.md`
 * `03-prototype-spec.md`

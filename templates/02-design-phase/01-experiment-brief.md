@@ -51,7 +51,7 @@
 
 ## 3. Kill Criteria & Pre-Mortem (Our Defense Against Wishful Thinking)
 
-### We will IMMEDIATELY STOP this experiment if:
+### We will IMMEDIATELY STOP this experiment if
 
 * **Primary Kill Trigger:** [Specific measurable outcome that proves we're wrong. e.g., "Conversion rate < 1% after 100 users"]
 * **Guardrail Breach:** [Critical metric that can't degrade. e.g., "Core feature usage drops >10%"]
@@ -115,19 +115,20 @@
 
 **Does this experiment need Red Team review?**
 
-- [ ] Affects >1000 users → Red Team Required
-- [ ] >$10K investment → Red Team Required  
-- [ ] Strategic direction change → Red Team Required
-- [ ] None of the above → Red Team Optional
+* [ ] Affects >1000 users → Red Team Required
+* [ ] >$10K investment → Red Team Required  
+* [ ] Strategic direction change → Red Team Required
+* [ ] None of the above → Red Team Optional
 
 **If Required:**
-- **Red Team Members:** [Assigned by Data Science Lead]
-- **Review Date:** [Within 48 hours of request]
-- **Key Concerns to Address:** [What you want Red Team to focus on]
+* **Red Team Members:** [Assigned by Data Science Lead]
+* **Review Date:** [Within 48 hours of request]
+* **Key Concerns to Address:** [What you want Red Team to focus on]
 
 ---
 
 **Connected Documents:**
+
 * `02-user-journey-map.md`
 * `03-prototype-spec.md`
 * `04-tech-feasibility-check.md`

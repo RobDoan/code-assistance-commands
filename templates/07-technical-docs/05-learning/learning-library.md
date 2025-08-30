@@ -1,7 +1,7 @@
 # Learning Library: Our Invalidated Assumptions
 
-> **The graveyard of bad ideas that saved us millions.** 
-> 
+> **The graveyard of bad ideas that saved us millions.**
+>
 > Every funeral here represents time, money, and effort not wasted.
 
 ## Our Philosophy
@@ -63,6 +63,7 @@ An invalidated hypothesis is not a failure—it's a victory. This library captur
 ## 📚 Learning Categories
 
 ### 🎯 User Behavior Assumptions
+
 *What we learned about how users actually behave*
 
 | Assumption | Reality | Key Learning | Date |
@@ -71,6 +72,7 @@ An invalidated hypothesis is not a failure—it's a victory. This library captur
 | Users will pay for Y | Users won't pay for Y | [Insight] | [Date] |
 
 ### 🏗️ Technical Assumptions  
+
 *What we learned about our architecture and systems*
 
 | Assumption | Reality | Key Learning | Date |
@@ -79,6 +81,7 @@ An invalidated hypothesis is not a failure—it's a victory. This library captur
 | Integration B is simple | Integration B requires major refactor | [Insight] | [Date] |
 
 ### 💰 Business Model Assumptions
+
 *What we learned about our path to revenue*
 
 | Assumption | Reality | Key Learning | Date |
@@ -87,6 +90,7 @@ An invalidated hypothesis is not a failure—it's a victory. This library captur
 | Pricing D is optimal | Pricing D causes churn | [Insight] | [Date] |
 
 ### 🎨 Design Assumptions
+
 *What we learned about user experience and interface*
 
 | Assumption | Reality | Key Learning | Date |
@@ -99,6 +103,7 @@ An invalidated hypothesis is not a failure—it's a victory. This library captur
 ## 🔄 Learning Patterns
 
 ### Recurring Themes
+
 *What assumptions do we keep making incorrectly?*
 
 - **Pattern 1:** [e.g., "We consistently overestimate user engagement with new features"]
@@ -106,6 +111,7 @@ An invalidated hypothesis is not a failure—it's a victory. This library captur
 - **Pattern 3:** [e.g., "We assume users want more options when they want fewer"]
 
 ### Early Warning Signs
+
 *How to spot similar assumptions before they become experiments*
 
 - 🚩 **Red Flag 1:** [Signal that suggests similar assumption might be wrong]
@@ -135,6 +141,7 @@ An invalidated hypothesis is not a failure—it's a victory. This library captur
 ## 🧠 Institutional Memory
 
 ### Questions We've Already Answered
+
 *Avoid re-testing what we've already learned*
 
 **Q:** [Question we investigated]  
@@ -146,9 +153,11 @@ An invalidated hypothesis is not a failure—it's a victory. This library captur
 **Source:** [Link to experiment that taught us this]
 
 ### Zombie Assumptions  
+
 *Ideas that keep coming back despite being invalidated*
 
 **Zombie 1:** "[Assumption that won't die]"  
+
 - **First Death:** [Date] - [How we killed it]
 - **Resurrection:** [Date] - [How it came back]  
 - **Second Death:** [Date] - [How we killed it again]
@@ -159,12 +168,14 @@ An invalidated hypothesis is not a failure—it's a victory. This library captur
 ## 🎯 Learning Velocity Metrics
 
 ### This Quarter
+
 - **Experiments Run:** [Number]
 - **Hypotheses Validated:** [Number]  
 - **Hypotheses Invalidated:** [Number]
 - **Learning Rate:** [Invalidated/Total - aim for 30-50%]
 
 ### Historical Trends
+
 - **Q[X]:** [Learning rate and key insights]
 - **Q[Y]:** [Learning rate and key insights]  
 - **Q[Z]:** [Learning rate and key insights]
@@ -174,6 +185,7 @@ An invalidated hypothesis is not a failure—it's a victory. This library captur
 ## 🔗 Learning Connections
 
 ### How Our Learnings Connect
+
 *Map relationships between invalidated assumptions*
 
 ```
@@ -185,17 +197,20 @@ Business Model E (testing)
 ```
 
 ### Cross-Pollination Opportunities
+
 *Where learnings from one area might apply to another*
 
 - **Learning from [Area A]** could apply to **[Area B]** because **[reasoning]**
 - **Learning from [Area C]** could apply to **[Area D]** because **[reasoning]**
 
 ### Competitive Intelligence
+
 *How our failure library becomes strategic advantage*
 
 **Quarterly Review Question:** "What did we learn from the library last quarter that will allow us to take a smart risk our competitors wouldn't?"
 
 Examples:
+
 - **We learned [X] doesn't work** → **So we can focus resources on [Y] while competitors waste time on [X]**
 - **We discovered [Z] pattern fails** → **So we can avoid similar pitfalls that will trip up others**
 - **We validated [W] approach** → **So we can double down while others are still experimenting**
@@ -205,6 +220,7 @@ Examples:
 ## 🏃 Next Learning Sprints
 
 ### High-Value Questions to Answer
+
 *What should we test next based on our learning gaps?*
 
 1. **Question:** [What we need to learn]  

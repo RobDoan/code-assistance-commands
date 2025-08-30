@@ -27,6 +27,7 @@
 ## Debt Scoring Rubric (1-5)
 
 ### Score 1: Production-Ready
+
 - Fully tested (>80% coverage)
 - Proper error handling
 - Monitoring in place
@@ -34,12 +35,14 @@
 - **Can run indefinitely without intervention**
 
 ### Score 2: Minor Polish Needed
+
 - Core functionality solid
 - Missing edge case handling
 - Basic monitoring only
 - **Could run for months with minimal issues**
 
 ### Score 3: Acceptable Experiment
+
 - Happy path works reliably
 - Limited error handling
 - Basic logging only
@@ -47,6 +50,7 @@
 - **Safe for 2-4 week experiment**
 
 ### Score 4: Minimum Viable Hack
+
 - Core feature barely works
 - No error handling
 - Hard-coded values
@@ -54,6 +58,7 @@
 - **Maximum 1 week in production**
 
 ### Score 5: Duct Tape & Prayer
+
 - Proof of concept quality
 - Will break under load
 - No monitoring/logging
@@ -67,10 +72,12 @@
 ### 🚨 MANDATORY HARDENING TRIGGERS
 
 **Team Debt Ceiling: 15 points total**
+
 - If total debt > 15: Next sprint MUST be hardening sprint
 - No new experiments until debt < 10
 
 **Individual Experiment Triggers:**
+
 - Score 5 debt: 48 hours maximum in production
 - Score 4 debt: 1 week then mandatory review
 - Experiment succeeds + debt > 3: Immediate hardening before scaling
@@ -94,11 +101,13 @@
 **Oldest Unresolved Debt:** [Experiment name, age in days]  
 
 ### Debt Resolution This Month
+
 - ✅ Checkout flow: Reduced from 4 → 2 (added proper error handling)
 - ✅ Analytics pipeline: Reduced from 3 → 1 (automated manual processes)
 - ❌ Email system: Still at 4 (deprioritized for new feature)
 
 ### Learning: What Debt Taught Us
+
 *What did we learn by consciously taking on debt? What would have happened if we'd built "properly" from the start?*
 
 Example: "Taking on Score 4 debt for the referral test saved 3 weeks. Test failed in 2 days. Saved 18 developer-days by not building it 'right.'"

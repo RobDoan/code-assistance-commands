@@ -1,7 +1,7 @@
 # Technical Documentation: Our Learning Machine
 
 > **We are not a company. We are a learning machine.**
-> 
+>
 > These documents exist to accelerate learning, not document completion.
 
 ## Our Philosophy
@@ -35,18 +35,23 @@ graph LR
 ## Quick Navigation
 
 ### 🧪 **Currently Experimenting?**
+
 Start with [Experiment Brief Template](experiments/experiment-brief.md)
 
-### 🏗️ **Building Something?** 
+### 🏗️ **Building Something?**
+
 Check [Tech Stack](systems/tech-stack.md) and [Architecture Guide](systems/architecture-guide.md)
 
 ### 🚀 **Ready to Ship?**
+
 Use [Release Runbook](runbooks/release-runbook.md)
 
 ### 🎓 **Want to Learn?**
+
 Browse [Learning Library](learning/learning-library.md) for invalidated assumptions
 
 ### ⚡ **Making a Big Decision?**
+
 Create an [ADR](decisions/adr-template.md)
 
 ## The 3 AM Test
@@ -68,6 +73,7 @@ Hypothesis → Experiment → Learning → Evolution
 ```
 
 Every document should:
+
 - Start with a hypothesis or assumption
 - Define success/failure criteria  
 - Generate measurable outcomes

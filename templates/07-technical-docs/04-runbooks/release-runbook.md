@@ -1,7 +1,7 @@
 # Release Runbook: Guardrails, Not Handcuffs
 
 > **Make the safe path the easy path.**  
-> 
+>
 > This runbook exists to eliminate thinking during deployments, not eliminate judgment.
 
 ## Our Philosophy
@@ -71,6 +71,7 @@ git checkout -b release/$(date +%Y.%m.%d)
 ```
 
 **Success Criteria:**
+
 - [ ] All smoke tests pass
 - [ ] Response times < 500ms
 - [ ] No error spikes in logs
@@ -89,6 +90,7 @@ git checkout -b release/$(date +%Y.%m.%d)
 ```
 
 **Success Criteria:**
+
 - [ ] Zero 5xx errors
 - [ ] Response times within SLA
 - [ ] All key metrics stable
@@ -111,6 +113,7 @@ git checkout -b release/$(date +%Y.%m.%d)
 ## 🛡️ Rollback Procedures
 
 ### Automatic Rollback Triggers
+
 *These conditions trigger automatic rollback - no human decision needed*
 
 - Error rate > 1% for 2 consecutive minutes
@@ -134,6 +137,7 @@ git checkout -b release/$(date +%Y.%m.%d)
 > **🤖 Automation Note:** Rollbacks automatically trigger risk register updates via [`risk-incident-sync`](../support-tools/risk-incident-sync/)
 
 ### Rollback Verification Checklist
+
 - [ ] Application responding normally
 - [ ] Error rates back to baseline
 - [ ] Database integrity confirmed
@@ -144,17 +148,20 @@ git checkout -b release/$(date +%Y.%m.%d)
 ## 📊 Monitoring & Alerts
 
 ### Key Metrics Dashboard
+
 *Single source of truth for release health*
 
 **Location:** [Dashboard URL]
 
 **Critical Thresholds:**
+
 - **Response Time:** < 500ms (Warning), < 1s (Critical)
 - **Error Rate:** < 0.1% (Warning), < 0.5% (Critical)  
 - **Throughput:** > [baseline] (Warning if drops 20%)
 - **Memory Usage:** < 70% (Warning), < 85% (Critical)
 
 ### Alert Escalation
+
 1. **Level 1 (0-5 min):** Automated alerts to #releases
 2. **Level 2 (5-15 min):** Page on-call engineer
 3. **Level 3 (15+ min):** Escalate to engineering leadership
@@ -166,6 +173,7 @@ git checkout -b release/$(date +%Y.%m.%d)
 ### Common Issues & Solutions
 
 #### "Tests failing in CI/CD"
+
 ```bash
 # Quick fix: Retry flaky tests
 ./scripts/retry-failed-tests.sh
@@ -175,6 +183,7 @@ git checkout -b release/$(date +%Y.%m.%d)
 ```
 
 #### "Deployment stuck/timing out"
+
 ```bash
 # Check deployment status
 ./scripts/check-deployment-status.sh
@@ -184,6 +193,7 @@ git checkout -b release/$(date +%Y.%m.%d)
 ```
 
 #### "Database migration failed"
+
 ```bash
 # Check migration status
 ./scripts/check-migration-status.sh
@@ -193,6 +203,7 @@ git checkout -b release/$(date +%Y.%m.%d)
 ```
 
 ### Escalation Path
+
 1. **Self-service:** Use troubleshooting scripts above
 2. **Team Help:** Ask in #engineering-help  
 3. **On-Call:** Page if production impacted
@@ -203,6 +214,7 @@ git checkout -b release/$(date +%Y.%m.%d)
 ## 🧪 Experimental Releases
 
 ### Feature Flag Deployments
+
 *For testing new features with subset of users*
 
 ```bash
@@ -217,6 +229,7 @@ git checkout -b release/$(date +%Y.%m.%d)
 ```
 
 ### A/B Test Deployments
+
 *For running controlled experiments*
 
 ```bash
@@ -235,16 +248,19 @@ git checkout -b release/$(date +%Y.%m.%d)
 ## 🎯 Release Success Metrics
 
 ### Release Velocity
+
 - **Deployment Frequency:** [Target: daily/weekly]
 - **Lead Time:** [Target: < X hours from commit to production]
 - **Recovery Time:** [Target: < X minutes to rollback]
 
 ### Quality Metrics  
+
 - **Change Failure Rate:** [Target: < X%]
 - **Rollback Rate:** [Target: < X%]
 - **Post-Release Issues:** [Target: < X per release]
 
 ### Team Confidence
+
 - **Process Satisfaction:** [Regular team survey]
 - **Deployment Anxiety:** [1-5 scale, target: < 2]
 - **Time Spent on Releases:** [Target: < X minutes]
@@ -254,6 +270,7 @@ git checkout -b release/$(date +%Y.%m.%d)
 ## 📚 Knowledge Base
 
 ### Release History Log
+
 *Learn from past releases*
 
 | Date | Version | Changes | Issues | Recovery Time | Learnings |
@@ -261,17 +278,21 @@ git checkout -b release/$(date +%Y.%m.%d)
 | [Date] | [v1.2.3] | [Summary] | [None/Details] | [N/A/Time] | [What we learned] |
 
 ### Runbook Evolution
+
 *How this runbook should improve*
 
 **Current Pain Points:**
+
 - [ ] [Issue 1: e.g., "Manual step X takes too long"]
 - [ ] [Issue 2: e.g., "Alert Y has too many false positives"]
 
 **Planned Improvements:**
+
 - [ ] [Improvement 1: e.g., "Automate step X"]
 - [ ] [Improvement 2: e.g., "Tune alert Y thresholds"]
 
 **Success Metrics for This Runbook:**
+
 - Deployment time: Currently [X min], Target [Y min]
 - Rollback time: Currently [X min], Target [Y min]  
 - Process confidence: Currently [X/5], Target [Y/5]
@@ -290,12 +311,14 @@ git checkout -b release/$(date +%Y.%m.%d)
 ## 🎉 Release Celebration
 
 ### When We Ship Successfully
+
 - [ ] Update team in #releases with metrics
 - [ ] Thank everyone who contributed  
 - [ ] Add learnings to knowledge base
 - [ ] Plan next improvement to this runbook
 
 ### When We Rollback
+
 - [ ] Celebrate fast recovery (no blame!)
 - [ ] Document what we learned
 - [ ] Improve guardrails to catch it next time

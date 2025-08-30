@@ -16,28 +16,28 @@ The document's strength is its substance. It perfectly captures the *what* and t
 
 Here’s a breakdown of how we can elevate each section.
 
-*   **Executive Summary**
-    *   **What's Working Well:** The core thesis is perfect: "not just what to document, but... *how to think*."
-    *   **Opportunity for Enhancement:** Let's inject more energy. Instead of "This document synthesizes...", let's open with something like: "**This is our playbook. It's the mindset that turns good ideas into great products. It’s not about new rules; it’s about a new way of thinking.**"
+* **Executive Summary**
+  * **What's Working Well:** The core thesis is perfect: "not just what to document, but... *how to think*."
+  * **Opportunity for Enhancement:** Let's inject more energy. Instead of "This document synthesizes...", let's open with something like: "**This is our playbook. It's the mindset that turns good ideas into great products. It’s not about new rules; it’s about a new way of thinking.**"
 
-*   **The Seven Core Principles**
-    *   **What's Working Well:** The `In Practice` and `Template Evidence` sections are gold. They ground the theory in reality.
-    *   **Opportunity for Enhancement:** The titles are too academic. They need to be sticky. Let's rebrand them:
-        *   `Hypothesis-Driven Everything` -> **`1. Assume Nothing, Test Everything`**
-        *   `Speed of Learning Over Perfection` -> **`2. Seek Velocity, Not Perfection`**
-        *   `Kill Ideas Cheaply and Celebrate It` -> **`3. Celebrate Funerals for Bad Ideas`** (This is provocative and powerful).
-        *   `Ruthless Intellectual Honesty` -> **`4. Data Over Drama`**
-        *   `Structured Freedom, Not Chaos` -> **`5. Guardrails, Not Handcuffs`** (A great visual metaphor).
-        *   `Build-Measure-Learn as Breathing` -> **`6. The Loop is Our Lifeline`**
-        *   `Culture Over Process` -> **`7. Mindset is the OS`** (Our Operating System).
+* **The Seven Core Principles**
+  * **What's Working Well:** The `In Practice` and `Template Evidence` sections are gold. They ground the theory in reality.
+  * **Opportunity for Enhancement:** The titles are too academic. They need to be sticky. Let's rebrand them:
+    * `Hypothesis-Driven Everything` -> **`1. Assume Nothing, Test Everything`**
+    * `Speed of Learning Over Perfection` -> **`2. Seek Velocity, Not Perfection`**
+    * `Kill Ideas Cheaply and Celebrate It` -> **`3. Celebrate Funerals for Bad Ideas`** (This is provocative and powerful).
+    * `Ruthless Intellectual Honesty` -> **`4. Data Over Drama`**
+    * `Structured Freedom, Not Chaos` -> **`5. Guardrails, Not Handcuffs`** (A great visual metaphor).
+    * `Build-Measure-Learn as Breathing` -> **`6. The Loop is Our Lifeline`**
+    * `Culture Over Process` -> **`7. Mindset is the OS`** (Our Operating System).
 
-*   **Critical Anti-Patterns to Avoid**
-    *   **What's Working Well:** The list is spot-on.
-    *   **Opportunity for Enhancement:** Let's give it a more dramatic frame. Instead of "Anti-Patterns," call it **`The Seven Deadly Sins of Product Development`**. It’s memorable and carries weight.
+* **Critical Anti-Patterns to Avoid**
+  * **What's Working Well:** The list is spot-on.
+  * **Opportunity for Enhancement:** Let's give it a more dramatic frame. Instead of "Anti-Patterns," call it **`The Seven Deadly Sins of Product Development`**. It’s memorable and carries weight.
 
-*   **The Ultimate Test**
-    *   **What's Working Well:** The questions are the perfect gut-check.
-    *   **Opportunity for Enhancement:** Let's raise the stakes. Title it **`The 3 AM Test`**. Can you answer these five questions instantly, even if woken up in the middle of the night? That’s the standard.
+* **The Ultimate Test**
+  * **What's Working Well:** The questions are the perfect gut-check.
+  * **Opportunity for Enhancement:** Let's raise the stakes. Title it **`The 3 AM Test`**. Can you answer these five questions instantly, even if woken up in the middle of the night? That’s the standard.
 
 ***
 
@@ -56,6 +56,7 @@ This isn't a process document; it's our playbook for winning. It’s the mindset
 ---
 
 ## **Our 7 Core Principles**
+
 *(The operating system for our product culture)*
 
 **1. Assume Nothing, Test Everything.**
@@ -82,13 +83,14 @@ This isn't a process document; it's our playbook for winning. It’s the mindset
 ---
 
 ## **The 3 AM Test**
+
 *(Can you answer these instantly?)*
 
-1.  What is our riskiest assumption right now?
-2.  How, specifically, are we testing it this week?
-3.  What result would kill this hypothesis?
-4.  What did we learn from our last failure?
-5.  What assumption did we prove wrong this month?
+1. What is our riskiest assumption right now?
+2. How, specifically, are we testing it this week?
+3. What result would kill this hypothesis?
+4. What did we learn from our last failure?
+5. What assumption did we prove wrong this month?
 
 **If we can't answer these, we're not experimenting. We're just hoping.**
 

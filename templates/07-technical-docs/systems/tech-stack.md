@@ -1,7 +1,7 @@
 # Tech Stack: Strategic Technology Choices
 
 > **Every technology is a bet on the future.**  
-> 
+>
 > This isn't just a list—it's our strategic technology decisions with the reasoning behind each choice.
 
 ## Our Philosophy
@@ -57,13 +57,15 @@ Technology choices are hypotheses about what will help us learn and build faster
 | **[New Tech]** | [What it would replace/enable] | [What we believe it will improve] | [How we'll measure success] | [When we'll decide] |
 
 ### Recently Graduated
+
 *Technologies that moved from experiment to standard*
 
-| Technology | Graduated On | Original Hypothesis | Actual Result | 
+| Technology | Graduated On | Original Hypothesis | Actual Result |
 |------------|--------------|---------------------|---------------|
 | **[Tech]** | [Date] | [What we thought] | [What actually happened] |
 
 ### Recently Killed
+
 *Technologies we tested and decided against*
 
 | Technology | Killed On | Original Hypothesis | Why We Killed It |
@@ -96,6 +98,7 @@ Technology choices are hypotheses about what will help us learn and build faster
 ## 🚨 Technical Debt & Risk Assessment
 
 ### High-Risk Dependencies
+
 *Technologies that could hurt us if they fail*
 
 | Technology | Risk Level | Risk Type | Mitigation Plan | Owner |
@@ -104,6 +107,7 @@ Technology choices are hypotheses about what will help us learn and build faster
 | **[Important Tech]** | 🟡 Medium | [Maintenance/Scaling] | [How we'll handle it] | [Team/Person] |
 
 ### Upgrade Debt
+
 *Technologies running on outdated versions*
 
 | Technology | Current Version | Latest Version | Upgrade Priority | Blocker |
@@ -112,6 +116,7 @@ Technology choices are hypotheses about what will help us learn and build faster
 | **[Tech 2]** | v[X] | v[Y] | 🟡 Medium | [What's stopping us] |
 
 ### Replacement Candidates
+
 *Technologies we're considering replacing*
 
 | Technology | Why Replace? | Leading Alternative | Decision Timeline |
@@ -124,24 +129,29 @@ Technology choices are hypotheses about what will help us learn and build faster
 
 ### Our Decision Framework
 
-**1. Team Capability** 
+**1. Team Capability**
+
 - Can our team learn this quickly?
 - Does it match our skill strengths?
 
 **2. Problem Fit**
+
 - Does it solve our specific problem?
 - Is it overkill or underpowered?
 
 **3. Ecosystem Maturity**
+
 - Community size and activity
 - Documentation quality
 - Long-term viability
 
 **4. Learning Value**
+
 - Will this make us smarter?
 - Does it teach us valuable skills?
 
 **5. Exit Strategy**
+
 - How hard is it to change later?
 - What's our migration path?
 
@@ -160,12 +170,14 @@ Technology choices are hypotheses about what will help us learn and build faster
 ### Technology Refresh Cycle
 
 **Quarterly Reviews:**
+
 - Performance against success criteria
 - Security updates and patches
 - New alternatives in the market
 - Team satisfaction and productivity
 
 **Annual Strategy:**
+
 - Major version upgrade planning
 - Technology replacement evaluation
 - Skill development planning
@@ -174,6 +186,7 @@ Technology choices are hypotheses about what will help us learn and build faster
 ### Experimentation Budget
 
 **20% Time Rule:** We allocate roughly 20% of our technical effort to:
+
 - Testing new technologies
 - Upgrading existing systems
 - Reducing technical debt
@@ -193,10 +206,12 @@ Technology choices are hypotheses about what will help us learn and build faster
 ### External Learning
 
 **Conferences & Events:**
+
 - [Conference Name] - [Date] - [Who's attending]
 - [Meetup Name] - [Frequency] - [Regular attendees]
 
 **Subscriptions & Resources:**
+
 - [Newsletter/Blog/Podcast] - [Who follows]
 - [Training Platform] - [Team access]
 
@@ -214,16 +229,19 @@ Technology choices are hypotheses about what will help us learn and build faster
 ## 🎯 Success Metrics for This Tech Stack
 
 ### Business Impact
+
 - **Development Velocity:** Can we ship features [X]% faster than last quarter?
 - **System Reliability:** Do we maintain [X]% uptime with current stack?
 - **Cost Efficiency:** Are we staying within [X] budget per user/transaction?
 
 ### Team Impact  
+
 - **Learning Satisfaction:** Team rates tech stack learning at [X]/5
 - **Productivity:** Developers can ship features without blockers [X]% of time
 - **Hiring:** Can we find qualified developers for our stack in [X] weeks?
 
 ### Technical Impact
+
 - **Performance:** System responds within [X]ms for [Y]% of requests
 - **Scalability:** Stack handles [X] concurrent users without degradation  
 - **Security:** Zero critical vulnerabilities in production

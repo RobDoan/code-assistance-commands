@@ -1,7 +1,7 @@
 # Hotfix Log: Emergency Changes Record
 
 > **For when the building is on fire and processes must bend.**  
-> 
+>
 > This captures the "why" of emergency changes without the full experimental overhead.
 
 ## Our Philosophy
@@ -22,21 +22,25 @@ Sometimes you need to break glass. This log ensures we capture the essential con
 **Who:** [Person who made the change]
 
 #### The Emergency
+
 **Problem:** [What was broken/failing]  
 **Impact:** [How many users affected, business impact]  
 **Why Emergency:** [Why normal process couldn't wait]
 
 #### The Fix
+
 **Change Made:** [Brief description of what was changed]  
 **Files/Systems Affected:** [What was touched]  
 **Rollback Plan:** [How to undo if it makes things worse]
 
 #### The Context
+
 **Root Cause (Initial):** [Best guess at cause]  
 **Risk Accepted:** [What corners were cut, what wasn't tested]  
 **Monitoring:** [What metrics to watch post-fix]
 
 #### Follow-up Required
+
 - [ ] **Post-mortem scheduled** for [Date] with [People]
 - [ ] **Proper fix planned** - [Brief description]  
 - [ ] **Process improvement** - [What should prevent this]
@@ -47,6 +51,7 @@ Sometimes you need to break glass. This log ensures we capture the essential con
 ## Completed Hotfixes (Last 6 Months)
 
 ### 🚨 [HOTFIX-XXX] [Brief Description] - [Date]
+
 **Duration:** [Time to fix] | **Follow-up:** [Status] | **Learning:** [Key insight]
 
 **Post-mortem:** [Link to full analysis]
@@ -56,12 +61,15 @@ Sometimes you need to break glass. This log ensures we capture the essential con
 ## Hotfix Patterns & Prevention
 
 ### Common Emergency Types
+
 - **Type 1:** [e.g., Database connection failures] - **Prevention:** [Strategy]
 - **Type 2:** [e.g., Third-party API outages] - **Prevention:** [Strategy]  
 - **Type 3:** [e.g., Memory leaks under load] - **Prevention:** [Strategy]
 
 ### Warning Signs
+
 *Metrics/behaviors that predict emergencies:*
+
 - **Signal 1:** [Metric/behavior] → **Threshold:** [When to act]
 - **Signal 2:** [Metric/behavior] → **Threshold:** [When to act]
 - **Signal 3:** [Metric/behavior] → **Threshold:** [When to act]
@@ -105,6 +113,7 @@ Can it wait 2-4 hours? ─── Yes ──→ Use expedited PR process
 ## Communication Templates
 
 ### Incident Alert (Slack)
+
 ```
 🚨 HOTFIX IN PROGRESS 🚨
 Issue: [Brief description]
@@ -115,6 +124,7 @@ Tracking: HOTFIX-[XXX]
 ```
 
 ### Hotfix Complete (Slack)
+
 ```
 ✅ HOTFIX DEPLOYED ✅
 Issue: [Brief description] 
@@ -125,6 +135,7 @@ Log: [Link to this entry]
 ```
 
 ### Stakeholder Update (Email)
+
 ```
 Subject: Production Issue Resolved - [Brief Description]
 
@@ -145,16 +156,19 @@ Next steps:
 ## Success Metrics
 
 ### Response Time
+
 - **Detection to alert:** Target <5 minutes
 - **Alert to fix deployed:** Target <30 minutes  
 - **Total incident duration:** Target <60 minutes
 
 ### Learning Velocity
+
 - **Post-mortems completed:** 100% within 48 hours
 - **Prevention rate:** [X]% of similar incidents prevented
 - **Process improvements:** [X] improvements per quarter
 
 ### Team Health
+
 - **Hotfix frequency:** Trending down month over month
 - **Repeat incidents:** <10% of total incidents
 - **Team confidence:** High comfort with emergency procedures
@@ -172,6 +186,7 @@ Next steps:
 ## Evolution Notes
 
 ### Template Improvements
+
 *How this log format should improve based on usage:*
 
 - **Add:** [Suggestions for new fields/sections]
@@ -179,6 +194,7 @@ Next steps:
 - **Streamline:** [Ways to make this faster to fill out]
 
 ### Process Improvements
+
 *How our emergency response should evolve:*
 
 - **Automation:** [Things that could be automated]

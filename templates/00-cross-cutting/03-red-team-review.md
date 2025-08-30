@@ -23,6 +23,7 @@
 **Review Date:** [Must be within 48 hours of request]  
 
 ### Selection Criteria
+
 - ❌ Cannot be on the team proposing the experiment
 - ❌ Cannot benefit from the experiment's success
 - ✅ Should have domain knowledge OR methodology expertise
@@ -75,6 +76,7 @@
 ### 4. Weaponization Detection
 
 **Is this experiment being used to:**
+
 - [ ] Avoid difficult but necessary work?
 - [ ] Justify a predetermined conclusion?
 - [ ] Delay a decision indefinitely?
@@ -134,7 +136,7 @@
 2. [Specific change needed]
 3. [Specific change needed]
 
-### If Red Light, Primary Reason:
+### If Red Light, Primary Reason
 
 ⬜ Hypothesis not falsifiable  
 ⬜ Vanity metrics / no real business value  
@@ -158,6 +160,7 @@
 ## Post-Experiment: Red Team Retrospective
 
 **Did the Red Team's concerns materialize?**
+
 - [ ] Yes - we caught a real issue
 - [ ] No - the concern was unfounded
 - [ ] Partially - some issues, not others

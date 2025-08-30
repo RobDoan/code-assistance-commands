@@ -1,7 +1,7 @@
 # Testing Manifesto: Our Learning Acceleration Engine
 
 > **We don't test to catch bugs. We test to learn faster.**
-> 
+>
 > Tests are our safety net for rapid experimentation and our documentation of intended behavior.
 
 ## Our Philosophy
@@ -31,6 +31,7 @@ Testing is not about perfection—it's about confidence. We test to enable veloc
 ```
 
 ### Our Test Distribution Target
+
 - **70% Unit Tests** - Fast feedback, regression safety
 - **20% Integration Tests** - Component interaction confidence  
 - **10% E2E Tests** - Critical user journey protection
@@ -40,18 +41,21 @@ Testing is not about perfection—it's about confidence. We test to enable veloc
 ## ⚡ Unit Tests: Our Safety Net
 
 ### What We Unit Test
+
 - **Business logic functions** (pure functions are easiest)
 - **Complex algorithms** (edge cases and corner cases)
 - **Data transformations** (input/output validation)
 - **Error handling paths** (how we fail gracefully)
 
 ### What We Don't Unit Test
+
 - Simple getters/setters (no logic to test)
 - Framework code (trust the framework)
 - Integration points (use integration tests)
 - User interface interactions (use E2E tests)
 
 ### Unit Test Success Criteria
+
 - **Fast:** Test suite runs in <[X] seconds
 - **Reliable:** <1% flaky test rate
 - **Readable:** Test names describe the scenario
@@ -62,7 +66,9 @@ Testing is not about perfection—it's about confidence. We test to enable veloc
 ## 🔗 Integration Tests: Component Confidence
 
 ### Our Integration Philosophy
+
 Test the **boundaries** where things connect:
+
 - API endpoint responses
 - Database operations  
 - External service calls
@@ -71,6 +77,7 @@ Test the **boundaries** where things connect:
 ### Integration Test Types
 
 #### API Integration Tests
+
 ```javascript
 // Example pattern - test the contract, not implementation
 describe('POST /users', () => {
@@ -84,11 +91,13 @@ describe('POST /users', () => {
 ```
 
 #### Database Integration Tests
+
 - Test complex queries return correct data
 - Test migrations work in both directions  
 - Test database constraints are enforced
 
 #### External Service Tests
+
 - Mock external services in lower environments
 - Test error handling when services are down
 - Validate request/response formats
@@ -98,13 +107,16 @@ describe('POST /users', () => {
 ## 🧪 E2E Tests: User Journey Protection
 
 ### What Gets E2E Coverage
+
 **Critical Business Flows Only:**
+
 - User signup/login flow
 - Core product functionality
 - Payment processing
 - Data export/import
 
 ### E2E Test Principles
+
 - **Stable selectors** (test IDs, not CSS classes)
 - **Real data scenarios** (not perfect test data)
 - **Rollback-friendly** (can run against any environment)
@@ -122,6 +134,7 @@ describe('POST /users', () => {
 4. **Reflect:** What did we learn about the problem?
 
 ### Testing New Features
+
 ```markdown
 ## Feature Test Plan Template
 
@@ -147,6 +160,7 @@ describe('POST /users', () => {
 ## 📊 Test Quality Metrics
 
 ### Coverage That Matters
+
 - **Critical Path Coverage:** 100% (user can complete core actions)
 - **Business Logic Coverage:** >90% (our unique value)
 - **Overall Coverage:** >80% (good safety net)
@@ -167,6 +181,7 @@ describe('POST /users', () => {
 ## 🛡️ Test Safety & Reliability
 
 ### Flaky Test Protocol
+
 **When a test fails intermittently:**
 
 1. **Immediate:** Disable the test (don't let it block team)
@@ -175,6 +190,7 @@ describe('POST /users', () => {
 4. **Learn:** Add learnings to team knowledge base
 
 ### Test Data Management
+
 - **Isolated:** Each test creates its own data
 - **Predictable:** Use factories/fixtures for consistent data
 - **Cleanup:** Reset state after each test
@@ -185,16 +201,19 @@ describe('POST /users', () => {
 ## 🎪 Testing in Production
 
 ### Feature Flag Testing
+
 - **Gradual rollouts** with monitoring
 - **A/B testing** with control groups
 - **Canary deployments** with automated rollback
 
 ### Chaos Engineering
+
 - **Circuit breaker testing** (what happens when services fail)
 - **Load testing** (how we perform under stress)
 - **Disaster recovery** (how we handle data loss)
 
 ### Production Monitoring as Tests
+
 ```javascript
 // Example: Synthetic user tests running in production
 describe('Production Health Check', () => {
@@ -210,16 +229,19 @@ describe('Production Health Check', () => {
 ## 🧠 Testing Anti-Patterns to Avoid
 
 ### ❌ Testing Theater
+
 - Writing tests just to hit coverage numbers
 - Testing implementation details instead of behavior
 - Tests that never fail (always pass regardless of code changes)
 
 ### ❌ Fragile Tests
+
 - Tests that break when UI changes slightly
 - Tests that depend on external services being available
 - Tests that require specific execution order
 
 ### ❌ Slow Tests
+
 - E2E tests that could be unit tests
 - Tests that don't run in parallel
 - Tests that sleep instead of waiting for conditions
@@ -229,14 +251,18 @@ describe('Production Health Check', () => {
 ## 🔄 Test Evolution Strategy
 
 ### Quarterly Test Review
+
 **Questions We Ask:**
+
 - Which tests have saved us from bugs?
 - Which tests are slowing us down unnecessarily?  
 - What production issues could better tests prevent?
 - How can we make our test suite faster?
 
 ### Test Refactoring Sprints
+
 **Monthly investment in test quality:**
+
 - Remove duplicate test coverage
 - Speed up slowest tests
 - Fix most flaky tests
@@ -247,6 +273,7 @@ describe('Production Health Check', () => {
 ## 🎓 Testing Learning Goals
 
 ### This Quarter's Focus
+
 **We are focusing on improving our skills in:** [e.g., E2E testing with Cypress]
 
 **Why this matters:** [e.g., Our E2E tests are slow and flaky, causing deployment delays]
@@ -254,6 +281,7 @@ describe('Production Health Check', () => {
 **Success looks like:** [e.g., E2E test suite runs in <5 minutes with <1% flake rate]
 
 ### Learning Resources
+
 - **Champion:** [Team member leading this learning initiative]
 - **Resources:** [Specific courses, tutorials, documentation]
 - **Practice:** [How we'll apply these skills in our codebase]
@@ -264,16 +292,19 @@ describe('Production Health Check', () => {
 ## 🎯 Success Metrics for Our Testing Practice
 
 ### Business Impact
+
 - **Deployment Confidence:** We can deploy anytime without fear
 - **Bug Reduction:** [X]% fewer customer-reported issues
 - **Recovery Speed:** Issues caught and fixed within [X] minutes
 
 ### Team Impact
+
 - **Development Velocity:** Features ship [X]% faster with good tests
 - **Developer Happiness:** Team rates testing workflow [X]/5
 - **Learning Speed:** New team members productive in [X] days
 
 ### Technical Impact
+
 - **Regression Prevention:** <[X]% of bugs are re-occurrences
 - **Refactoring Safety:** We can change any code with confidence
 - **Documentation:** Tests serve as accurate behavior documentation
@@ -283,6 +314,7 @@ describe('Production Health Check', () => {
 ## 🔗 Testing Toolchain
 
 ### Current Testing Stack
+
 | Tool | Purpose | Owner | Status |
 |------|---------|--------|--------|
 | **[Unit Test Framework]** | Fast feedback loop | [Team] | ✅ Active |
@@ -291,6 +323,7 @@ describe('Production Health Check', () => {
 | **[Mock Library]** | Isolation support | [Team] | ✅ Active |
 
 ### Related Documentation
+
 - **[Tech Stack](../systems/tech-stack.md)** - Testing tools and versions
 - **[Development Workflow](development-workflow.md)** - When/how we run tests
 - **[Release Runbook](../runbooks/release-runbook.md)** - Testing in deployment process
@@ -300,12 +333,14 @@ describe('Production Health Check', () => {
 ## 🎉 Celebrating Test Success
 
 ### When Tests Save Us
+
 - **Acknowledge the save** in team updates
 - **Share the story** of what could have gone wrong
 - **Improve coverage** in similar areas
 - **Thank the test author** publicly
 
 ### When Tests Fail in Production
+
 - **Blameless post-mortem** on what we missed
 - **Strengthen our test strategy** based on learnings
 - **Celebrate the learning** not the failure
