@@ -129,6 +129,8 @@ We don't build features; we test assumptions. Every line of code is a hypothesis
 
 **Memorial:** [What we learned that we'll remember]
 
+> **🤖 Automation Note:** This funeral will be automatically processed by [`funeral-automation`](../support-tools/funeral-automation/) and added to the Learning Library
+
 ---
 
 *Template Version: 1.0 | Last Updated: [Date] | Evolution: [How this template should improve]*

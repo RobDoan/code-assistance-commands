@@ -148,6 +148,8 @@ We capture the "why" behind decisions, not just the "what." Every technical choi
 - **90-day check:** [Date] - Full impact assessment  
 - **Annual review:** [Date] - Strategic alignment review
 
+> **🤖 Automation Note:** Review reminders will be sent automatically by [`adr-review-reminder`](../support-tools/adr-review-reminder/)
+
 ---
 
 ## 🔄 Implementation Plan

@@ -2,7 +2,7 @@
 
 ## Date: 2025-08-30
 ## Reviewer: Pragmatic Principal Engineer, "Lean Documentation" Champion
-## Overall Alignment Score: 9/10 ’ 9.5/10
+## Overall Alignment Score: 9/10 ï¿½ 9.5/10
 
 ---
 
@@ -11,7 +11,7 @@
 ### 1. README.md
 **Feedback Addressed:** Added visual workflow diagram
 **Change Made:** 
-- Added Mermaid diagram showing the primary path: `Experiment Brief ’ ADR (if needed) ’ Development Workflow ’ Release Runbook ’ Learning Library`
+- Added Mermaid diagram showing the primary path: `Experiment Brief ï¿½ ADR (if needed) ï¿½ Development Workflow ï¿½ Release Runbook ï¿½ Learning Library`
 - This visually reinforces "The Loop is Our Lifeline" principle
 **Impact:** Makes the core workflow immediately visible and actionable
 
@@ -107,4 +107,118 @@
 
 ---
 
-*These revisions strengthen an already exceptional documentation system, making it even more aligned with the Learning Machine Manifesto while maintaining its lean, pragmatic nature.*
+## Round 2: Automation & Self-Awareness Improvements
+
+### Date: 2025-08-30
+### Feedback Source: Next-Level Suggestions for Living Documentation
+### Theme: From Templates to Self-Aware Learning Engine
+
+---
+
+## Automation Tools Added
+
+### 1. Funeral Automation (`support-tools/funeral-automation/`)
+**Purpose:** Automate capture of invalidated experiments
+**Template Updates:**
+- `experiment-brief.md`: Added automation note in Funeral Notice section
+- Automatically parses killed experiments and updates Learning Library
+**Impact:** Reduces friction of documenting learnings to near zero
+
+### 2. Risk-Incident Sync (`support-tools/risk-incident-sync/`)
+**Purpose:** Create closed-loop between predictions and incidents
+**Template Updates:**
+- `risk-register.md`: Added automation note for incident sync
+- `release-runbook.md`: Added note that rollbacks trigger risk updates
+**Impact:** Validates risk predictions against reality automatically
+
+### 3. ADR Review Reminder (`support-tools/adr-review-reminder/`)
+**Purpose:** Make ADRs accountable with automated reminders
+**Template Updates:**
+- `adr-template.md`: Added automation note for review reminders
+- Sends notifications when review dates approach
+**Impact:** Ensures decisions are validated against actual outcomes
+
+### 4. Mission Control Dashboard (`support-tools/dashboard-generator/`)
+**Purpose:** Transform static README into live dashboard
+**Template Updates:**
+- `README.md`: Added link to generated dashboard view
+- Provides real-time visibility of experiments, risks, and learnings
+**Impact:** Makes documentation ambient and immediately visible
+
+---
+
+## Key Improvements Summary
+
+### From Manual to Automated
+- **Before:** Manual updates to Learning Library when experiments fail
+- **After:** Automatic capture and PR creation for failed experiments
+
+### From Static to Dynamic
+- **Before:** Static README as entry point
+- **After:** Live dashboard showing current system state
+
+### From Passive to Active
+- **Before:** ADR reviews depend on human memory
+- **After:** Bot-driven reminders with specific metrics to check
+
+### From Open-Loop to Closed-Loop
+- **Before:** Risk predictions exist separately from incidents
+- **After:** Incidents automatically validate or create risk entries
+
+---
+
+## Implementation Roadmap
+
+### Phase 1: Foundation (Week 1-2)
+1. Implement `funeral-automation` script
+2. Test with existing killed experiments
+3. Verify Learning Library updates correctly
+
+### Phase 2: Integration (Week 3-4)
+1. Deploy `risk-incident-sync` with rollback hooks
+2. Connect `adr-review-reminder` to team calendars
+3. Integrate with existing notification channels
+
+### Phase 3: Visualization (Week 5-6)
+1. Generate first Mission Control dashboard
+2. Set up automatic refresh on commits
+3. Deploy to team-accessible location
+
+### Phase 4: Optimization (Ongoing)
+1. Measure automation effectiveness
+2. Tune notification frequencies
+3. Add predictive analytics capabilities
+
+---
+
+## Success Metrics for Automation
+
+### Efficiency Gains
+- Time to document learning: -90% (from 30min to 3min)
+- ADR review compliance: +75% (from 40% to 70%+)
+- Risk prediction accuracy: +50% improvement over 6 months
+
+### Cultural Impact
+- Increased engagement with documentation system
+- Higher learning velocity (more experiments per sprint)
+- Better institutional memory retention
+
+### Technical Benefits
+- Reduced documentation debt
+- Faster onboarding for new team members
+- Proactive risk management
+
+---
+
+## Next Evolution: AI-Powered Insights
+
+### Potential Future Enhancements
+1. **Pattern Recognition:** AI identifies recurring failure patterns
+2. **Predictive Suggestions:** Recommend experiments based on past learnings
+3. **Auto-Generated Summaries:** Weekly learning digests from all sources
+4. **Smart Routing:** Automatically assign reviews based on expertise
+5. **Anomaly Detection:** Flag unusual patterns in experiments or risks
+
+---
+
+*These Round 2 improvements transform an already exceptional template system into a living, breathing learning engine that actively supports the team's continuous improvement journey.*

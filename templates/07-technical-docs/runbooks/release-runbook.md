@@ -131,6 +131,8 @@ git checkout -b release/$(date +%Y.%m.%d)
 ./scripts/create-incident.sh "Production rollback executed"
 ```
 
+> **🤖 Automation Note:** Rollbacks automatically trigger risk register updates via [`risk-incident-sync`](../support-tools/risk-incident-sync/)
+
 ### Rollback Verification Checklist
 - [ ] Application responding normally
 - [ ] Error rates back to baseline

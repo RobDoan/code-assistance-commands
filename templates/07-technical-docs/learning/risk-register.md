@@ -153,6 +153,8 @@ We don't pretend risks don't exist—we make them explicit and trackable. Every 
 - Do existing mitigations still apply?
 - Who needs to know about this?
 
+> **🤖 Automation Note:** Production incidents automatically sync with this register via [`risk-incident-sync`](../support-tools/risk-incident-sync/)
+
 ---
 
 ## 🧠 Risk Learning
