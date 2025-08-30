@@ -26,9 +26,12 @@ We don't pretend risks don't exist—we make them explicit and trackable. Every 
 - [What would cause this risk to become reality]
 - [Early warning signs we should watch for]
 
-**Current Mitigations:**
-- [What we're doing to reduce probability]
-- [What we're doing to reduce impact]
+**Proposed Mitigations:**
+- [Specific experiment to reduce uncertainty: What will we test and how?]
+- [Concrete action to reduce probability: What will we build/change?]
+- [Measurable step to reduce impact: How will we limit damage?]
+
+> **💡 Mitigation Rule:** A risk without a proposed mitigation is just fear. Every risk must include a small, concrete experiment to reduce uncertainty.
 
 **Owner:** [Person/team responsible for monitoring]  
 **Next Review:** [Date]  

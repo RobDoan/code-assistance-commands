@@ -12,6 +12,17 @@ We capture the "why" behind decisions, not just the "what." Every technical choi
 
 ---
 
+## 🏢 ADR Office Hours
+
+**Feeling intimidated by this template?** Don't let perfect be the enemy of good!
+
+- **Weekly ADR Office Hours:** Every [Day] at [Time] - bring rough ideas for quick feedback
+- **5-minute rule:** Get team blessing before investing in full write-up
+- **Small decisions:** Use only Context, Decision, and Rationale sections
+- **Remember:** ADRs are thinking tools, not bureaucratic hoops
+
+---
+
 ## Decision Metadata
 
 - **Decision Scale:** [S/M/L] *(S = minor/reversible, M = moderate impact, L = major/hard to reverse)*

@@ -84,4 +84,14 @@ This system is a **living experiment**:
 
 ---
 
+## Monthly Health Check
+
+**The One Question** to ask your team every month:
+
+> *"This past month, did our documentation feel more like a springboard that helped you move faster with confidence, or a safety net that you felt tangled in?"*
+
+This question reveals whether the system is serving its intended purpose (acceleration) or collapsing under its own weight (bureaucracy). Track the answers and act on the feedback.
+
+---
+
 *Last Updated: [Date] | Next Review: After next major learning*

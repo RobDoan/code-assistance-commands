@@ -16,6 +16,7 @@ An invalidated hypothesis is not a failure—it's a victory. This library captur
 - **Link from your experiment brief:** Reference relevant learnings in new `experiment-brief.md` files
 - **During retrospectives:** Review recent funerals to extract patterns
 - **For onboarding:** New team members should read the Hall of Fame to quickly learn what doesn't work
+- **For competitive advantage:** During quarterly planning, ask "What did we learn that lets us take smart risks our competitors wouldn't?"
 
 ---
 
@@ -188,6 +189,16 @@ Business Model E (testing)
 
 - **Learning from [Area A]** could apply to **[Area B]** because **[reasoning]**
 - **Learning from [Area C]** could apply to **[Area D]** because **[reasoning]**
+
+### Competitive Intelligence
+*How our failure library becomes strategic advantage*
+
+**Quarterly Review Question:** "What did we learn from the library last quarter that will allow us to take a smart risk our competitors wouldn't?"
+
+Examples:
+- **We learned [X] doesn't work** → **So we can focus resources on [Y] while competitors waste time on [X]**
+- **We discovered [Z] pattern fails** → **So we can avoid similar pitfalls that will trip up others**
+- **We validated [W] approach** → **So we can double down while others are still experimenting**
 
 ---
 
