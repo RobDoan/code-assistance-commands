@@ -62,9 +62,13 @@
 
 *Imagine it's 2 weeks from now and this experiment failed spectacularly. What happened?*
 
-1. **Most Likely Failure:** [e.g., "Users don't actually have this problem - we projected our own needs"]
-2. **Second Most Likely:** [e.g., "The problem exists but our solution doesn't address it"]
-3. **Hidden Risk:** [e.g., "This breaks an existing workflow we didn't consider"]
+1. **Team-Generated Failure Modes:**
+   - **Most Likely Failure:** [e.g., "Users don't actually have this problem - we projected our own needs"]
+   - **Second Most Likely:** [e.g., "The problem exists but our solution doesn't address it"]
+   - **Hidden Risk:** [e.g., "This breaks an existing workflow we didn't consider"]
+2. **AI-Assisted Failure Analysis (Intellectual Sparring Partner):**
+   - *Prompt Idea: "Act as a skeptical product manager. Given the hypothesis '[copy hypothesis here]', what are 10 reasons this experiment might fail or produce misleading results? Focus on cognitive biases, measurement errors, and unintended user behaviors."*
+   - **AI-Generated Risks:** *[Paste key risks identified by the AI here]*
 
 **If these failures happen, we will have learned:** [What valuable insight comes from failure]
 

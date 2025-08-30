@@ -2,6 +2,20 @@
 
 **Purpose:** Document specific scenarios to validate that the experiment functions correctly and data collection is accurate before launch.
 
+---
+
+## AI-Assisted Test Case Generation
+> Use GenAI to expand test coverage and identify edge cases. This applies the "Automated Content" capability to the QA process.
+
+- **Prompt Idea:** *"Given the following user story: '[Paste user story from requirements]', generate 20 test cases. Include happy paths, negative paths (e.g., invalid inputs), edge cases (e.g., empty strings, zero values, special characters), and security-related tests (e.g., basic injection attempts)."*
+- **AI-Generated Cases to Consider:** *[Paste a summary of the most valuable AI-generated cases here. The full list can be linked.]*
+
+## AI-Generated Synthetic Data
+> Use GenAI to create realistic data for testing.
+
+- **Prompt Idea:** *"Generate a JSON array of 50 realistic but fake user profiles for testing. Include fields: 'name', 'email', 'companyName', and 'country'. Ensure a diverse mix of data."*
+- **Data Generation Status:** *[e.g., Synthetic data generated and loaded into staging environment.]*
+
 ## Test Information
 
 **Related Test Plan:** `test-plan.md`  

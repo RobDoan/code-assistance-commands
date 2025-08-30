@@ -24,6 +24,15 @@
 
 ---
 
+## AI-Generated Code Debt
+> A new category of debt introduced by AI code assistants. This isn't inherently bad, but it must be managed consciously.
+
+- **Definition:** Code written primarily by an AI assistant that a developer has integrated. While it may be functional, it may lack deep understanding of the system context, contain subtle bugs, or follow patterns inconsistent with our codebase.
+- **Interest Rate:** Can be high if not reviewed properly. The cost is paid in future debugging time, maintenance complexity, and potential security vulnerabilities.
+- **Paydown Plan:** All significant blocks of AI-generated code should be flagged for a "human refactoring" pass in a subsequent sprint. The goal is for a human developer to "re-own" the code by refactoring it to fit our standards and mental models.
+
+---
+
 ## Debt Scoring Rubric (1-5)
 
 ### Score 1: Production-Ready

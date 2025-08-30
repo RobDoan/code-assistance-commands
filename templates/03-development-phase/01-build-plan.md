@@ -24,6 +24,13 @@
 - **User Path:** [The exact flow we're testing]
 - **Architecture Choice:** [Why this approach vs. alternatives]
 
+### AI Copilot Strategy
+> How will we leverage GenAI code assistants (e.g., GitHub Copilot) to accelerate this build?
+
+- **Areas for AI Assistance:** *[e.g., Boilerplate code, utility functions, unit test generation, data transformations]*
+- **Areas for Human-Only Focus:** *[e.g., Core business logic, security-sensitive code, complex algorithms]*
+- **Review Standard for AI-Generated Code:** *[e.g., All AI-generated code must be treated as if written by a new junior developer—it requires rigorous review, understanding, and testing. The developer using the tool is 100% accountable for the final code.]*
+
 ### Conscious Trade-offs (The Debt We're Taking)
 
 | What We're NOT Doing | Why | Debt Score | Payback Plan |

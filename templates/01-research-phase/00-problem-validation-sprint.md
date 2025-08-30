@@ -55,12 +55,13 @@
 
 ## 3. Sprint Plan (Max 5 Days)
 
-### Day 1: Desk Research (2-3 hours)
+### Day 1: Desk Research & AI-Assisted Analysis (2-3 hours)
 
-- [ ] Scan Reddit, Discord, forums for complaints about this problem
-- [ ] Review competitor sites/reviews for mentions of this pain
-- [ ] Check if existing solutions exist and how they're reviewed
-- [ ] Document initial findings
+- [ ] **AI-Assisted Insight Generation:** Use a GenAI tool to accelerate research. This leverages GenAI's "Concision" capability to process vast amounts of unstructured data.
+  - *Example Prompt: "Summarize the top 5 complaints about [topic] from the following sources: [links to Reddit, forums, reviews]. Extract direct quotes related to user frustration and categorize them."*
+- [ ] **Manual Deep Dive:** Manually scan key sources (Reddit, Discord, forums) to validate AI findings and catch nuances.
+- [ ] **Competitor & Solution Review:** Review competitor sites/reviews for mentions of this pain and check if existing solutions exist.
+- [ ] **Document Initial Findings:** Synthesize manual and AI-generated findings into a coherent summary.
 
 ### Day 2-3: Problem Interviews (5-10 interviews, 20-30 min each)
 

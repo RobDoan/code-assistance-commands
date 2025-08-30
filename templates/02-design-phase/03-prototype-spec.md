@@ -4,7 +4,19 @@
 
 ---
 
-## 1. Content & Copy
+## 1. AI-Generated Assets (Optional)
+> Leverage GenAI's "Creative Content" capability to accelerate prototyping.
+
+- **Copy Generation:**
+  - *Prompt Idea: "Generate 5 variations for a [Hook Headline] that is exciting and creates urgency for a user to learn more about a new reporting feature."*
+  - **Selected Copy:** *[Paste the chosen copy here]*
+- **Mockup Generation:**
+  - *Prompt Idea: "Generate a simple wireframe/SVG for a modal that asks a user to enter their email to be notified about a new feature. The modal should have a headline, a body text, an email input field, and a submit button."*
+  - **Generated Asset:** *[Paste or link to the asset]*
+
+---
+
+## 2. Content & Copy
 
 **This is the single source of truth for all text in the prototype.**
 

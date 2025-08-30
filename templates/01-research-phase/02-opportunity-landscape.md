@@ -42,6 +42,12 @@
 
 *Where are the cracks in the market we can exploit? Focus on asymmetric opportunities.*
 
+### AI-Generated Market Analysis
+> Use GenAI to synthesize market signals from unstructured data. This is a practical application of the "Concision" and "Creative Content" capabilities described in the Generative AI Impact analysis.
+
+- **Prompt Idea:** *"Analyze recent news articles, earnings reports, and social media sentiment for [Competitor A, Competitor B]. What are their stated strategic priorities, and where are customers expressing the most frustration? Identify three potential market gaps."*
+- **AI-Generated Summary:** *[Paste the AI-generated summary here for team review]*
+
 ### Market Shift Opportunities
 
 - **Shift:** *Example: The rise of remote work has tripled the number of freelancers*
