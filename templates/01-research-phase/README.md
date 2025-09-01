@@ -15,25 +15,35 @@ Research Phase embodies the **Learning Machine Manifesto**:
 
 ## The Research Toolkit
 
+### 💡 **Hypothesis List**
+
+*[00-hypothesis-list.md](00-hypothesis-list.md)*
+
+**When to Use:** Document every assumption and hypothesis before testing
+
+**The Problem It Solves:** Assumptions hide as facts until they break our product
+
+**3 AM Test Question:** *"What are we assuming that we haven't tested?"*
+
 ### 🔍 **Problem Validation Sprint**
 
-*[problem-validation-sprint.md](problem-validation-sprint.md)*
+*[01-problem-validation-sprint.md](01-problem-validation-sprint.md)*
 
-**When to Use:** Before building anything, validate the problem exists
+**When to Use:** Test specific hypotheses from your Hypothesis List
 
 **The Problem It Solves:** Teams build solutions for problems that don't actually exist
 
 **3 AM Test Question:** *"How do we know this problem is worth solving?"*
 
-### 💡 **Hypothesis List**
+### 🌄 **Opportunity Landscape**
 
-*[hypothesis-list.md](hypothesis-list.md)*
+*[02-opportunity-landscape.md](02-opportunity-landscape.md)*
 
-**When to Use:** Convert every assumption into testable statements
+**When to Use:** Find exploitable gaps in 3 hours instead of 3 months of analysis
 
-**The Problem It Solves:** Assumptions hide as facts until they break our product
+**The Problem It Solves:** Analysis paralysis that delays customer contact
 
-**3 AM Test Question:** *"What are we assuming that we haven't tested?"*
+**3 AM Test Question:** *"Where can we win that others can't?"*
 
 ### 🗺️ **Lean Canvas**
 
@@ -45,19 +55,9 @@ Research Phase embodies the **Learning Machine Manifesto**:
 
 **3 AM Test Question:** *"What's our riskiest business assumption?"*
 
-### 🌄 **Opportunity Landscape**
-
-*[opportunity-landscape.md](opportunity-landscape.md)*
-
-**When to Use:** Find exploitable gaps in 3 hours instead of 3 months of analysis
-
-**The Problem It Solves:** Analysis paralysis that delays customer contact
-
-**3 AM Test Question:** *"Where can we win that others can't?"*
-
 ### 📋 **Experiment Summary**
 
-*[experiment-summary.md](experiment-summary.md)*
+*[04-experiment-summary.md](04-experiment-summary.md)*
 
 **When to Use:** After every research experiment to capture learning
 
@@ -113,24 +113,24 @@ Before moving to Design Phase, answer these:
 
 ### Week 1: Problem Discovery
 
-1. **Start with [Problem Validation Sprint](problem-validation-sprint.md)**
-   - Define the problem hypothesis
-   - Interview 10+ potential customers
-   - Look for evidence the problem is urgent and expensive
-
-2. **Create [Hypothesis List](hypothesis-list.md)**
+1. **Start with [Hypothesis List](00-hypothesis-list.md)**
    - List every assumption about problem, customer, market
    - Rank by risk and testability
    - Define what would prove each hypothesis wrong
 
+2. **Run [Problem Validation Sprint](01-problem-validation-sprint.md)**
+   - Select highest-risk hypothesis to test
+   - Interview 10+ potential customers
+   - Look for evidence the problem is urgent and expensive
+
 ### Week 2: Market Understanding  
 
-3. **Map [Opportunity Landscape](opportunity-landscape.md)**
+3. **Map [Opportunity Landscape](02-opportunity-landscape.md)**
    - Find competitors and adjacent solutions
    - Identify market gaps and positioning opportunities
    - Validate market size assumptions
 
-4. **Build [Lean Canvas](lean-canvas.md)**
+4. **Build [Lean Canvas](03-lean-canvas.md)**
    - Map all business model assumptions
    - Identify the riskiest components
    - Plan tests for each assumption
@@ -142,7 +142,7 @@ Before moving to Design Phase, answer these:
    - Measure intent, not opinions
    - Look for behavior, not words
 
-6. **Complete [Experiment Summary](experiment-summary.md)**
+6. **Complete [Experiment Summary](04-experiment-summary.md)**
    - Document what you learned vs. what you hoped
    - Identify validated vs. invalidated assumptions
    - Define next most dangerous assumption to test

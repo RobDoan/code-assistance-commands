@@ -3,7 +3,7 @@
 **Sprint Duration:** `[3-5 days]`  
 **Owner:** `[Name]`  
 **Date:** `[YYYY-MM-DD]`  
-**Problem Hypothesis ID:** `[Link to hypothesis-list.md #X]`
+**Problem Hypothesis ID:** `[Link to 00-hypothesis-list.md #X]`
 
 ---
 
@@ -199,19 +199,19 @@ OR
 
 ### If ✅ GO (Problem Validated)
 
-1. [ ] **Immediate:** Add "Solution Hypothesis" to `hypothesis-list.md`
-2. [ ] **Immediate:** Update `lean-canvas.md` Problem and Customer Segment sections
+1. [ ] **Immediate:** Add "Solution Hypothesis" to `00-hypothesis-list.md`
+2. [ ] **Immediate:** Update `03-lean-canvas.md` Problem and Customer Segment sections
 3. [ ] **This week:** Design solution concept/prototype
 4. [ ] **Next sprint:** Solution testing (landing page, prototype, etc.)
 5. [ ] **Housekeeping:** Schedule solution sprint planning meeting
 
 ### If ❌ NO-GO (Problem Invalidated)
 
-1. [ ] **Immediate:** Document invalidated problem in `hypothesis-list.md` Learning Library
+1. [ ] **Immediate:** Document invalidated problem in `00-hypothesis-list.md` Learning Library
 2. [ ] **Immediate:** Hold 30-min "What Did We Learn?" retrospective
-3. [ ] **This week:** Select next problem from `opportunity-landscape.md`
+3. [ ] **This week:** Select next problem from `02-opportunity-landscape.md`
 4. [ ] **Next sprint:** New problem validation sprint
-5. [ ] **Housekeeping:** Update `lean-canvas.md` assumptions if strategic direction changed
+5. [ ] **Housekeeping:** Update `03-lean-canvas.md` assumptions if strategic direction changed
 
 ### If ⚠️ INCONCLUSIVE
 

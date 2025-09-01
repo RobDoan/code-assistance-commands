@@ -15,6 +15,7 @@
 | **Key Insight** | *Quality vs quantity tradeoff: +73% signups but -11% retention. Users want to "try before they buy" but need more guidance to find value* |
 | **Decision** | 🚀 **Ship & Scale** / 🔄 **Iterate & Retest** / 🛑 **Kill & Learn** |
 | **Next Action** | *Launch guided onboarding experiment to restore retention while keeping signup gains* |
+| **Solution Experiment Name** | *"Guided Onboarding for No-Payment Signups"* |
 | **Cost of Learning** | *3 dev days, $50 ad spend, 1 week timeline - ROI: Saved 2 months of wrong direction* |
 
 ---
@@ -128,6 +129,33 @@ This validates our **product-led growth hypothesis** and suggests we should:
 1. **Payment timing optimization:** When is the optimal moment to introduce payment?
 2. **Value demonstration:** What's the minimum feature set that creates "aha moment"?
 3. **Commitment mechanisms:** Do small commitments (survey, profile setup) improve retention?
+
+---
+
+## → Transition to Design Phase
+
+### Named Solution Experiments Ready for Design
+
+Based on our learning, these solution experiments are ready to move to Design Phase:
+
+1. **Primary Experiment: "Guided Onboarding for No-Payment Signups"**
+   - **Problem Validated:** Users want to try before they buy but get lost without guidance
+   - **Design Challenge:** How do we accelerate time-to-value for trial users?
+   - **Success Metric:** Restore 7-day retention to ≥35% while maintaining signup gains
+   - **Next Template:** `../02-design-phase/00-tech-spike-check.md`
+
+2. **Secondary Experiment: "Payment Timing Optimization"**
+   - **Problem Validated:** Payment barrier timing matters more than payment requirement
+   - **Design Challenge:** When is the optimal moment to introduce payment?
+   - **Success Metric:** Increase payment conversion without hurting trial engagement
+   - **Next Template:** `../02-design-phase/00-tech-spike-check.md`
+
+### Updated Hypothesis List
+
+Add these solution hypotheses to `00-hypothesis-list.md`:
+
+- **Solution Hypothesis #1:** Interactive onboarding checklist will restore retention to 35%
+- **Solution Hypothesis #2:** Introducing payment after "aha moment" will increase conversion 25%
 
 ---
 
