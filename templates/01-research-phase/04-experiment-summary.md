@@ -134,6 +134,10 @@ This validates our **product-led growth hypothesis** and suggests we should:
 
 ## → Transition to Design Phase
 
+### Option 1: Direct Transition (Simple Cases)
+
+If you have 1-2 clear solution experiments, you can move directly to Design Phase:
+
 ### Named Solution Experiments Ready for Design
 
 Based on our learning, these solution experiments are ready to move to Design Phase:
@@ -156,6 +160,20 @@ Add these solution hypotheses to `00-hypothesis-list.md`:
 
 - **Solution Hypothesis #1:** Interactive onboarding checklist will restore retention to 35%
 - **Solution Hypothesis #2:** Introducing payment after "aha moment" will increase conversion 25%
+
+### Option 2: Workshop-Driven Prioritization (Complex Cases)
+
+If you have many research insights and need to prioritize multiple competing assumptions, run the Assumption & Opportunity Mapping Workshop:
+
+**Next Step:** `05-assumption-mapping-workshop.md`
+
+**When to Use Workshop:**
+- Multiple competing solution directions discovered in research
+- Complex findings with many interconnected assumptions
+- Need to prioritize between 5+ potential experiments
+- Team needs alignment on which assumptions are most dangerous
+
+**Workshop Output:** Prioritized queue of named experiments ready for Design Phase, ranked by Impact/Certainty matrix.
 
 ---
 

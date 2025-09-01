@@ -65,6 +65,16 @@ Research Phase embodies the **Learning Machine Manifesto**:
 
 **3 AM Test Question:** *"What did we learn that changes what we do next?"*
 
+### 💎 **Assumption & Opportunity Mapping Workshop**
+
+*[05-assumption-mapping-workshop.md](05-assumption-mapping-workshop.md)*
+
+**When to Use:** Immediately after Research Experiment Summary to bridge to Design Phase
+
+**The Problem It Solves:** Teams can't translate research insights into prioritized, named experiments
+
+**3 AM Test Question:** *"Which of our beliefs could kill the business if we're wrong?"*
+
 ---
 
 ## Research Anti-Patterns We Avoid
@@ -146,6 +156,12 @@ Before moving to Design Phase, answer these:
    - Document what you learned vs. what you hoped
    - Identify validated vs. invalidated assumptions
    - Define next most dangerous assumption to test
+
+7. **Run [Assumption & Opportunity Mapping Workshop](05-assumption-mapping-workshop.md)**
+   - Transform research insights into "We believe..." statements
+   - Map assumptions on Impact/Certainty matrix
+   - Prioritize most dangerous assumptions for testing
+   - Name specific experiments ready for Design Phase
 
 ---
 

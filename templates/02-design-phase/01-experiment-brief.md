@@ -5,6 +5,7 @@
 **Last Updated:** [Date]
 **Red Team Review:** [Not Required | Scheduled | Completed]
 **Craftsmanship Debt Score:** [1-5 | TBD]
+**Research Source:** `[Link to Research Phase Experiment Summary OR Assumption Mapping Workshop that defined this experiment]`
 
 ---
 

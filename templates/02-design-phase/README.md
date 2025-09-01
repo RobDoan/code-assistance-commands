@@ -133,15 +133,22 @@ Before moving to Development Phase, answer these:
 
 ### Week 1: Hypothesis Formation
 
+**Prerequisites:** You should have named solution experiments from either:
+- Research Phase Experiment Summary (simple cases with 1-2 experiments)
+- Assumption & Opportunity Mapping Workshop (complex cases with multiple competing experiments)
+
 1. **Start with [Tech Spike Check](00-tech-spike-check.md)**
+   - Use the experiment name from Research Phase outputs
+   - Reference the Research source (Experiment Summary OR Workshop)
    - Validate technical feasibility early
    - Identify constraints that will shape design
    - Surface technical risks before investing in design
 
 2. **Create [Experiment Brief](01-experiment-brief.md)**
-   - Convert research insights into design hypotheses
+   - Reference the Research source that defined this experiment
+   - Convert validated problems and prioritized assumptions into specific design hypotheses
    - Define what you're trying to learn vs. what you're trying to build
-   - Set clear success/failure criteria
+   - Set clear success/failure criteria based on Research findings
 
 ### Week 2: Flow Design
 
@@ -177,6 +184,7 @@ Before moving to Development Phase, answer these:
 - **User insights** inform design principles
 - **Market constraints** guide design decisions
 - **Technical learnings** shape feasibility assessment
+- **Named solution experiments** from Research Experiment Summary provide the experiment names and success criteria for Design Phase
 
 ### To Development Phase
 

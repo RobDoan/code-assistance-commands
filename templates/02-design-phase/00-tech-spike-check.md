@@ -2,6 +2,8 @@
 
 **Purpose:** Ultra-quick (5 min) technical gut check BEFORE writing the experiment brief. Determines if we need a technical spike to validate feasibility.
 
+**Experiment Source:** `[Link to Research Phase Experiment Summary that defined this experiment]`
+
 **Engineer:** [Engineer Name]
 **Date:** [Date]
 **Time to Complete:** [Should be <5 minutes]
