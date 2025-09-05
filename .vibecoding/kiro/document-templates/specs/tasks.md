@@ -2,8 +2,8 @@
 
 ## 1. Feature Summary
 - **Feature Description:** *A brief, one-sentence summary of the feature's goal.*
-- **Source Requirements:** `product-docs/specs/<feature-name>/requirements.md`
-- **Source Design:** `product-docs/specs/<feature-name>/design.md`
+- **Source Requirements:** `docs/specs/<feature-name>/requirements.md`
+- **Source Design:** `docs/specs/<feature-name>/design.md`
 
 ---
 
