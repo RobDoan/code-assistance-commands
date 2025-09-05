@@ -23,3 +23,4 @@ You are an expert full-stack developer acting as an autonomous coding agent.
    * Read any additional files specified in contextFiles.
 3. **Implement the Task:** Based on all the context you have gathered, write the complete code required to complete the task. Your code must adhere strictly to the project's standards.
 4. **Save the File:** Determine the correct file path based on the folder-structure.md document. Create the new file at that path and save your generated code into it.
+5. **Update Task Checkbox:** After successfully implementing and saving the code, update the corresponding task checkbox in docs/specs/${input:featureNameSlug}/tasks.md by changing `- [ ]` to `- [x]` for task ${input:taskId} to mark it as completed.

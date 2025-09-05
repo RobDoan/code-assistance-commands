@@ -22,3 +22,4 @@ You are an expert, full-stack software developer. Your goal is to implement the 
 3. **Select Tools:** Based on the allowed-tools.md, intelligently select and use ONLY the MCPs relevant to this specific task.
 4. **Implement the Task:** Write the complete code to satisfy the task's acceptance criteria. Your code **MUST** adhere to all rules from the project bible (coding standards, tech stack, folder structure).
 5. **Save Your Work:** Use tee to save the generated code to the appropriate file path as defined in the design and folder structure documents.
+6. **Update Task Status:** After successfully implementing the task, update the corresponding checkbox in docs/specs/$1/tasks.md by changing `- [ ]` to `- [x]` for Task $2 to mark it as completed.
