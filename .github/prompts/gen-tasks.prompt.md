@@ -1,7 +1,6 @@
 ---
 description: 'Generates a detailed implementation plan (tasks.md) for a feature.'
 mode: 'agent'
-model: GPT-4o
 ---
 You are a Senior Tech Lead acting as a planning agent.
 

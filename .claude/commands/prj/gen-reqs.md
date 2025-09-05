@@ -1,7 +1,6 @@
 ---
 description: Suggests a feature name and saves a requirements.md file to the product-docs/specs/ folder.
 argument-hint: [A brief description of the feature...]
-model: claude-3-opus-20240229
 allowed-tools: Bash(mkdir: *), Bash(tee: *)
 ---
 You are an expert product manager and system architect. Perform the following steps in order:

@@ -1,7 +1,6 @@
 ---
 description: Generates a detailed implementation plan and task list for a feature.
 argument-hint: [feature-name-slug]
-model: claude-3-opus-20240229
 allowed-tools: Bash(cat: *), Bash(tee: *)
 ---
 You are a Senior Tech Lead responsible for creating detailed implementation plans.

@@ -1,7 +1,6 @@
 ---
 description: 'Suggests a feature name, then generates and saves a requirements.md file.'
 mode: 'agent'
-model: GPT-4o
 ---
 You are an expert Senior Product Manager acting as a file-creation agent.
 

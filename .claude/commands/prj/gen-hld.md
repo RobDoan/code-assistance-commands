@@ -1,7 +1,6 @@
 ---
 description: Generates a High-Level Design (HLD) document from a feature's requirements file.
 argument-hint: [feature-name-slug] [Optional high-level technical direction...]
-model: claude-3-opus-20240229
 allowed-tools: Bash(cat: *), Bash(tee: *)
 ---
 You are a Principal Software Architect. Your task is to generate a High-Level Design (HLD) document and save it to the correct file.
