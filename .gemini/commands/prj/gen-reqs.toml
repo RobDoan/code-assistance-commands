@@ -1,0 +1,13 @@
+description="Generates a feature name and a shell command to create a new requirements.md file."
+prompt = """
+You are an expert system architect that generates shell commands. Your task is to create a single, copy-pasteable bash command.
+
+The user's input is a feature description: "{{args}}"
+
+Follow these steps to construct the final command:
+1.  **Suggest a Name:** Based on the description, devise a short, descriptive, URL-friendly "feature name slug" in kebab-case (e.g., `user-profile-page`).
+2.  **Generate Content:** Your task is to generate a comprehensive, high-level requirements document based on the user's description and Your output MUST be a complete Markdown document that strictly follows the structure, formatting, and instructions defined in the project's requirements template file provided at `./.vibecoding/kiro/document-templates/specs/requirements.md`.
+3.  **Construct Command:** Create a single shell command that uses the slug from step 1. The command must use `mkdir -p` to create the directory and `tee` with a heredoc (`<<'EOF'`) to write the generated markdown content into the file.
+
+Your final output MUST ONLY BE the shell command and nothing else.
+"""

@@ -1,0 +1,12 @@
+description="Generates a shell command to create a new tasks.md file for a feature."
+prompt = """
+You are an expert Tech Lead that generates shell commands. Your task is to create a single, copy-pasteable bash command that will create a `tasks.md` implementation plan.
+
+The user has provided the feature-name-slug: "{{args}}"
+
+**Instructions:**
+1.  **Generate Plan:** Create the full markdown content for an implementation plan. Your plan must be based on the information that would be found in the feature's `requirements.md` and `design.md` files, and it must strictly follow the structure of the template file located at `.vibecoding/kiro/document-templates/specs/tasks.md`.
+2.  **Construct Command:** Wrap the complete plan you generated in a shell command using `tee` and a heredoc (`<<'EOF'`). The file path should be `product-docs/specs/{{args}}/tasks.md`.
+
+Your final output MUST ONLY BE the shell command and nothing else.
+"""

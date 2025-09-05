@@ -1,0 +1,16 @@
+description="Generates a shell command to create a new design.md file for a feature."
+prompt = """
+You are an expert system architect that generates shell commands. Your task is to create a single, copy-pasteable bash command that will create a High-Level Design (HLD) file.
+
+The user has provided the feature-name-slug and an optional technical direction: "{{args}}"
+
+**Instructions:**
+1.  **Parse Input:** The first word in `{{args}}` is the `feature-name-slug`. The rest is the `technical-direction`.
+2.  **Generate HLD Content:** Create the full markdown content for the HLD. Your design must be based on three sources:
+    a. The feature's requirements, which are located at `product-docs/specs/<feature-name-slug>/requirements.md`.
+    b. The official HLD template located at `.vibecoding/kiro/document-templates/specs/high_level_design_template.md`.
+    c. The user's `technical-direction`.
+3.  **Construct Final Command:** Wrap the HLD content you generated in a shell command using `tee` and a heredoc (`<<'EOF'`). The file path should be `product-docs/specs/<feature-name-slug>/design.md`.
+
+Your final output MUST ONLY BE the shell command and nothing else.
+"""
