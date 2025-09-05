@@ -65,20 +65,20 @@ project-docs/
       requirements.md        # Shared feature requirements
       design.md              # Shared feature design
       frontend/
-    requirements.md      # Frontend-specific requirements (optional)
-    tasks.md             # Frontend-specific tasks
-    design.md            # Frontend-specific design (optional)
-    test-plan.md         # Frontend-specific tests
+        requirements.md      # Frontend-specific requirements (optional)
+        tasks.md             # Frontend-specific tasks
+        design.md            # Frontend-specific design (optional)
+        test-plan.md         # Frontend-specific tests
       backend/
-    requirements.md      # Backend-specific requirements (optional)
-    tasks.md
-    design.md
-    test-plan.md
+        requirements.md      # Backend-specific requirements (optional)
+        tasks.md
+        design.md
+        test-plan.md
       devops/
-    requirements.md      # DevOps-specific requirements (optional)
-    tasks.md
-    design.md
-    test-plan.md
+        requirements.md      # DevOps-specific requirements (optional)
+        tasks.md
+        design.md
+        test-plan.md
   technical-docs/
     tech-stack.md
     architecture-guide.md
