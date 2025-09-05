@@ -14,7 +14,7 @@ You are an expert Principal Software Architect acting as a file-creation agent.
 **Instructions (in order):**
 
 1.  **Read Context Files:**
-    * First, find and read the content of the requirements file located at: `product-docs/specs/${input:featureNameSlug}/requirements.md`.
+    * First, find and read the content of the requirements file located at: `docs/specs/${input:featureNameSlug}/requirements.md`.
     * Also, read the HLD template file located at: `/.vibecoding/kiro/document-templates/specs/high_level_design_template.md`.
 2.  **Generate HLD Content:** Based on the context from the two files you read and the user's technical direction, generate the complete markdown content for the High-Level Design document.
-3.  **Save the New File:** Create a new file in the workspace at the following path: `product-docs/specs/${input:featureNameSlug}/design.md`. Place the generated content into this new file and save it.
+3.  **Save the New File:** Create a new file in the workspace at the following path: `docs/specs/${input:featureNameSlug}/design.md`. Place the generated content into this new file and save it.

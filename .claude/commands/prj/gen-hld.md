@@ -8,11 +8,11 @@ You are a Principal Software Architect. Your task is to generate a High-Level De
 **Instructions:**
 
 1. **Read Context:**
-    * First, use your `cat` tool to read the content of the requirements document located at: `product-docs/specs/$1/requirements.md`.
+    * First, use your `cat` tool to read the content of the requirements document located at: `docs/specs/$1/requirements.md`.
     * Also, use `cat` to read the official HLD template from: `.vibecoding/kiro/document-templates/specs/high_level_design_template.md`.
 
 2. **Generate HLD Content:** Based on the content of those two files and the user's technical direction (`$2`), generate the complete HLD markdown content.
 
-3. **Save File:** Use your `tee` tool to write the generated content to the following file path: `product-docs/specs/$1/design.md`.
+3. **Save File:** Use your `tee` tool to write the generated content to the following file path: `docs/specs/$1/design.md`.
 
 Execute these steps precisely and without any additional commentary.
