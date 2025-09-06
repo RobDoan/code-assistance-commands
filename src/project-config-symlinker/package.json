@@ -1,0 +1,48 @@
+{
+  "name": "project-config-symlinker",
+  "version": "1.0.0",
+  "description": "A CLI tool that creates symbolic links between project configuration files/folders and target projects",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "symlinker": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "dev:ts": "tsx src/cli.ts",
+    "debug:ts": "tsx --inspect-brk src/cli.ts",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "test:debug": "node --inspect-brk ./node_modules/vitest/dist/cli.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "cli",
+    "configuration",
+    "symlink",
+    "development",
+    "tools"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "inquirer": "^9.2.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.0",
+    "@types/node": "^20.0.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0",
+    "vitest": "^1.0.0"
+  },
+  "files": [
+    "dist/"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "original": ".claude/commands/prj",
+      "target": ".claude/commands/prj",
+      "type": "folder"
+    },
+    {
+      "original": ".gemini/commands/prj",
+      "target": ".gemini/commands/prj",
+      "type": "folder"
+    },
+    {
+      "original": ".github/prompts",
+      "type": "files"
+    },
+    {
+      "original": ".vibecoding/kiro",
+      "type": "folder"
+    }
+  ]
+}

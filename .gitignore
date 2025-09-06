@@ -17,3 +17,8 @@ src/.claude/settings.local.json
 .vscode/mcp.json
 .my-notes/
 
+
+src/project-config-symlinker/dist
+src/project-config-symlinker/setup-config.json
+src/project-config-symlinker/sample
+src/project-config-symlinker/.claude/settings.local.json

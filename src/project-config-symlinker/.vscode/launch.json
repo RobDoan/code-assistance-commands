@@ -1,0 +1,43 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug TypeScript CLI",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["tsx", "src/cli.ts"],
+      "args": ["./sample", "--verbose"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "env": {
+        "NODE_OPTIONS": "--enable-source-maps"
+      }
+    },
+    {
+      "name": "Debug TypeScript CLI (dry run)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["tsx", "src/cli.ts"],
+      "args": ["./sample", "--dry-run", "--verbose"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "env": {
+        "NODE_OPTIONS": "--enable-source-maps"
+      }
+    },
+    {
+      "name": "Debug CLI (built JS)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/dist/cli.js",
+      "args": ["./sample", "--verbose"],
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "sourceMaps": true,
+      "smartStep": true,
+      "preLaunchTask": "build"
+    }
+  ]
+}
