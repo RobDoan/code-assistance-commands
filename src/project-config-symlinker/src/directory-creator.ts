@@ -230,71 +230,6 @@ export default class DirectoryCreator {
     }
   }
 
-  static async validateDirectoryCreation(
-    targetPath: string,
-    sourceStructure: DirectoryStructure
-  ): Promise<ValidationResult> {
-    try {
-      // Validate target path
-      const pathValidation = PathValidator.validatePathLength(targetPath);
-      if (!pathValidation.isValid) {
-        return pathValidation;
-      }
-
-      const charValidation = PathValidator.validatePathCharacters(targetPath);
-      if (!charValidation.isValid) {
-        return charValidation;
-      }
-
-      // Check if we can create directories at target path
-      const parentDir = dirname(targetPath);
-      const parentExists = await this.pathExists(parentDir);
-
-      if (!parentExists) {
-        // Try to create parent directory to test permissions
-        try {
-          await mkdir(parentDir, { recursive: true });
-          Logger.debug(`Created parent directory for validation: ${parentDir}`);
-        } catch (error) {
-          return {
-            isValid: false,
-            error: `Cannot create parent directory: ${parentDir} (${error})`
-          };
-        }
-      }
-
-      // Validate we won't exceed reasonable depth
-      const estimatedDepth = this.calculateStructureDepth(sourceStructure);
-      if (estimatedDepth > this.MAX_DEPTH) {
-        return {
-          isValid: false,
-          error: `Directory structure is too deep (${estimatedDepth} levels, max ${this.MAX_DEPTH})`
-        };
-      }
-
-      return { isValid: true };
-
-    } catch (error) {
-      return {
-        isValid: false,
-        error: `Directory validation failed: ${error}`
-      };
-    }
-  }
-
-  private static calculateStructureDepth(structure: DirectoryStructure, currentDepth: number = 1): number {
-    if (!structure.children || structure.children.length === 0) {
-      return currentDepth;
-    }
-
-    let maxChildDepth = currentDepth;
-    for (const child of structure.children) {
-      const childDepth = this.calculateStructureDepth(child, currentDepth + 1);
-      maxChildDepth = Math.max(maxChildDepth, childDepth);
-    }
-
-    return maxChildDepth;
-  }
 
   private static async pathExists(path: string): Promise<boolean> {
     try {
@@ -302,33 +237,6 @@ export default class DirectoryCreator {
       return true;
     } catch {
       return false;
-    }
-  }
-
-  static async cleanupEmptyDirectories(
-    basePath: string,
-    createdDirectories: string[],
-    verbose: boolean = false
-  ): Promise<void> {
-    // Sort directories by depth (deepest first) to clean up from bottom to top
-    const sortedDirs = createdDirectories.sort((a, b) => b.split('/').length - a.split('/').length);
-
-    for (const dir of sortedDirs) {
-      try {
-        const entries = await readdir(dir);
-        if (entries.length === 0) {
-          // Directory is empty, safe to remove
-          const { rmdir } = await import('fs/promises');
-          await rmdir(dir);
-
-          if (verbose) {
-            Logger.debug(`Cleaned up empty directory: ${dir}`);
-          }
-        }
-      } catch (error) {
-        // Ignore cleanup errors - they're not critical
-        Logger.debug(`Could not clean up directory: ${dir}`, error);
-      }
     }
   }
 }

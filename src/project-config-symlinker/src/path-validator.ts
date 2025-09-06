@@ -9,50 +9,39 @@ export default class PathValidator {
   ];
 
   static async validateTargetPath(targetPath: string): Promise<ValidationResult> {
-    try {
-      // Sanitize input
-      const sanitized = this.sanitizePath(targetPath);
-      const resolvedPath = resolve(sanitized);
-
-      // Check for dangerous system paths
-      const dangerousCheck = this.checkForDangerousPaths(resolvedPath);
-      if (!dangerousCheck.isValid) {
-        return dangerousCheck;
-      }
-
-      // Check if path exists and is accessible
-      await access(resolvedPath, constants.F_OK | constants.R_OK | constants.W_OK);
-
-      const stats = await stat(resolvedPath);
-      if (!stats.isDirectory()) {
-        return { isValid: false, error: 'Target path must be a directory' };
-      }
-
-      return { isValid: true };
-    } catch (error: any) {
-      const errorMessage = this.getAccessErrorMessage(error, targetPath);
-      return { isValid: false, error: errorMessage };
-    }
+    return this.validatePathCommon(targetPath, constants.F_OK | constants.R_OK | constants.W_OK, true);
   }
 
   static async validateSourcePath(sourcePath: string): Promise<ValidationResult> {
+    return this.validatePathCommon(sourcePath, constants.F_OK | constants.R_OK, false);
+  }
+
+  private static async validatePathCommon(
+    inputPath: string,
+    accessMode: number,
+    mustBeDirectory: boolean
+  ): Promise<ValidationResult> {
     try {
-      // Sanitize input
-      const sanitized = this.sanitizePath(sourcePath);
+      const sanitized = this.sanitizePath(inputPath);
       const resolvedPath = resolve(sanitized);
 
-      // Check for dangerous system paths
       const dangerousCheck = this.checkForDangerousPaths(resolvedPath);
       if (!dangerousCheck.isValid) {
         return dangerousCheck;
       }
 
-      // Check if path exists and is readable
-      await access(resolvedPath, constants.F_OK | constants.R_OK);
+      await access(resolvedPath, accessMode);
+
+      if (mustBeDirectory) {
+        const stats = await stat(resolvedPath);
+        if (!stats.isDirectory()) {
+          return { isValid: false, error: 'Target path must be a directory' };
+        }
+      }
 
       return { isValid: true };
     } catch (error: any) {
-      const errorMessage = this.getAccessErrorMessage(error, sourcePath);
+      const errorMessage = this.getAccessErrorMessage(error, inputPath);
       return { isValid: false, error: errorMessage };
     }
   }
