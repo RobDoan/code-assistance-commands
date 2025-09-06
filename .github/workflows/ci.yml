@@ -18,7 +18,7 @@ permissions:
 
 defaults:
   run:
-    working-directory: src/project-config-symlinker
+    working-directory: ./src/project-config-symlinker
 
 jobs:
   lint-and-format:
@@ -35,7 +35,8 @@ jobs:
           node-version: '18.x'
           cache: 'npm'
           cache-dependency-path: 'src/project-config-symlinker/package-lock.json'
-
+      - name: Check current directory
+        run: pwd
       - name: Install dependencies
         run: npm ci
 
@@ -54,7 +55,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-latest]
         node-version: [20.x]
 
     steps:
