@@ -3,14 +3,8 @@ name: Continuous Integration
 on:
   push:
     branches: [ main, develop ]
-    paths:
-      - 'src/project-config-symlinker/**'
-      - '.github/workflows/**'
   pull_request:
     branches: [ main, develop ]
-    paths:
-      - 'src/project-config-symlinker/**'
-      - '.github/workflows/**'
 
 permissions:
   contents: read
