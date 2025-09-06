@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "original": ".claude/commands",
+      "type": "folder"
+    },
+    {
+      "original": ".gemini/commands",
+      "type": "folder"
+    },
+    {
+      "original": ".github/prompts",
+      "type": "files"
+    },
+    {
+      "original": "CLAUDE.md",
+      "type": "files"
+    },
+    {
+      "original": ".cursor/rules",
+      "type": "files"
+    },
+    {
+      "original": "prompts",
+      "target": ".prompts",
+      "type": "folder"
+    }
+  ]
+}

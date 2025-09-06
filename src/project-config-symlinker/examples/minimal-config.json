@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+      "original": ".gitignore",
+      "type": "files"
+    },
+    {
+      "original": ".editorconfig",
+      "type": "files"
+    },
+    {
+      "original": "LICENSE",
+      "type": "files"
+    }
+  ]
+}

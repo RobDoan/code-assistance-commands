@@ -1,33 +1,80 @@
 {
   "name": "project-config-symlinker",
   "version": "1.0.0",
-  "description": "A CLI tool that creates symbolic links between project configuration files/folders and target projects",
+  "description": "A CLI tool that creates symbolic links between project configuration files/folders and target projects, enabling centralized configuration management across multiple development projects",
   "type": "module",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
     "symlinker": "./dist/cli.js"
   },
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && npm run build:types",
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
     "dev": "vite build --watch",
     "dev:ts": "tsx src/cli.ts",
     "debug:ts": "tsx --inspect-brk src/cli.ts",
     "test": "vitest",
     "test:coverage": "vitest --coverage",
     "test:debug": "node --inspect-brk ./node_modules/vitest/dist/cli.js",
-    "typecheck": "tsc --noEmit"
+    "test:package": "node scripts/test-package.js",
+    "test:install": "bash scripts/test-installation.sh",
+    "build:full": "bash scripts/build-and-test.sh",
+    "ci": "bash scripts/build-and-test.sh",
+    "typecheck": "tsc --noEmit",
+    "lint": "echo 'No linter configured'",
+    "prepublishOnly": "npm run typecheck && npm run build && npm run test:package",
+    "prepack": "npm run build"
   },
   "keywords": [
     "cli",
     "configuration",
     "symlink",
+    "symbolic-links",
     "development",
-    "tools"
+    "tools",
+    "config-management",
+    "project-setup",
+    "development-environment",
+    "build-tools",
+    "devops",
+    "automation"
   ],
-  "author": "",
+  "author": {
+    "name": "Quy Doan",
+    "email": "quydoantran@gmail.com",
+    "url": "https://quybits.com"
+  },
+  "maintainers": [
+    {
+      "name": "Quy Doan",
+      "email": "quydoantran@gmail.com"
+    }
+  ],
   "license": "MIT",
+  "homepage": "https://github.com/RobDoan/project-config-symlinker#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobDoan/project-config-symlinker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RobDoan/project-config-symlinker/issues"
+  },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
     "commander": "^12.0.0",
@@ -43,6 +90,15 @@
     "vitest": "^1.0.0"
   },
   "files": [
-    "dist/"
-  ]
+    "dist/",
+    "examples/",
+    "scripts/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/RobDoan"
+  }
 }
