@@ -22,6 +22,7 @@
     "build:full": "bash scripts/build-and-test.sh",
     "ci": "bash scripts/build-and-test.sh",
     "typecheck": "tsc --noEmit",
+    "typecheck:test": "tsc --noEmit --project tsconfig.test.json",
     "lint": "echo 'No linter configured'",
     "semantic-release": "semantic-release",
     "prepublishOnly": "npm run typecheck && npm run build && npm run test:package",
