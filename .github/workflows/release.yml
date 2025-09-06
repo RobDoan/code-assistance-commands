@@ -1,0 +1,278 @@
+name: Release Package
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+    paths: 
+      - 'src/project-config-symlinker/**'
+      - '.github/workflows/**'
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  packages: write
+  id-token: write
+
+defaults:
+  run:
+    working-directory: src/project-config-symlinker
+
+jobs:
+  test:
+    name: Test & Build
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x, 20.x]
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch full history for semantic-release
+        
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: 'src/project-config-symlinker/package-lock.json'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run type checking
+        run: npm run typecheck
+        
+      - name: Run tests
+        run: npm test
+        
+      - name: Build package
+        run: npm run build
+        
+      - name: Run package tests
+        run: npm run test:package
+
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+          cache-dependency-path: 'src/project-config-symlinker/package-lock.json'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run security audit
+        run: |
+          echo "🔒 Running security audit..."
+          npm audit --audit-level moderate
+          
+      - name: Check for vulnerabilities
+        run: |
+          if npm audit --audit-level high --json | jq -e '.metadata.vulnerabilities.high > 0 or .metadata.vulnerabilities.critical > 0' 2>/dev/null; then
+            echo "❌ High or critical vulnerabilities found"
+            npm audit --audit-level high
+            exit 1
+          fi
+          echo "✅ No high or critical vulnerabilities found"
+
+  release:
+    name: Semantic Release
+    needs: [test, security-scan]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop')
+    
+    outputs:
+      new-release-published: ${{ steps.semantic-release.outputs.new-release-published }}
+      new-release-version: ${{ steps.semantic-release.outputs.new-release-version }}
+      new-release-git-tag: ${{ steps.semantic-release.outputs.new-release-git-tag }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'npm'
+          cache-dependency-path: 'src/project-config-symlinker/package-lock.json'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build package
+        run: npm run build
+        
+      - name: Create dist-tarball directory
+        run: mkdir -p dist-tarball
+        
+      - name: Run comprehensive tests
+        run: npm run ci
+        
+      - name: Verify package integrity
+        run: |
+          echo "🔍 Verifying package integrity..."
+          
+          # Check that all required files exist
+          for file in "dist/cli.js" "dist/index.js" "README.md" "LICENSE" "CHANGELOG.md"; do
+            if [ ! -f "$file" ]; then
+              echo "❌ Required file missing: $file"
+              exit 1
+            fi
+          done
+          
+          # Test CLI functionality
+          node dist/cli.js --help > /dev/null
+          node dist/cli.js --version > /dev/null
+          
+          echo "✅ Package integrity verified"
+          
+      - name: Semantic Release
+        id: semantic-release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          
+      - name: Summary
+        if: steps.semantic-release.outputs.new-release-published == 'true'
+        run: |
+          echo "🎉 Successfully released version ${{ steps.semantic-release.outputs.new-release-version }}"
+          echo "📦 NPM: https://www.npmjs.com/package/project-config-symlinker"
+          echo "🏷️ Tag: ${{ steps.semantic-release.outputs.new-release-git-tag }}"
+          echo "📋 GitHub: https://github.com/${{ github.repository }}/releases/tag/${{ steps.semantic-release.outputs.new-release-git-tag }}"
+
+  post-release:
+    name: Post-Release Actions
+    needs: release
+    runs-on: ubuntu-latest
+    if: needs.release.outputs.new-release-published == 'true'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.release.outputs.new-release-git-tag }}
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+          cache-dependency-path: 'src/project-config-symlinker/package-lock.json'
+          
+      - name: Test published package
+        run: |
+          echo "🧪 Testing published package..."
+          
+          # Wait a bit for NPM to propagate the package
+          sleep 30
+          
+          # Create a temporary test directory
+          TEST_DIR="/tmp/release-test-$$"
+          mkdir -p "$TEST_DIR"
+          cd "$TEST_DIR"
+          
+          # Test installation from NPM
+          npm init -y
+          
+          # Determine version tag for installation
+          if [[ "${{ needs.release.outputs.new-release-version }}" == *"-"* ]]; then
+            echo "Installing pre-release version with @next tag"
+            npm install project-config-symlinker@next
+          else
+            echo "Installing stable version with @latest tag"  
+            npm install project-config-symlinker@latest
+          fi
+          
+          # Test that the CLI works
+          npx symlinker --help
+          npx symlinker --version
+          
+          echo "✅ Published package test completed successfully"
+          
+          # Cleanup
+          cd /
+          rm -rf "$TEST_DIR"
+          
+      - name: Update README badges (if needed)
+        run: |
+          echo "📱 Updating documentation badges..."
+          
+          # This could trigger documentation updates or badge refreshes
+          # For now, just log the new version
+          echo "New version available: ${{ needs.release.outputs.new-release-version }}"
+          
+      - name: Notify success
+        run: |
+          echo "🎊 Release completed successfully!"
+          echo "==============================================="
+          echo "Version: ${{ needs.release.outputs.new-release-version }}"
+          echo "Tag: ${{ needs.release.outputs.new-release-git-tag }}"
+          echo "Branch: ${GITHUB_REF#refs/heads/}"
+          echo "NPM: https://www.npmjs.com/package/project-config-symlinker"
+          echo "GitHub: https://github.com/${{ github.repository }}/releases"
+          echo "==============================================="
+          
+          # Add webhook notifications here if needed
+          # curl -X POST -H 'Content-type: application/json' \
+          #   --data '{"text":"🎉 Released project-config-symlinker v${{ needs.release.outputs.new-release-version }}!"}' \
+          #   ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+  no-release:
+    name: No Release
+    needs: [test, security-scan]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop')
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+          cache-dependency-path: 'src/project-config-symlinker/package-lock.json'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Check if release would be triggered
+        run: |
+          echo "🔍 Checking if commits would trigger a release..."
+          
+          # Run semantic-release in dry-run mode
+          if npx semantic-release --dry-run --no-ci | grep -q "There are no relevant changes"; then
+            echo "ℹ️ No release needed - no relevant changes since last release"
+            echo "To trigger a release, use conventional commit messages:"
+            echo "  - feat: for new features (minor version)"
+            echo "  - fix: for bug fixes (patch version)"  
+            echo "  - feat!: or BREAKING CHANGE: for breaking changes (major version)"
+          else
+            echo "⚠️ Semantic-release dry-run detected changes but release job didn't run"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

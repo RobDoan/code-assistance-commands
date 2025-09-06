@@ -1,0 +1,272 @@
+name: Maintenance & Updates
+
+on:
+  schedule:
+    # Run weekly on Mondays at 9 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch: # Allow manual triggering
+
+permissions:
+  contents: write
+  pull-requests: write
+
+defaults:
+  run:
+    working-directory: src/project-config-symlinker
+
+jobs:
+  dependency-update:
+    name: Update Dependencies
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+          cache-dependency-path: 'src/project-config-symlinker/package-lock.json'
+          
+      - name: Check for dependency updates
+        run: |
+          echo "🔍 Checking for dependency updates..."
+          
+          # Check for outdated packages
+          npm outdated --json > outdated.json || true
+          
+          if [ -s outdated.json ]; then
+            echo "📦 Outdated packages found:"
+            cat outdated.json | jq -r 'to_entries[] | "  \(.key): \(.value.current) -> \(.value.wanted)"'
+            echo "update_needed=true" >> $GITHUB_ENV
+          else
+            echo "✅ All dependencies are up to date"
+            echo "update_needed=false" >> $GITHUB_ENV
+          fi
+          
+      - name: Update dependencies
+        if: env.update_needed == 'true'
+        run: |
+          echo "⬆️ Updating dependencies..."
+          
+          # Update patch and minor versions
+          npm update
+          
+          # Check if package-lock.json changed
+          if git diff --quiet package-lock.json; then
+            echo "No changes after npm update"
+          else
+            echo "dependencies_updated=true" >> $GITHUB_ENV
+          fi
+          
+      - name: Run tests after update
+        if: env.dependencies_updated == 'true'
+        run: |
+          echo "🧪 Running tests after dependency update..."
+          npm ci
+          npm run typecheck
+          npm test
+          npm run test:package
+          
+      - name: Create Pull Request
+        if: env.dependencies_updated == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: update dependencies"
+          title: "🔄 Automated dependency update"
+          body: |
+            This PR updates project dependencies to their latest compatible versions.
+            
+            ## Changes
+            - Updated npm dependencies to latest patch/minor versions
+            - All tests pass with updated dependencies
+            
+            ## Verification
+            - ✅ TypeScript compilation passes
+            - ✅ Unit tests pass
+            - ✅ Package tests pass
+            
+            This PR was created automatically by the maintenance workflow.
+          branch: automated/dependency-update
+          delete-branch: true
+
+  security-check:
+    name: Security Check
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+          cache-dependency-path: 'src/project-config-symlinker/package-lock.json'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run security audit
+        run: |
+          echo "🔒 Running comprehensive security audit..."
+          
+          # Generate audit report
+          npm audit --json > audit-report.json || true
+          
+          # Check for vulnerabilities
+          CRITICAL=$(cat audit-report.json | jq '.metadata.vulnerabilities.critical // 0')
+          HIGH=$(cat audit-report.json | jq '.metadata.vulnerabilities.high // 0')
+          MODERATE=$(cat audit-report.json | jq '.metadata.vulnerabilities.moderate // 0')
+          
+          echo "Security audit results:"
+          echo "  Critical: $CRITICAL"
+          echo "  High: $HIGH" 
+          echo "  Moderate: $MODERATE"
+          
+          # Create issue if critical/high vulnerabilities found
+          if [ "$CRITICAL" -gt 0 ] || [ "$HIGH" -gt 0 ]; then
+            echo "⚠️ Critical or high vulnerabilities found!"
+            echo "create_security_issue=true" >> $GITHUB_ENV
+            echo "vulnerability_summary=Critical: $CRITICAL, High: $HIGH, Moderate: $MODERATE" >> $GITHUB_ENV
+          fi
+          
+      - name: Create security issue
+        if: env.create_security_issue == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { vulnerability_summary } = process.env;
+            
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🚨 Security vulnerabilities detected',
+              body: `## Security Alert
+            
+            Our automated security scan has detected vulnerabilities in project dependencies:
+            
+            **Summary:** ${vulnerability_summary}
+            
+            ## Recommended Actions
+            1. Review the vulnerability details with \`npm audit\`
+            2. Update affected packages with \`npm audit fix\`
+            3. If automatic fixes aren't available, consider manual updates
+            4. Test thoroughly after applying fixes
+            
+            ## Next Steps
+            - [ ] Run \`npm audit\` to see detailed vulnerability information
+            - [ ] Apply fixes with \`npm audit fix\` or manual updates
+            - [ ] Verify all tests pass after updates
+            - [ ] Close this issue once vulnerabilities are resolved
+            
+            This issue was created automatically by the maintenance workflow.`,
+              labels: ['security', 'dependencies', 'priority:high']
+            });
+
+  package-health:
+    name: Package Health Check
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+          cache-dependency-path: 'src/project-config-symlinker/package-lock.json'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Check package health
+        run: |
+          echo "🏥 Running package health checks..."
+          
+          # Check bundle size
+          npm run build
+          TARBALL=$(npm pack --silent)
+          SIZE=$(du -h "$TARBALL" | cut -f1)
+          SIZE_BYTES=$(wc -c < "$TARBALL")
+          rm "$TARBALL"
+          
+          echo "📦 Package size: $SIZE"
+          
+          # Warn if package is getting large (>2MB)
+          MAX_SIZE=2097152  # 2MB
+          if [ "$SIZE_BYTES" -gt "$MAX_SIZE" ]; then
+            echo "⚠️ Package size is large: $SIZE"
+            echo "large_package=true" >> $GITHUB_ENV
+            echo "package_size=$SIZE" >> $GITHUB_ENV
+          fi
+          
+          # Check for potential issues
+          echo "🔍 Checking for potential issues..."
+          
+          # Check if there are TODO comments that might need attention
+          TODO_COUNT=$(find src -name "*.ts" -exec grep -l "TODO\|FIXME\|HACK" {} \; | wc -l)
+          if [ "$TODO_COUNT" -gt 0 ]; then
+            echo "📝 Found $TODO_COUNT files with TODO/FIXME/HACK comments"
+            echo "todos_found=true" >> $GITHUB_ENV
+            echo "todo_count=$TODO_COUNT" >> $GITHUB_ENV
+          fi
+          
+          # Check test coverage if available
+          if npm run test:coverage > /dev/null 2>&1; then
+            echo "📊 Test coverage check completed"
+          fi
+          
+          echo "✅ Health check completed"
+          
+      - name: Create health report issue
+        if: env.large_package == 'true' || env.todos_found == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { large_package, package_size, todos_found, todo_count } = process.env;
+            
+            let body = `## 📋 Package Health Report
+            
+            Our weekly health check has found some items that may need attention:
+            
+            `;
+            
+            if (large_package === 'true') {
+              body += `### 📦 Package Size
+            - **Current size:** ${package_size}
+            - **Recommendation:** Consider optimizing bundle size or reviewing included files
+            
+            `;
+            }
+            
+            if (todos_found === 'true') {
+              body += `### 📝 Code Maintenance  
+            - **TODO/FIXME comments:** ${todo_count} files
+            - **Recommendation:** Review and address pending TODO items
+            
+            `;
+            }
+            
+            body += `## Actions
+            - [ ] Review and address the items above
+            - [ ] Consider running \`npm run build:full\` to check overall health
+            - [ ] Close this issue once items are addressed
+            
+            This report was generated automatically by the maintenance workflow.`;
+            
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '📋 Weekly package health report',
+              body: body,
+              labels: ['maintenance', 'health-check']
+            });

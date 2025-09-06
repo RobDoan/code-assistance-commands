@@ -23,6 +23,7 @@
     "ci": "bash scripts/build-and-test.sh",
     "typecheck": "tsc --noEmit",
     "lint": "echo 'No linter configured'",
+    "semantic-release": "semantic-release",
     "prepublishOnly": "npm run typecheck && npm run build && npm run test:package",
     "prepack": "npm run build"
   },
@@ -87,7 +88,11 @@
     "tsx": "^4.20.5",
     "typescript": "^5.0.0",
     "vite": "^5.0.0",
-    "vitest": "^1.0.0"
+    "vitest": "^1.0.0",
+    "semantic-release": "^22.0.0",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/git": "^10.0.0",
+    "@semantic-release/github": "^9.0.0"
   },
   "files": [
     "dist/",

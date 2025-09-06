@@ -1,5 +1,10 @@
 # Project Config Symlinker
 
+[![CI](https://github.com/RobDoan/project-config-symlinker/actions/workflows/ci.yml/badge.svg)](https://github.com/RobDoan/project-config-symlinker/actions/workflows/ci.yml)
+[![Release](https://github.com/RobDoan/project-config-symlinker/actions/workflows/release.yml/badge.svg)](https://github.com/RobDoan/project-config-symlinker/actions/workflows/release.yml)
+[![npm version](https://badge.fury.io/js/project-config-symlinker.svg)](https://www.npmjs.com/package/project-config-symlinker)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A CLI tool that creates symbolic links between project configuration files/folders and target projects. This enables developers to maintain a centralized set of configuration files and easily synchronize them across multiple projects while avoiding duplication.
 
 ## Features
@@ -448,6 +453,36 @@ src/
 7. Commit changes: `git commit -am 'Add feature'`
 8. Push to branch: `git push origin my-feature`
 9. Create Pull Request
+
+### Automated Release Process
+
+This project uses **semantic-release** for fully automated releases:
+
+1. **Commit with conventional messages**:
+   ```bash
+   git commit -m "feat: add interactive mode support"  # Minor release
+   git commit -m "fix: resolve symlink permission bug" # Patch release
+   git commit -m "feat!: change CLI interface"         # Major release
+   ```
+
+2. **Push to main/develop**: `git push origin main`
+
+3. **Automated Pipeline**:
+   - 🔍 Analyzes commit messages
+   - 📊 Determines version bump
+   - ✅ Runs comprehensive tests
+   - 📦 Builds and validates package  
+   - 🔒 Security audit
+   - 📝 Generates changelog
+   - 🚀 Creates GitHub release
+   - 📦 Publishes to NPM
+   - ✨ Updates package version
+
+**Branches:**
+- `main` → Production releases (`@latest`)
+- `develop` → Beta releases (`@next`)
+
+See [`../../.github/WORKFLOWS.md`](../../.github/WORKFLOWS.md) for detailed workflow documentation.
 
 ## License
 

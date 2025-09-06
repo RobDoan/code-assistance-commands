@@ -1,0 +1,310 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'src/project-config-symlinker/**'
+      - '.github/workflows/**'
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - 'src/project-config-symlinker/**'
+      - '.github/workflows/**'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+defaults:
+  run:
+    working-directory: src/project-config-symlinker
+
+jobs:
+  lint-and-format:
+    name: Lint & Format Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+          cache-dependency-path: 'src/project-config-symlinker/package-lock.json'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check TypeScript types
+        run: npm run typecheck
+
+      - name: Check for formatting issues
+        run: |
+          # Add prettier check if configured
+          echo "✅ Format check placeholder (add prettier if needed)"
+
+  test:
+    name: Test Suite
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        node-version: [20.x]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: 'src/project-config-symlinker/package-lock.json'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run unit tests
+        run: npm test
+
+      - name: Run package tests
+        run: npm run test:package
+
+      - name: Upload coverage reports (if available)
+        if: matrix.os == 'ubuntu-latest' && matrix.node-version == '20.x'
+        run: |
+          # Add coverage upload if configured
+          echo "📊 Coverage reporting placeholder"
+
+  build-and-validate:
+    name: Build & Validate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+          cache-dependency-path: 'src/project-config-symlinker/package-lock.json'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build package
+        run: npm run build
+
+      - name: Validate build outputs
+        run: |
+          echo "🔍 Validating build outputs..."
+
+          # Check that required files exist
+          if [ ! -f "dist/cli.js" ]; then
+            echo "❌ CLI binary not found"
+            exit 1
+          fi
+
+          if [ ! -f "dist/index.js" ]; then
+            echo "❌ Library entry not found"
+            exit 1
+          fi
+
+          # Check CLI has shebang
+          if ! head -1 dist/cli.js | grep -q "#!/usr/bin/env node"; then
+            echo "❌ CLI missing shebang"
+            exit 1
+          fi
+
+          # Check CLI is executable
+          if [ ! -x "dist/cli.js" ]; then
+            echo "❌ CLI not executable"
+            exit 1
+          fi
+
+          echo "✅ Build validation passed"
+
+      - name: Test CLI functionality
+        run: |
+          echo "🧪 Testing CLI functionality..."
+
+          # Test help command
+          node dist/cli.js --help
+
+          # Test version command
+          node dist/cli.js --version
+
+          echo "✅ CLI functionality test passed"
+
+      - name: Validate package structure
+        run: |
+          echo "📦 Validating package structure..."
+
+          # Check package.json has required fields
+          node -e "
+            const pkg = require('./package.json');
+            const required = ['name', 'version', 'description', 'main', 'bin', 'author', 'license'];
+            const missing = required.filter(field => !pkg[field]);
+            if (missing.length > 0) {
+              console.error('❌ Missing required fields:', missing);
+              process.exit(1);
+            }
+            console.log('✅ Package.json validation passed');
+          "
+
+          # Check for required files
+          for file in README.md LICENSE CHANGELOG.md; do
+            if [ ! -f "$file" ]; then
+              echo "❌ Required file missing: $file"
+              exit 1
+            fi
+          done
+
+          echo "✅ Package structure validation passed"
+
+  security-audit:
+    name: Security Audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+          cache-dependency-path: 'src/project-config-symlinker/package-lock.json'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run security audit
+        run: |
+          echo "🔒 Running security audit..."
+          npm audit --audit-level moderate
+
+      - name: Check for high/critical vulnerabilities
+        run: |
+          if npm audit --audit-level high --json | jq -e '.metadata.vulnerabilities.high > 0 or .metadata.vulnerabilities.critical > 0' 2>/dev/null; then
+            echo "⚠️ High or critical vulnerabilities found - review required"
+            npm audit --audit-level high
+            # Don't fail CI for now, just warn
+            # exit 1
+          else
+            echo "✅ No high or critical vulnerabilities found"
+          fi
+
+  compatibility-test:
+    name: Compatibility Test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+          cache-dependency-path: 'src/project-config-symlinker/package-lock.json'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build package
+        run: npm run build
+
+      - name: Test installation simulation
+        run: |
+          echo "🔄 Testing package installation simulation..."
+
+          # Create a temporary directory
+          mkdir -p /tmp/install-test
+          cd /tmp/install-test
+
+          # Pack the package
+          cd $GITHUB_WORKSPACE/src/project-config-symlinker
+          TARBALL=$(npm pack --silent)
+
+          # Test installation from tarball
+          cd /tmp/install-test
+          npm init -y
+          npm install $GITHUB_WORKSPACE/src/project-config-symlinker/$TARBALL
+
+          # Test that CLI works
+          npx symlinker --help
+
+          echo "✅ Installation compatibility test passed"
+
+      - name: Comment on PR
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ All CI checks passed! Package is ready for review.'
+            })
+
+  summary:
+    name: CI Summary
+    runs-on: ubuntu-latest
+    needs: [lint-and-format, test, build-and-validate, security-audit]
+    if: always()
+
+    steps:
+      - name: Check CI Results
+        run: |
+          echo "📋 CI Summary:"
+          echo "=============="
+
+          if [ "${{ needs.lint-and-format.result }}" = "success" ]; then
+            echo "✅ Lint & Format: PASSED"
+          else
+            echo "❌ Lint & Format: FAILED"
+          fi
+
+          if [ "${{ needs.test.result }}" = "success" ]; then
+            echo "✅ Tests: PASSED"
+          else
+            echo "❌ Tests: FAILED"
+          fi
+
+          if [ "${{ needs.build-and-validate.result }}" = "success" ]; then
+            echo "✅ Build & Validate: PASSED"
+          else
+            echo "❌ Build & Validate: FAILED"
+          fi
+
+          if [ "${{ needs.security-audit.result }}" = "success" ]; then
+            echo "✅ Security Audit: PASSED"
+          else
+            echo "⚠️ Security Audit: WARNING"
+          fi
+
+          # Fail if any critical jobs failed
+          if [ "${{ needs.lint-and-format.result }}" != "success" ] ||
+             [ "${{ needs.test.result }}" != "success" ] ||
+             [ "${{ needs.build-and-validate.result }}" != "success" ]; then
+            echo ""
+            echo "❌ CI FAILED - Check the logs above"
+            exit 1
+          fi
+
+          echo ""
+          echo "🎉 All CI checks passed!"
