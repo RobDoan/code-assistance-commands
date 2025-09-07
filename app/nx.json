@@ -47,15 +47,12 @@
     }
   ],
   "release": {
-    "versionPlans": true,
-    "projects": ["libs/symlinker"],
-    "releaseTagPattern": "{projectName}@{version}",
+    "version": {
+      "conventionalCommits": true
+    },
     "git": {
       "commit": true,
       "tag": true
-    },
-    "npm": {
-      "publish": true
     },
     "changelog": {
       "workspaceChangelog": false,
