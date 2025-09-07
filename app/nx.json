@@ -46,6 +46,24 @@
       }
     }
   ],
+  "release": {
+    "versionPlans": true,
+    "projects": ["libs/symlinker"],
+    "releaseTagPattern": "{projectName}@{version}",
+    "git": {
+      "commit": true,
+      "tag": true
+    },
+    "npm": {
+      "publish": true
+    },
+    "changelog": {
+      "workspaceChangelog": false,
+      "projectChangelogs": {
+        "createRelease": "github"
+      }
+    }
+  },
   "targetDefaults": {
     "@nx/esbuild:esbuild": {
       "cache": true,
