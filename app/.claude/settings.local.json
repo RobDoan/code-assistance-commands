@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx nx build:*)",
+      "Bash(npm install:*)",
+      "Bash(chmod:*)",
+      "Bash(node dist/cli.js --help)",
+      "Bash(npm link:*)",
+      "Bash(symlinker:*)",
+      "Bash(node dist/cli.js --version)",
+      "Bash(npx vitest run:*)",
+      "Bash(npx nx test:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
