@@ -248,9 +248,6 @@ jobs:
 
       - name: Release packages
         if: steps.check-packages.outputs.packages-found == 'true'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           echo "🚀 Releasing packages..."
 
