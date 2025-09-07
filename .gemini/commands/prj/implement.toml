@@ -7,7 +7,7 @@ The user has provided the feature-slug, task-id, and optional context files: "{{
 **Instructions:**
 1.  **Parse Input:** Parse `{{args}}` to identify the `feature-slug`, `task-id`, and any `--file` paths.
 2.  **Internalize Context:** To generate the code, you must synthesize information from multiple sources:
-    a. The project's "bible" located in the `.project-docs/` folder (assume you have read the coding standards, tech stack, etc.).
+    a. The project's "bible" located in the `./docs/project_guides` folder (assume you have read the coding standards, tech stack, etc.).
     b. The feature documents: `requirements.md`, `design.md`, and `tasks.md` for the given `feature-slug`.
     c. The specific details for the `task-id` within `tasks.md`.
     d. Any ad-hoc context from `--file` arguments.

@@ -4,9 +4,9 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Debug @app/symlinker with Nx",
+      "name": "Debug @quydoan/symlinker with Nx",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["nx", "serve", "@app/symlinker"],
+      "runtimeArgs": ["nx", "serve", "@quydoan/symlinker"],
       "env": {
         "NODE_OPTIONS": "--inspect=9229"
       },

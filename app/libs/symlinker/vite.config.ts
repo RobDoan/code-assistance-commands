@@ -31,7 +31,7 @@ export default defineConfig(() => ({
         index: 'src/index.ts',
         cli: 'src/cli.ts',
       },
-      name: '@app/symlinker',
+      name: '@quydoan/symlinker',
       // Change this to the formats you want to support.
       // Don't forget to update your package.json as well.
       formats: ['es' as const],
@@ -49,7 +49,7 @@ export default defineConfig(() => ({
     },
   },
   test: {
-    name: '@app/symlinker',
+    name: '@quydoan/symlinker',
     watch: false,
     globals: true,
     environment: 'node',

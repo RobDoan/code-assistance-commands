@@ -1,7 +1,7 @@
 {
-  "name": "@app/symlinker",
+  "name": "@quydoan/symlinker",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",

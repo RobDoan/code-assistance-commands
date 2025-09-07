@@ -1,5 +1,5 @@
 {
-  "name": "@app/source",
+  "name": "@quydoan/source",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -7,9 +7,9 @@
     "test": "nx run-many --target=test --all",
     "typecheck": "nx run-many --target=typecheck --all",
     "lint": "nx run-many --target=lint --all",
-    "build:shared": "nx run @app/shared:build",
+    "build:shared": "nx run @quydoan/shared:build",
     "build:sample-app": "nx run sample-app:build",
-    "test:shared": "nx run @app/shared:test",
+    "test:shared": "nx run @quydoan/shared:test",
     "serve:sample-app": "nx run sample-app:serve",
     "dev": "nx run sample-app:serve"
   },

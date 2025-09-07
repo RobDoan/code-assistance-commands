@@ -1,6 +1,6 @@
 import { rm, stat, writeFile, mkdir } from 'fs/promises';
 import path from 'path';
-import { emptyFolderExceptGitignore } from '@app/test-utils';
+import { emptyFolderExceptGitignore } from '@quydoan/test-utils';
 import DirectoryCreator from './directory-creator';
 
 describe('DirectoryCreator.ensureDirectoryExists', () => {

@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, afterEach, beforeEach } from 'vitest';
 import { join } from 'path';
 
-import { emptyFolderExceptGitignore } from '@app/test-utils'
+import { emptyFolderExceptGitignore } from '@quydoan/test-utils'
 
 import PathValidator from './path-validator';
 // Mock fs/promises globally
