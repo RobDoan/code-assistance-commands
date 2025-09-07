@@ -18,7 +18,4 @@ src/.claude/settings.local.json
 .my-notes/
 
 
-src/project-config-symlinker/dist
-src/project-config-symlinker/setup-config.json
-src/project-config-symlinker/sample
-src/project-config-symlinker/.claude/settings.local.json
+app/.claude/settings.local.json
