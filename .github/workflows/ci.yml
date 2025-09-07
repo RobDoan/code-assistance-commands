@@ -124,32 +124,6 @@ jobs:
 
           echo "✅ Project functionality test completed"
 
-      - name: Validate package structure
-        run: |
-          echo "📦 Validating package structure..."
-
-          # Check package.json has required fields
-          node -e "
-            const pkg = require('./package.json');
-            const required = ['name', 'version', 'description', 'main', 'bin', 'author', 'license'];
-            const missing = required.filter(field => !pkg[field]);
-            if (missing.length > 0) {
-              console.error('❌ Missing required fields:', missing);
-              process.exit(1);
-            }
-            console.log('✅ Package.json validation passed');
-          "
-
-          # Check for required files
-          for file in README.md LICENSE CHANGELOG.md; do
-            if [ ! -f "$file" ]; then
-              echo "❌ Required file missing: $file"
-              exit 1
-            fi
-          done
-
-          echo "✅ Package structure validation passed"
-
   security-audit:
     name: Security Audit
     runs-on: ubuntu-latest

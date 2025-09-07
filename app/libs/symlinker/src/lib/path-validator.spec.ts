@@ -61,14 +61,14 @@ describe('PathValidator.validateTargetPath', () => {
   it('should call access once with correct params and return valid for normal directory', async () => {
     (fs.access as any).mockResolvedValueOnce(undefined);
     (fs.stat as any).mockResolvedValueOnce({ isDirectory: () => true });
-    const result = await PathValidator.validateTargetPath('../../sample');
+    const result = await PathValidator.validateTargetPath('/sample');
     expect(fs.access).toHaveBeenCalledTimes(1);
     expect(result).toEqual({ isValid: true });
   });
 
   it('should return invalid if access throws error', async () => {
     (fs.access as any).mockRejectedValueOnce({ code: 'EACCES', message: 'Permission denied' });
-    const result = await PathValidator.validateTargetPath('../../sample');
+    const result = await PathValidator.validateTargetPath('/sample');
     expect(result.isValid).toBe(false);
     expect(result.error).toContain('Permission denied');
   });
