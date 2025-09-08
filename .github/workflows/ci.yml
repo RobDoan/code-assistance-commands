@@ -258,7 +258,7 @@ jobs:
           # Use nx release command if available, otherwise manual publish
           if npx nx release --help >/dev/null 2>&1; then
             echo "Using Nx release command..."
-            npx nx release --yes minor
+            npx nx release --yes --first-release minor
           else
             echo "Using manual package publishing..."
             for package in ${{ steps.check-packages.outputs.packages }}; do
