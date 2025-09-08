@@ -2,7 +2,7 @@
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
-A TypeScript monorepo built with Nx, featuring shared libraries and applications with modern development tooling.
+A TypeScript monorepo built with Nx, featuring utility libraries with modern development tooling and CLI capabilities.
 
 ## Features
 
@@ -18,22 +18,19 @@ A TypeScript monorepo built with Nx, featuring shared libraries and applications
 
 ```
 app/
-├── shared/                 # Shared utility library (@app/shared)
-│   ├── src/
-│   │   ├── lib/
-│   │   │   ├── shared.ts      # Utility functions
-│   │   │   └── shared.spec.ts # Unit tests
-│   │   └── index.ts           # Library exports
-│   ├── dist/                  # Built library output
-│   ├── package.json
-│   ├── project.json           # Nx project configuration
-│   └── vite.config.ts         # Vite configuration
-├── apps/
-│   └── sample-app/            # Sample Node.js application
-│       ├── src/
-│       │   └── main.ts        # Application entry point
-│       ├── dist/              # Built application output
-│       └── project.json       # Nx project configuration
+├── libs/
+│   ├── symlinker/             # Symlinker CLI library (@quydoan/symlinker)
+│   │   ├── src/               # Source code
+│   │   ├── dist/              # Built library output
+│   │   ├── examples/          # Usage examples
+│   │   ├── package.json       # Package configuration
+│   │   └── vite.config.ts     # Vite configuration
+│   └── test-utils/            # Testing utilities library (@quydoan/test-utils)
+│       ├── src/               # Source code
+│       ├── dist/              # Built library output
+│       ├── package.json       # Package configuration
+│       └── vite.config.ts     # Vite configuration
+├── apps/                      # Applications directory (currently empty)
 ├── nx.json                    # Nx workspace configuration
 ├── package.json               # Root package.json with scripts
 ├── eslint.config.mjs          # ESLint configuration
@@ -62,16 +59,14 @@ npm install
 npm run build
 
 # Build specific projects
-npm run build:shared
-npm run build:sample-app
+npx nx run @quydoan/symlinker:build
+npx nx run @quydoan/test-utils:build
 ```
 
 #### Development Commands
 ```bash
-# Run sample application in development mode
-npm run dev
-# or
-npm run serve:sample-app
+# No applications currently available for development mode
+# Libraries can be built and tested individually
 ```
 
 #### Testing Commands
@@ -79,8 +74,9 @@ npm run serve:sample-app
 # Run all tests
 npm test
 
-# Run tests for specific project
-npm run test:shared
+# Run tests for specific library
+npx nx run @quydoan/symlinker:test
+npx nx run @quydoan/test-utils:test
 ```
 
 #### Quality Commands
@@ -106,50 +102,46 @@ npx nx run-many --target=test --all
 npx nx run-many --target=lint --all
 
 # Run target for specific project
-npx nx run @app/shared:build
-npx nx run sample-app:serve
+npx nx run @quydoan/symlinker:build
+npx nx run @quydoan/test-utils:build
 ```
 
 ## Architecture
 
-### Shared Library (@app/shared)
+### Symlinker Library (@quydoan/symlinker)
 
-The shared library contains common utilities and functions that can be imported by applications:
+A CLI tool and library for creating symbolic links with interactive prompts:
+
+- **Built with**: Vite + TypeScript
+- **Output**: ES modules with type definitions and CLI executable
+- **Location**: `libs/symlinker/`
+- **Import**: `import { functionName } from '@quydoan/symlinker'`
+- **CLI**: Available as `symlinker` command after build
+- **Dependencies**: inquirer, commander
+
+### Test Utils Library (@quydoan/test-utils)
+
+A utility library providing common testing utilities and helpers:
 
 - **Built with**: Vite + TypeScript
 - **Output**: ES modules with type definitions
-- **Location**: `shared/`
-- **Import**: `import { functionName } from '@app/shared'`
-
-Example functions:
-- `shared()` - Returns 'shared' string
-- `formatGreeting(name)` - Formats a greeting message
-- `sum(numbers[])` - Calculates sum of numbers array
-- `capitalizeWords(text)` - Capitalizes first letter of each word
-
-### Sample Application
-
-A Node.js application demonstrating usage of the shared library:
-
-- **Built with**: ESBuild + TypeScript
-- **Output**: CommonJS modules
-- **Location**: `apps/sample-app/`
-- **Entry**: `apps/sample-app/src/main.ts`
+- **Location**: `libs/test-utils/`
+- **Import**: `import { functionName } from '@quydoan/test-utils'`
 
 ## Development Workflow
 
-1. **Make changes** to library or application code
+1. **Make changes** to library code
 2. **Run tests**: `npm test` to ensure functionality
 3. **Type check**: `npm run typecheck` to verify TypeScript
 4. **Lint code**: `npm run lint` for code quality
 5. **Build**: `npm run build` to create production builds
-6. **Test locally**: `npm run dev` to run the sample app
+6. **Test CLI tools**: Build symlinker and test CLI functionality
 
 ## Testing Strategy
 
 - **Unit Tests**: Located alongside source files with `.spec.ts` extension
 - **Test Framework**: Vitest for fast, TypeScript-native testing
-- **Coverage**: Tests cover core utility functions in shared library
+- **Coverage**: Tests cover utility functions in both libraries
 - **Running**: Use `npm test` or `npx nx run-many --target=test --all`
 
 ## Build System
@@ -160,11 +152,11 @@ A Node.js application demonstrating usage of the shared library:
 - Automatic TypeScript declaration generation
 - Source maps for debugging
 
-### Applications (ESBuild)
-- Optimized for Node.js runtime
-- CommonJS output format
-- Fast incremental builds
-- Development and production configurations
+### CLI Tools
+- Symlinker provides executable CLI interface
+- ES module output with proper bin configuration
+- Interactive prompts using inquirer
+- Command-line argument parsing with commander
 
 ## Configuration
 
@@ -188,9 +180,10 @@ A Node.js application demonstrating usage of the shared library:
 ### Common Issues
 
 1. **Build failures**: Run `npm run typecheck` to identify TypeScript errors
-2. **Import errors**: Ensure the shared library is built before running applications
+2. **Import errors**: Ensure libraries are built before importing from other packages
 3. **ESLint errors**: Check `eslint.config.mjs` for configuration issues
 4. **Test failures**: Verify test file imports use correct file extensions
+5. **CLI issues**: Ensure symlinker is built before testing CLI functionality
 
 ### Reset and Clean
 
@@ -199,7 +192,7 @@ A Node.js application demonstrating usage of the shared library:
 npx nx reset
 
 # Clean build outputs
-rm -rf dist/ shared/dist/ apps/*/dist/
+rm -rf libs/*/dist/ dist/
 
 # Reinstall dependencies
 rm -rf node_modules/ && npm install

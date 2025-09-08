@@ -1,5 +1,5 @@
 {
-  "name": "@quydoan/source",
+  "name": "@quydoan/code-assistance-commands",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -13,7 +13,6 @@
     "serve:sample-app": "nx run sample-app:serve",
     "dev": "nx run sample-app:serve"
   },
-  "private": true,
   "devDependencies": {
     "@nx/esbuild": "21.4.1",
     "@nx/eslint": "^21.4.1",
