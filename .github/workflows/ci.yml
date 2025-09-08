@@ -258,7 +258,7 @@ jobs:
           # Use nx release command if available, otherwise manual publish
           if npx nx release --help >/dev/null 2>&1; then
             echo "Using Nx release command..."
-            npx nx release --yes --first-release minor
+            npx nx release --yes minor
           else
             echo "Using manual package publishing..."
             for package in ${{ steps.check-packages.outputs.packages }}; do
@@ -279,53 +279,5 @@ jobs:
             done
           fi
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  summary:
-    name: CI Summary
-    runs-on: ubuntu-latest
-    needs: [lint-and-format, test, build-and-validate, security-audit]
-    if: always()
-
-    steps:
-      - name: Check CI Results
-        run: |
-          echo "📋 CI Summary:"
-          echo "=============="
-
-          if [ "${{ needs.lint-and-format.result }}" = "success" ]; then
-            echo "✅ Lint & Format: PASSED"
-          else
-            echo "❌ Lint & Format: FAILED"
-          fi
-
-          if [ "${{ needs.test.result }}" = "success" ]; then
-            echo "✅ Tests: PASSED"
-          else
-            echo "❌ Tests: FAILED"
-          fi
-
-          if [ "${{ needs.build-and-validate.result }}" = "success" ]; then
-            echo "✅ Build & Validate: PASSED"
-          else
-            echo "❌ Build & Validate: FAILED"
-          fi
-
-          if [ "${{ needs.security-audit.result }}" = "success" ]; then
-            echo "✅ Security Audit: PASSED"
-          else
-            echo "⚠️ Security Audit: WARNING"
-          fi
-
-          # Fail if any critical jobs failed
-          if [ "${{ needs.lint-and-format.result }}" != "success" ] ||
-             [ "${{ needs.test.result }}" != "success" ] ||
-             [ "${{ needs.build-and-validate.result }}" != "success" ]; then
-            echo ""
-            echo "❌ CI FAILED - Check the logs above"
-            exit 1
-          fi
-
-          echo ""
-          echo "🎉 All CI checks passed!"
